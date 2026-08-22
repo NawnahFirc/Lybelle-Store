@@ -1,0 +1,8 @@
+{
+  "name": "lybelle-store",
+  "private": true,
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "node dev-server.mjs"
+  }
+}

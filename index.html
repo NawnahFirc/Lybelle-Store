@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYBELLE — Science. Nature. Bien-être.</title>
+<meta name="description" content="Découvrez LYBELLE : compléments alimentaires, soins beauté et produits bien-être pour tous. Livraison partout au Maroc.">
+<meta name="theme-color" content="#2C3626">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FDFBF8'/%3E%3Cpath d='M32 49c-9-8-15-14-15-22 0-5 4-9 9-9 3 0 5 1 6 4 1-3 3-4 6-4 5 0 9 4 9 9 0 8-6 14-15 22Z' fill='none' stroke='%234C5F40' stroke-width='3'/%3E%3Cpath d='M32 45V16' stroke='%23C2718A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:title" content="LYBELLE — Science. Nature. Bien-être.">
+<meta property="og:description" content="Compléments alimentaires et soins d'hygiène formulés au Maroc.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/">
+<meta property="og:image" content="assets/hero-hair-ritual.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/*══════════════════════════════════════════════════════════════
+  LYBELLE — palette drawn from the lotus mark on the packaging:
+  sage green leaves, dusty-rose petals, warm off-white label,
+  midnight indigo for the Noctiglyc / night world.
+══════════════════════════════════════════════════════════════*/
+:root{
+  --sage-900:#2C3626;
+  --sage-700:#4C5F40;
+  --sage:#5F7350;
+  --sage-400:#8CA077;
+  --sage-200:#C9D6BC;
+  --sage-50:#EDF1E7;
+
+  --rose:#C2718A;
+  --rose-700:#A2566F;
+  --rose-200:#EFC9D4;
+  --rose-50:#FAEEF1;
+
+  --night:#241F4E;
+  --night-2:#4A4380;
+  --lav:#9E9AD0;
+
+  --gold:#BFA36B;
+
+  --cream:#FDFBF8;
+  --sand:#F5F0E9;
+  --sand-2:#EDE6DC;
+  --ink:#22261F;
+  --ink-soft:#6E7367;
+  --line:rgba(34,38,31,.13);
+  --line-2:rgba(34,38,31,.07);
+
+  --display:"Cormorant Garamond",Georgia,serif;
+  --body:"Jost",system-ui,-apple-system,sans-serif;
+
+  --pad:clamp(1.15rem,4.6vw,5rem);
+  --gap:clamp(2rem,5vw,4.5rem);
+  --ease:cubic-bezier(.19,1,.22,1);
+  --ease2:cubic-bezier(.65,0,.35,1);
+  --r:4px;
+  --rl:18px;
+  --shadow:0 18px 50px -24px rgba(44,54,38,.34);
+  --shadow-sm:0 8px 24px -14px rgba(44,54,38,.38);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:8.5rem;overflow-x:clip}
+body{font-family:var(--body);background:var(--cream);color:var(--ink);
+  font-size:16px;line-height:1.68;font-weight:300;overflow-x:clip;position:relative;
+  -webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px;border-radius:var(--r)}
+.skip{position:fixed;left:1rem;top:1rem;z-index:1000;transform:translateY(-180%);background:var(--sage-900);color:var(--cream);padding:.7rem 1rem;border-radius:999px;font-size:.75rem;transition:transform .25s}.skip:focus{transform:none}
+body.modal-open{overflow:hidden}
+img{background:var(--sand)}
+::selection{background:var(--rose-200);color:var(--sage-900)}
+.serif{font-family:var(--display)}
+.lbl{font-size:.63rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/*══ SCROLLBAR ══*/
+::-webkit-scrollbar{width:9px;height:6px}
+::-webkit-scrollbar-track{background:var(--sand)}
+::-webkit-scrollbar-thumb{background:var(--sage-200);border-radius:9px}
+::-webkit-scrollbar-thumb:hover{background:var(--sage-400)}
+
+/*══ GRAIN ══*/
+.grain{position:fixed;inset:0;z-index:600;pointer-events:none;opacity:.22;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+
+/*══ LOGO ══*/
+.logo{display:flex;align-items:center;gap:.6rem}
+.logo svg{flex:none}
+.logo .wm{display:flex;flex-direction:column;line-height:1}
+.logo .wm b{font-family:var(--body);font-weight:500;font-size:1.28rem;letter-spacing:.34em;
+  color:var(--sage-700);text-indent:.34em}
+.logo .wm b i{font-style:normal;color:var(--rose)}
+.logo .wm small{font-size:.45rem;letter-spacing:.29em;color:var(--ink-soft);margin-top:.32rem;
+  text-transform:uppercase;text-indent:.29em}
+.logo.lg .wm b{font-size:2.1rem}
+.logo.lg .wm small{font-size:.6rem;margin-top:.5rem}
+.logo.inv .wm b{color:var(--sage-200)}
+.logo.inv .wm b i{color:var(--rose-200)}
+.logo.inv .wm small{color:rgba(253,251,248,.55)}
+
+/*══ INTRO ══*/
+#intro{position:fixed;inset:0;z-index:700;background:var(--cream);display:grid;place-items:center;
+  transition:opacity .8s var(--ease),visibility .8s}
+#intro.gone{opacity:0;visibility:hidden}
+#intro .in{display:flex;flex-direction:column;align-items:center;gap:1.6rem;
+  animation:mkIn 1.5s var(--ease) both}
+#intro .bar{width:9rem;height:1px;background:var(--line);overflow:hidden}
+#intro .bar i{display:block;height:100%;width:100%;background:var(--sage);
+  transform:translateX(-100%);animation:load 1.7s var(--ease2) forwards}
+@keyframes load{to{transform:none}}
+@keyframes mkIn{0%{opacity:0;transform:translateY(16px) scale(.97);filter:blur(6px)}100%{opacity:1;transform:none;filter:none}}
+
+/*══ ANNOUNCEMENT ══*/
+.ann{background:var(--sage-900);color:var(--sand);overflow:hidden;padding:.6rem 0;position:relative;z-index:60}
+.ann .track{display:flex;width:max-content;animation:slide 42s linear infinite}
+.ann:hover .track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.ann .unit{display:flex;align-items:center;gap:3.4rem;padding-right:3.4rem;
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;white-space:nowrap}
+.ann .unit span{display:flex;align-items:center;gap:.55rem}
+.ann .unit span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--rose-200);flex:none}
+
+/*══ HEADER ══*/
+header{position:sticky;top:0;z-index:120;background:rgba(253,251,248,.82);
+  backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
+  border-bottom:1px solid transparent;transition:border-color .35s,box-shadow .35s,background .35s}
+header.stuck{border-bottom-color:var(--line-2);box-shadow:0 10px 30px -26px rgba(44,54,38,.5)}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1.2rem;
+  padding:.95rem var(--pad)}
+nav.main{display:flex;gap:clamp(1rem,1.9vw,1.9rem);align-items:center;flex-wrap:nowrap}
+nav.main a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:400;
+  position:relative;padding:.3rem 0;color:var(--ink);white-space:nowrap}
+nav.main a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;
+  background:var(--sage);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+nav.main a:hover::after,nav.main a.act::after{transform:scaleX(1);transform-origin:left}
+nav.main a.act{color:var(--sage-700)}
+.brandlink{justify-self:center}
+.utils{display:flex;align-items:center;gap:.35rem;justify-self:end}
+.lang{display:flex;align-items:center;font-size:.66rem;letter-spacing:.1em;font-weight:500;
+  border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-right:.5rem}
+.lang button{padding:.34rem .62rem;color:var(--ink-soft);transition:.25s}
+.lang button[aria-pressed="true"]{background:var(--sage-700);color:var(--cream)}
+.ibtn{width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;position:relative;
+  transition:background .28s}
+.ibtn:hover{background:var(--sage-50)}
+.ibtn svg{width:18px;height:18px;stroke:var(--ink);stroke-width:1.4;fill:none;
+  stroke-linecap:round;stroke-linejoin:round}
+.pill{position:absolute;top:.05rem;right:.05rem;min-width:1.05rem;height:1.05rem;padding:0 .25rem;
+  border-radius:999px;background:var(--rose);color:#fff;font-size:.58rem;font-weight:500;
+  display:grid;place-items:center;transform:scale(0);transition:transform .35s var(--ease)}
+.pill.on{transform:scale(1)}
+.pill.sage{background:var(--sage-700)}
+.burger{display:none;width:2.4rem;height:2.4rem;place-items:center}
+.burger span{display:block;width:17px;height:1.3px;background:var(--ink);position:relative;transition:.3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:17px;height:1.3px;
+  background:var(--ink);transition:.3s var(--ease)}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+.burger.on span{background:transparent}
+.burger.on span::before{top:0;transform:rotate(45deg)}
+.burger.on span::after{top:0;transform:rotate(-45deg)}
+
+/*══ MOBILE NAV ══*/
+.mnav{position:fixed;inset:0;top:0;z-index:115;background:var(--cream);padding:6.5rem var(--pad) 2rem;
+  transform:translateY(-100%);transition:transform .6s var(--ease);display:flex;flex-direction:column;gap:.2rem;
+  overflow-y:auto}
+.mnav.on{transform:none}
+.mnav a{font-family:var(--display);font-size:2rem;font-weight:300;padding:.55rem 0;
+  border-bottom:1px solid var(--line-2);opacity:0;transform:translateY(14px)}
+.mnav.on a{animation:mIn .55s var(--ease) forwards}
+@keyframes mIn{to{opacity:1;transform:none}}
+.mnav .mfoot{margin-top:auto;padding-top:2rem;display:flex;gap:1rem;align-items:center}
+
+/*══ BUTTONS ══*/
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:.92rem 2.1rem;border-radius:999px;font-size:.68rem;letter-spacing:.18em;
+  text-transform:uppercase;font-weight:500;transition:all .4s var(--ease);position:relative;overflow:hidden;
+  border:1px solid transparent;cursor:pointer}
+.btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.btn-solid{background:var(--sage-700);color:var(--cream)}
+.btn-solid:hover{background:var(--sage-900);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.btn-rose{background:var(--rose);color:#fff}
+.btn-rose:hover{background:var(--rose-700);transform:translateY(-2px);box-shadow:0 12px 26px -16px var(--rose-700)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:rgba(255,255,255,.4)}
+.btn-ghost:hover{border-color:var(--sage-700);color:var(--sage-700);background:var(--sage-50);transform:translateY(-2px)}
+.btn-inv{border-color:rgba(253,251,248,.35);color:var(--cream)}
+.btn-inv:hover{background:var(--cream);color:var(--sage-900);transform:translateY(-2px)}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.link{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+  display:inline-flex;align-items:center;gap:.5rem;padding-bottom:.25rem;border-bottom:1px solid var(--line);
+  transition:.35s var(--ease)}
+.link:hover{border-color:var(--sage-700);color:var(--sage-700);gap:.85rem}
+
+/*══ SECTION HEADS ══*/
+.shead{padding:clamp(3.6rem,8vw,6.5rem) var(--pad) 0;max-width:64rem}
+.shead.ctr{margin:0 auto;text-align:center;max-width:46rem;display:flex;flex-direction:column;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;color:var(--sage-700);font-size:.63rem;
+  letter-spacing:.26em;text-transform:uppercase;font-weight:500}
+.eyebrow::before{content:"";width:1.7rem;height:1px;background:var(--sage-400)}
+.shead.ctr .eyebrow::after{content:"";width:1.7rem;height:1px;background:var(--sage-400)}
+h2,.h2{font-family:var(--display);font-size:clamp(2.1rem,4.4vw,3.5rem);font-weight:300;
+  line-height:1.13;margin-top:1.1rem;letter-spacing:-.012em;max-width:20ch}
+.shead.ctr h2{max-width:22ch}
+h2 em{font-style:italic;color:var(--sage-700)}
+.lede{margin-top:1.4rem;max-width:50ch;color:var(--ink-soft);font-size:1rem}
+
+/*══ HERO ══*/
+.hero{position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;
+  gap:var(--gap);padding:clamp(2.6rem,6vw,5.2rem) var(--pad) clamp(3rem,6vw,5rem);overflow:hidden}
+.hero::before{content:"";position:absolute;top:-24%;left:-12%;width:52%;height:120%;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,var(--rose-50),transparent 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-30%;right:-6%;width:46%;height:96%;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,var(--sage-50),transparent 68%);pointer-events:none}
+.hero>*{position:relative;z-index:2}
+.h1{font-family:var(--display);font-size:clamp(2.9rem,6.6vw,5.4rem);font-weight:300;
+  line-height:1.03;letter-spacing:-.022em;margin-top:1.5rem}
+.h1 .l{display:block;overflow:hidden;padding:.04em 0}
+.h1 .l>span{display:block;transform:translateY(105%);transition:transform 1.1s var(--ease)}
+.ready .h1 .l>span{transform:none}
+.h1 .l:nth-child(2)>span{transition-delay:.11s}
+.h1 .l:nth-child(3)>span{transition-delay:.22s}
+.h1 em{font-style:italic;color:var(--rose)}
+.hero .lede{margin-top:1.8rem;max-width:38ch}
+.hcta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.4rem}
+.hstats{display:flex;gap:clamp(1.4rem,3vw,2.8rem);margin-top:3rem;padding-top:1.7rem;border-top:1px solid var(--line-2)}
+.hstats div b{font-family:var(--display);font-size:1.85rem;font-weight:400;color:var(--sage-700);display:block;line-height:1}
+.hstats div small{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);
+  display:block;margin-top:.45rem}
+.hmedia{position:relative}
+.hmedia .shot{position:relative;aspect-ratio:4/5;border-radius:200px 200px var(--rl) var(--rl);
+  overflow:hidden;box-shadow:var(--shadow)}
+.hmedia .shot img{width:100%;height:100%;object-fit:cover;transform:scale(1.03);filter:saturate(.97) contrast(1.02);
+  animation:kb 22s var(--ease2) infinite alternate}
+@keyframes kb{to{transform:scale(1.11)}}
+.hmedia .chip{position:absolute;background:rgba(253,251,248,.93);backdrop-filter:blur(8px);
+  border-radius:999px;padding:.62rem 1.05rem;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:.55rem;
+  font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;white-space:nowrap;
+  animation:float 6s ease-in-out infinite}
+.hmedia .chip svg{width:15px;height:15px;stroke:var(--sage-700);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hmedia .c1{left:-1.4rem;top:16%}
+.hmedia .c2{right:-1rem;bottom:16%;animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hmedia .seal{position:absolute;right:-1.6rem;top:-1.6rem;width:6.6rem;height:6.6rem;
+  display:grid;place-items:center;color:var(--sage-700)}
+.hmedia .seal svg{width:100%;height:100%;animation:spin 26s linear infinite}
+.hmedia .seal .dot{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--rose)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/*══ TRUST ══*/
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);
+  border-block:1px solid var(--line-2)}
+.trust div{background:var(--cream);padding:1.5rem clamp(1.1rem,2.2vw,2rem);display:flex;align-items:center;gap:.85rem;
+  transition:background .35s}
+.trust div:hover{background:var(--sage-50)}
+.trust svg{width:22px;height:22px;stroke:var(--sage-700);stroke-width:1.2;fill:none;flex:none;
+  stroke-linecap:round;stroke-linejoin:round}
+.trust b{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.trust small{display:block;font-size:.74rem;color:var(--ink-soft);line-height:1.4;margin-top:.15rem}
+
+/*══ TOOLBAR ══*/
+.tools{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+  padding:2.2rem var(--pad) 0}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip-f{padding:.58rem 1.25rem;border:1px solid var(--line);border-radius:999px;
+  font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;
+  color:var(--ink-soft);transition:all .35s var(--ease);white-space:nowrap}
+.chip-f:hover{border-color:var(--sage-400);color:var(--sage-700)}
+.chip-f[aria-pressed="true"]{background:var(--sage-700);color:var(--cream);border-color:var(--sage-700)}
+.sortwrap{display:flex;align-items:center;gap:.6rem;font-size:.65rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-soft)}
+select.sort{border:1px solid var(--line);border-radius:999px;padding:.55rem 2.1rem .55rem 1.05rem;
+  background:transparent;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;
+  appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236E7367' fill='none' stroke-width='1.3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;transition:border-color .3s}
+select.sort:hover{border-color:var(--sage-400)}
+
+/*══ PRODUCT GRID ══*/
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.1rem,2.4vw,2.2rem);
+  padding:clamp(1.8rem,3.4vw,2.8rem) var(--pad) clamp(3.5rem,7vw,6rem)}
+.card{display:flex;flex-direction:column;animation:fadeUp .65s var(--ease) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.cmedia{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--rl);background:var(--sand);
+  box-shadow:0 2px 12px -8px rgba(44,54,38,.4)}
+.cmedia img{width:100%;height:100%;object-fit:cover;transition:transform 1.15s var(--ease);filter:saturate(.96) contrast(1.02)}
+.card:hover .cmedia img{transform:scale(1.07)}
+.cmedia::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(34,38,31,.22),transparent 42%);
+  opacity:0;transition:opacity .45s}
+.card:hover .cmedia::after{opacity:1}
+.badge{position:absolute;top:.85rem;left:.85rem;z-index:4;padding:.35rem .75rem;border-radius:999px;
+  font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+  background:var(--sage-700);color:var(--cream)}
+.badge.rose{background:var(--rose)}
+.badge.gold{background:var(--gold);color:#fff}
+.heart{position:absolute;top:.75rem;right:.75rem;z-index:4;width:2.15rem;height:2.15rem;border-radius:50%;
+  background:rgba(253,251,248,.9);backdrop-filter:blur(6px);display:grid;place-items:center;
+  transition:.3s var(--ease)}
+.heart svg{width:15px;height:15px;stroke:var(--ink);stroke-width:1.4;fill:none;transition:.3s}
+.heart:hover{transform:scale(1.1)}
+.heart.on svg{fill:var(--rose);stroke:var(--rose)}
+.quick{position:absolute;left:1rem;right:1rem;bottom:1rem;z-index:4;
+  background:rgba(253,251,248,.95);backdrop-filter:blur(8px);padding:.72rem;border-radius:999px;
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;text-align:center;
+  transform:translateY(150%);opacity:0;transition:all .5s var(--ease)}
+.card:hover .quick,.quick:focus-visible{transform:none;opacity:1}
+.quick:hover{background:var(--sage-900);color:var(--cream)}
+.cbody{padding-top:1.15rem;display:flex;flex-direction:column;flex:1}
+.stars{display:none}
+.stars i{display:flex;gap:1px}
+.stars svg{width:11px;height:11px;fill:var(--gold)}
+.stars svg.e{fill:var(--sand-2)}
+.cname{font-family:var(--display);font-size:1.44rem;font-weight:400;margin-top:.45rem;line-height:1.18}
+.cdesc{margin-top:.5rem;font-size:.85rem;color:var(--ink-soft);flex:1;line-height:1.6}
+.csize{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-700);margin-top:.7rem}
+.cmeta{display:flex;align-items:baseline;gap:.6rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--line-2)}
+.price{font-size:1.05rem;font-weight:500;letter-spacing:.01em}
+.was{font-size:.8rem;color:var(--ink-soft);text-decoration:line-through}
+.save{margin-left:auto;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-700);
+  background:var(--rose-50);padding:.24rem .58rem;border-radius:999px}
+.add{margin-top:.85rem;width:100%;padding:.82rem;border:1px solid var(--sage-700);border-radius:999px;
+  font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--sage-700);
+  transition:all .35s var(--ease)}
+.add:hover{background:var(--sage-700);color:var(--cream)}
+.add.done{background:var(--sage-700);color:var(--cream)}
+.empty-grid{grid-column:1/-1;text-align:center;padding:4rem 0;color:var(--ink-soft)}
+
+/*══ RITUAL ══*/
+.ritual{background:var(--sage-50);border-block:1px solid var(--line-2);position:relative;overflow:hidden}
+.ritual::before{content:"";position:absolute;right:-8%;top:-20%;width:44%;height:140%;border-radius:50%;
+  background:radial-gradient(circle,rgba(194,113,138,.09),transparent 65%)}
+.ritual>*{position:relative;z-index:2}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);
+  padding:clamp(2rem,4vw,3rem) var(--pad) clamp(3.5rem,7vw,5.5rem)}
+.step{position:relative;padding-top:2.2rem}
+.step::before{content:"";position:absolute;top:0;left:0;width:2.6rem;height:1px;background:var(--sage-400)}
+.step .num{font-family:var(--display);font-size:2.6rem;font-weight:300;color:var(--rose);line-height:1;display:block}
+.step h3{font-family:var(--display);font-size:1.5rem;font-weight:400;margin-top:.7rem;max-width:14ch}
+.step p{margin-top:.75rem;font-size:.9rem;color:var(--ink-soft);max-width:34ch}
+
+/*══ SPLIT / VALUES ══*/
+.split{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:center;
+  padding:clamp(3.5rem,8vw,6.5rem) var(--pad)}
+.split-media{position:relative;aspect-ratio:1/1;border-radius:var(--rl);overflow:hidden;box-shadow:var(--shadow)}
+.split-media img{width:100%;height:100%;object-fit:cover}
+.split-media.round{border-radius:var(--rl) 200px var(--rl) 200px}
+.vlist{list-style:none;margin-top:2rem}
+.vlist li{padding:1.15rem 0;border-top:1px solid var(--line-2);display:grid;
+  grid-template-columns:auto 1fr;gap:1rem;align-items:start}
+.vlist li:last-child{border-bottom:1px solid var(--line-2)}
+.vlist .ic{width:2.2rem;height:2.2rem;border-radius:50%;background:var(--sage-50);display:grid;place-items:center;flex:none}
+.vlist .ic svg{width:14px;height:14px;stroke:var(--sage-700);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.vlist b{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.vlist p{font-size:.88rem;color:var(--ink-soft);margin-top:.3rem}
+
+/*══ NIGHT BANNER ══*/
+.night{position:relative;min-height:clamp(24rem,52vw,34rem);display:grid;align-items:center;
+  color:var(--cream);overflow:hidden}
+.night img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.night::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(28,23,62,.94) 0%,rgba(30,25,66,.78) 40%,rgba(36,31,78,.25) 82%)}
+.night .in{position:relative;z-index:3;padding:clamp(3rem,7vw,5rem) var(--pad);max-width:36rem}
+.night .eyebrow{color:var(--lav)}
+.night .eyebrow::before{background:var(--lav)}
+.night h2{color:var(--cream)}
+.night h2 em{color:var(--lav)}
+.night p{color:rgba(253,251,248,.78);margin-top:1.3rem;max-width:40ch}
+.night .hcta{margin-top:2.2rem}
+
+/*══ LOOKBOOK ══*/
+.look{padding-bottom:clamp(3.5rem,7vw,5.5rem);position:relative}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,25vw);
+  gap:clamp(.7rem,1.6vw,1.2rem);overflow-x:auto;scroll-snap-type:x proximity;
+  scroll-padding-left:var(--pad);
+  padding:clamp(1.8rem,3.5vw,2.8rem) var(--pad) 1rem;cursor:grab;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip.drag{cursor:grabbing;scroll-snap-type:none}
+.strip figure{scroll-snap-align:start;margin:0;aspect-ratio:4/5;border-radius:var(--rl);overflow:hidden;
+  position:relative;box-shadow:var(--shadow-sm)}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease);pointer-events:none}
+.strip figure:hover img{transform:scale(1.06)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1.1rem .95rem;
+  background:linear-gradient(to top,rgba(34,38,31,.72),transparent);color:var(--cream);
+  font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.arrows{display:flex;gap:.5rem;padding:0 var(--pad);margin-top:.6rem}
+.arrows button{width:2.6rem;height:2.6rem;border-radius:50%;border:1px solid var(--line);
+  display:grid;place-items:center;transition:.3s}
+.arrows button:hover{background:var(--sage-700);border-color:var(--sage-700)}
+.arrows svg{width:15px;height:15px;stroke:var(--ink);stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:.3s}
+.arrows button:hover svg{stroke:var(--cream)}
+
+/*══ REVIEWS ══*/
+.reviews{background:var(--sand);border-block:1px solid var(--line-2);padding-bottom:clamp(3.5rem,7vw,5.5rem);
+  position:relative;overflow:hidden}
+.rview{overflow:hidden;padding:clamp(2rem,4vw,3rem) var(--pad) 0}
+.rtrack{display:flex;transition:transform .8s var(--ease)}
+.rslide{flex:0 0 100%;padding:0 .2rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+.rslide .qm{font-family:var(--display);font-size:3.6rem;color:var(--rose-200);line-height:.6}
+.rslide blockquote{font-family:var(--display);font-size:clamp(1.35rem,2.9vw,2.1rem);font-weight:300;
+  line-height:1.4;max-width:30ch;margin-top:1.4rem;font-style:italic}
+.rslide .who{margin-top:1.8rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.rslide .where{font-size:.72rem;color:var(--ink-soft);margin-top:.25rem}
+.rslide .stars{justify-content:center;margin-top:1rem}
+.rnav{display:flex;align-items:center;justify-content:center;gap:1.4rem;margin-top:2.4rem}
+.dots{display:flex;gap:.45rem}
+.dots button{width:6px;height:6px;border-radius:50%;background:var(--sage-200);transition:.35s var(--ease)}
+.dots button.on{background:var(--sage-700);width:20px;border-radius:99px}
+
+/*══ FAQ ══*/
+.faqwrap{padding:0 var(--pad) clamp(3.5rem,7vw,5.5rem);max-width:52rem;margin:2.6rem auto 0}
+.acc{border-top:1px solid var(--line-2)}
+.acc:last-child{border-bottom:1px solid var(--line-2)}
+.acc button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem;
+  padding:1.4rem 0;text-align:left;transition:color .3s}
+.acc button:hover{color:var(--sage-700)}
+.acc .q{flex:1;font-size:1rem;font-weight:400}
+.acc .ic{width:1.5rem;height:1.5rem;flex:none;position:relative}
+.acc .ic::before,.acc .ic::after{content:"";position:absolute;top:50%;left:50%;background:var(--sage-700);
+  transform:translate(-50%,-50%);transition:.4s var(--ease)}
+.acc .ic::before{width:13px;height:1.2px}
+.acc .ic::after{width:1.2px;height:13px}
+.acc.open .ic::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.acc .panel{max-height:0;overflow:hidden;transition:max-height .55s var(--ease)}
+.acc .panel p{padding:0 0 1.5rem;max-width:56ch;color:var(--ink-soft);font-size:.92rem}
+
+/*══ NEWSLETTER ══*/
+.news{padding:clamp(3.5rem,8vw,6rem) var(--pad);text-align:center;position:relative;overflow:hidden;
+  background:var(--sage-900);color:var(--cream)}
+.news::before{content:"";position:absolute;left:50%;top:-40%;width:60rem;height:60rem;transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(194,113,138,.16),transparent 62%)}
+.news>*{position:relative;z-index:2}
+.news .eyebrow{color:var(--rose-200)}
+.news .eyebrow::before,.news .eyebrow::after{background:rgba(239,201,212,.5)}
+.news h2{color:var(--cream);margin-inline:auto}
+.news h2 em{color:var(--rose-200)}
+.news .lede{color:rgba(253,251,248,.72);margin-inline:auto}
+.field{display:flex;gap:.5rem;max-width:30rem;width:100%;margin:2.2rem auto 0;flex-wrap:wrap;justify-content:center}
+.field input{flex:1;min-width:13rem;padding:.95rem 1.4rem;border:1px solid rgba(253,251,248,.24);
+  border-radius:999px;background:rgba(253,251,248,.07);font-size:.9rem;color:var(--cream);transition:.3s}
+.field input::placeholder{color:rgba(253,251,248,.45)}
+.field input:focus{outline:none;border-color:var(--rose-200);background:rgba(253,251,248,.12)}
+.fmsg{margin-top:.9rem;font-size:.82rem;min-height:1.4em;color:var(--rose-200)}
+.fmsg.ok{color:var(--sage-200)}
+
+/*══ FOOTER ══*/
+footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
+.fcols{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:var(--gap)}
+.fcols h4{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;margin-bottom:1.2rem;
+  color:var(--sage-700)}
+.fcols ul{list-style:none}
+.fcols li{margin-bottom:.7rem}
+.fcols li a{font-size:.85rem;color:var(--ink-soft);transition:.3s}
+.fcols li a:hover{color:var(--sage-700);padding-left:.3rem}
+.fblurb{max-width:32ch;margin-top:1.2rem;font-size:.87rem;color:var(--ink-soft)}
+.social{display:flex;gap:.5rem;margin-top:1.5rem}
+.social a{width:2.3rem;height:2.3rem;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;
+  transition:.35s var(--ease)}
+.social a:hover{background:var(--sage-700);border-color:var(--sage-700);transform:translateY(-2px)}
+.social svg{width:15px;height:15px;stroke:var(--ink);stroke-width:1.4;fill:none;transition:.3s}
+.social a:hover svg{stroke:var(--cream)}
+.pay{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:1.4rem}
+.pay i{padding:.28rem .6rem;border:1px solid var(--line);border-radius:4px;font-size:.55rem;
+  letter-spacing:.1em;font-style:normal;color:var(--ink-soft);text-transform:uppercase}
+.fbot{margin-top:clamp(2.2rem,4.5vw,3.2rem);padding-top:1.4rem;border-top:1px solid var(--line-2);
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;
+  font-size:.72rem;color:var(--ink-soft)}
+.fbot .legal{max-width:60ch;font-size:.68rem;line-height:1.55}
+
+/*══ DRAWER / MODAL ══*/
+.scrim{position:fixed;inset:0;background:rgba(34,38,31,.42);backdrop-filter:blur(4px);
+  z-index:300;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.scrim.on{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(27rem,100%);background:var(--cream);
+  z-index:320;transform:translateX(100%);transition:transform .55s var(--ease);
+  display:flex;flex-direction:column;box-shadow:-20px 0 60px -30px rgba(34,38,31,.5)}
+.drawer.on{transform:none}
+.dhead{display:flex;align-items:center;justify-content:space-between;
+  padding:1.35rem 1.5rem 1.15rem;border-bottom:1px solid var(--line-2)}
+.dhead .t{font-family:var(--display);font-size:1.5rem}
+.x{width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;transition:background .3s}
+.x:hover{background:var(--sand)}
+.x svg{width:15px;height:15px;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round}
+.ship{padding:.95rem 1.5rem;background:var(--sage-50);font-size:.74rem;color:var(--sage-700)}
+.ship .track{height:3px;border-radius:99px;background:var(--sage-200);margin-top:.55rem;overflow:hidden}
+.ship .track i{display:block;height:100%;background:var(--sage-700);width:0;transition:width .6s var(--ease)}
+.dbody{flex:1;overflow-y:auto;padding:.4rem 1.5rem}
+.dfoot{border-top:1px solid var(--line-2);padding:1.15rem 1.5rem 1.4rem;background:var(--cream)}
+.empty{text-align:center;color:var(--ink-soft);font-size:.88rem;padding:3.5rem 0}
+.empty svg{width:34px;height:34px;stroke:var(--sage-200);stroke-width:1;fill:none;margin:0 auto 1rem}
+.li{display:grid;grid-template-columns:4.6rem 1fr auto;gap:.9rem;padding:1.05rem 0;
+  border-bottom:1px solid var(--line-2);align-items:start;animation:fadeUp .4s var(--ease) both}
+.li .thumb{aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--sand)}
+.li .thumb img{width:100%;height:100%;object-fit:cover}
+.li .nm{font-family:var(--display);font-size:1.08rem;line-height:1.2}
+.li .sz{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:.2rem}
+.qty{display:flex;align-items:center;gap:.15rem;margin-top:.55rem;border:1px solid var(--line);
+  border-radius:999px;width:max-content;padding:.1rem}
+.qty button{width:1.6rem;height:1.6rem;border-radius:50%;display:grid;place-items:center;font-size:.85rem;
+  color:var(--ink-soft);transition:.25s}
+.qty button:hover{background:var(--sage-50);color:var(--sage-700)}
+.qty span{min-width:1.5rem;text-align:center;font-size:.8rem}
+.li .rm{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
+  margin-top:.5rem;border-bottom:1px solid var(--line);transition:.3s}
+.li .rm:hover{color:var(--rose-700);border-color:var(--rose)}
+.li .lp{font-size:.88rem;font-weight:500;white-space:nowrap}
+.promo{display:flex;gap:.4rem;margin-bottom:.9rem}
+.promo input{flex:1;padding:.6rem 1rem;border:1px solid var(--line);border-radius:999px;font-size:.78rem;
+  background:transparent}
+.promo input:focus{outline:none;border-color:var(--sage-400)}
+.promo button{padding:.6rem 1.1rem;border-radius:999px;border:1px solid var(--line);font-size:.62rem;
+  letter-spacing:.14em;text-transform:uppercase;transition:.3s}
+.promo button:hover{background:var(--sage-700);color:var(--cream);border-color:var(--sage-700)}
+.pmsg{font-size:.72rem;margin:-.5rem 0 .8rem;color:var(--sage-700);min-height:1em}
+.row{display:flex;justify-content:space-between;align-items:baseline;font-size:.82rem;margin-bottom:.5rem;
+  color:var(--ink-soft)}
+.row.tot{font-size:1rem;color:var(--ink);font-weight:500;padding-top:.6rem;margin-top:.3rem;
+  border-top:1px solid var(--line-2)}
+.done-msg{text-align:center;padding:3rem 1rem}
+.done-msg .ok{width:3.4rem;height:3.4rem;border-radius:50%;background:var(--sage-50);display:grid;
+  place-items:center;margin:0 auto 1.2rem}
+.done-msg .ok svg{width:20px;height:20px;stroke:var(--sage-700);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.done-msg h3{font-family:var(--display);font-size:1.6rem;font-weight:400}
+.done-msg p{color:var(--ink-soft);font-size:.87rem;margin-top:.7rem}
+
+/*══ QUICK VIEW ══*/
+.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-46%) scale(.97);
+  width:min(58rem,94vw);max-height:90vh;overflow-y:auto;background:var(--cream);z-index:320;
+  border-radius:var(--rl);opacity:0;visibility:hidden;transition:all .5s var(--ease);
+  display:grid;grid-template-columns:1fr 1fr;box-shadow:0 40px 90px -40px rgba(34,38,31,.55)}
+.modal.on{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+.mmedia{position:relative;aspect-ratio:4/5;overflow:hidden}
+.mmedia img{width:100%;height:100%;object-fit:cover}
+.modal .x{position:absolute;top:.85rem;right:.85rem;z-index:6;background:rgba(253,251,248,.92)}
+.mbody{padding:clamp(1.5rem,3vw,2.6rem);display:flex;flex-direction:column}
+.mbody h3{font-family:var(--display);font-size:2rem;font-weight:400;margin-top:.5rem;line-height:1.15}
+.mbody .cdesc{font-size:.92rem;margin-top:.9rem;flex:none}
+.blist{list-style:none;margin-top:1.3rem;display:flex;flex-direction:column;gap:.55rem}
+.blist li{display:flex;gap:.6rem;align-items:flex-start;font-size:.86rem;color:var(--ink-soft)}
+.blist svg{width:13px;height:13px;stroke:var(--sage-700);stroke-width:2;fill:none;flex:none;margin-top:.42rem;
+  stroke-linecap:round;stroke-linejoin:round}
+.mprice{display:flex;align-items:baseline;gap:.7rem;margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid var(--line-2)}
+.mprice .price{font-size:1.5rem}
+.mqty{display:flex;gap:.6rem;margin-top:1.2rem;align-items:center}
+
+/*══ SEARCH ══*/
+.search{position:fixed;inset:0;z-index:330;background:rgba(253,251,248,.97);backdrop-filter:blur(10px);
+  opacity:0;visibility:hidden;transition:.4s var(--ease);padding:clamp(3rem,10vh,7rem) var(--pad);overflow-y:auto}
+.search.on{opacity:1;visibility:visible}
+.search .inwrap{max-width:44rem;margin:0 auto}
+.search input{width:100%;padding:1rem 0;border:none;border-bottom:1px solid var(--line);
+  background:transparent;font-family:var(--display);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:300}
+.search input:focus{outline:none;border-color:var(--sage-700)}
+.sres{max-width:44rem;margin:2rem auto 0;display:grid;gap:.5rem}
+.sres a{display:grid;grid-template-columns:3.6rem 1fr auto;gap:1rem;align-items:center;padding:.7rem;
+  border-radius:12px;transition:background .3s}
+.sres a:hover{background:var(--sand)}
+.sres img{aspect-ratio:4/5;border-radius:6px;object-fit:cover;width:100%}
+.sres .n{font-family:var(--display);font-size:1.15rem}
+.sres .c{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.snone{text-align:center;color:var(--ink-soft);padding:2rem 0;font-size:.9rem}
+
+/*══ TOAST ══*/
+.toasts{position:fixed;left:50%;bottom:1.6rem;transform:translateX(-50%);z-index:500;
+  display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none;width:max-content;max-width:92vw}
+.toast{background:var(--sage-900);color:var(--cream);padding:.75rem 1.3rem;border-radius:999px;
+  font-size:.76rem;display:flex;align-items:center;gap:.6rem;box-shadow:var(--shadow);
+  animation:tIn .45s var(--ease) both}
+.toast svg{width:14px;height:14px;stroke:var(--sage-200);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.toast.out{animation:tOut .35s var(--ease2) forwards}
+@keyframes tIn{from{opacity:0;transform:translateY(16px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes tOut{to{opacity:0;transform:translateY(10px) scale(.96)}}
+
+/*══ BACK TO TOP ══*/
+.top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:200;width:2.9rem;height:2.9rem;
+  border-radius:50%;background:var(--sage-900);display:grid;place-items:center;
+  opacity:0;visibility:hidden;transition:all .45s var(--ease);box-shadow:var(--shadow-sm)}
+.top.on{opacity:1;visibility:visible}
+.top:hover{background:var(--sage-700);transform:translateY(-3px)}
+.top svg{width:15px;height:15px;stroke:var(--cream);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/*══ REVEAL ══*/
+.rev{opacity:0;transform:translateY(26px);transition:opacity .95s var(--ease),transform .95s var(--ease)}
+.rev.in{opacity:1;transform:none}
+.par{will-change:transform}
+
+/*══ CHECKOUT FORM ══*/
+.checkout-panel{padding:1.4rem 1.5rem 1rem;border-bottom:1px solid var(--line-2)}
+.checkout-head h3{font-family:var(--display);font-size:1.6rem;font-weight:400;margin-top:.25rem}
+.checkout-form{display:flex;flex-direction:column;gap:.9rem;margin-top:1.2rem}
+.checkout-form label{display:flex;flex-direction:column;gap:.35rem;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.checkout-form input,.checkout-form textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line);border-radius:10px;background:transparent;font-size:.85rem;text-transform:none;letter-spacing:normal}
+.checkout-form input:focus,.checkout-form textarea:focus{outline:none;border-color:var(--sage-400);box-shadow:0 0 0 3px rgba(140,160,119,.12)}
+.checkout-summary{padding:.9rem;background:var(--sage-50);border-radius:12px;font-size:.82rem}
+.checkout-summary .sumrow{display:flex;justify-content:space-between;gap:1rem;padding:.22rem 0}
+.checkout-summary .sumtotal{margin-top:.45rem;padding-top:.55rem;border-top:1px solid var(--line-2);font-weight:500}
+.checkout-note{font-size:.72rem;line-height:1.5;color:var(--ink-soft)}
+.checkout-actions{display:flex;gap:.5rem}
+.checkout-actions .btn{flex:1}
+.search-close{position:absolute;right:var(--pad);top:1rem}
+/*══ STICKY PRODUCT RIBBON + WHATSAPP ══*/
+.product-ribbon{height:64px;overflow:hidden;border-top:1px solid var(--line-2);background:rgba(253,251,248,.96)}
+.ribbon-track{display:flex;width:max-content;min-width:200%;height:100%;animation:ribbonFlow 34s linear infinite;will-change:transform}
+.product-ribbon:hover .ribbon-track,.product-ribbon:focus-within .ribbon-track{animation-play-state:paused}
+.ribbon-set{display:flex;align-items:center;gap:1rem;padding:6px .5rem;min-width:50%}
+.ribbon-item{height:50px;min-width:190px;display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:.65rem;padding:.25rem .8rem .25rem .3rem;border:1px solid var(--line-2);border-radius:999px;background:#fff;color:var(--ink);text-align:left;box-shadow:0 8px 22px -22px rgba(44,54,38,.7);transition:.25s var(--ease)}
+.ribbon-item:hover,.ribbon-item:focus-visible{border-color:var(--sage-400);transform:translateY(-1px);outline:none}
+.ribbon-item img{width:42px;height:42px;border-radius:50%;object-fit:cover;background:var(--sage-50)}
+.ribbon-item span{font-size:.72rem;font-weight:500;white-space:nowrap}.ribbon-item b{font-size:.68rem;color:var(--sage-700);white-space:nowrap}
+@keyframes ribbonFlow{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.wa-float{position:fixed;right:1.2rem;bottom:1.2rem;z-index:210;display:flex;align-items:center;gap:.65rem;padding:.55rem .95rem .55rem .55rem;border-radius:999px;background:#176b47;color:#fff;box-shadow:0 16px 36px -14px rgba(23,107,71,.7);font-size:.72rem;font-weight:500;letter-spacing:.04em;transition:.28s var(--ease)}
+.wa-float:hover,.wa-float:focus-visible{background:#105337;transform:translateY(-2px);outline:3px solid rgba(23,107,71,.18);outline-offset:3px}
+.wa-dot{width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:#fff;color:#176b47;font-weight:700;font-family:Arial,sans-serif}
+.top{bottom:5.25rem}
+.is-ar{font-family:Tahoma,Arial,sans-serif}.is-ar .h1,.is-ar h2,.is-ar .h2,.is-ar .cname,.is-ar .night h2{font-family:Tahoma,Arial,sans-serif;letter-spacing:0;line-height:1.3}
+.is-ar .ribbon-item{text-align:right;padding:.25rem .3rem .25rem .8rem}.is-ar .drawer{right:auto;left:0;transform:translateX(-100%)}.is-ar .drawer.on{transform:none}.is-ar .search-close{right:auto;left:var(--pad)}
+
+/*══ ROUTINE FINDER ══*/
+.finder-banner{margin:clamp(2.5rem,6vw,5rem) var(--pad) 0;border-radius:32px;overflow:hidden;
+  display:grid;grid-template-columns:1.05fr .95fr;background:var(--sage-50);position:relative;box-shadow:var(--shadow-sm)}
+.finder-banner::before{content:"";position:absolute;inset:auto auto -45% -12%;width:28rem;height:28rem;
+  border-radius:50%;background:radial-gradient(circle,rgba(194,113,138,.18),transparent 68%);pointer-events:none}
+.finder-copy{padding:clamp(2.2rem,5vw,4.5rem);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;z-index:2}
+.finder-copy h2{font-size:clamp(2.2rem,4.2vw,3.8rem);max-width:13ch}.finder-copy .lede{max-width:44ch}
+.finder-points{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.6rem}.finder-points span{padding:.45rem .8rem;border:1px solid rgba(76,95,64,.2);border-radius:999px;background:rgba(255,255,255,.55);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-700);font-weight:500}
+.finder-visual{min-height:30rem;position:relative;overflow:hidden}.finder-visual img{width:100%;height:100%;object-fit:cover}
+.finder-note{position:absolute;left:1.1rem;right:1.1rem;bottom:1.1rem;background:rgba(253,251,248,.92);backdrop-filter:blur(12px);padding:1rem 1.15rem;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-shadow:var(--shadow-sm)}
+.finder-note strong{font-family:var(--display);font-size:1.15rem;font-weight:500}.finder-note small{display:block;color:var(--ink-soft);font-size:.72rem;margin-top:.12rem}
+.last-order{margin-top:1rem;width:100%;display:none;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1rem;border-radius:14px;background:rgba(255,255,255,.65);border:1px solid rgba(76,95,64,.14)}
+.last-order.on{display:flex}.last-order b{font-size:.76rem;font-weight:500}.last-order small{display:block;color:var(--ink-soft);font-size:.68rem}.last-order button{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-700);font-weight:600;border-bottom:1px solid var(--sage-400)}
+
+/*══ FINDER MODAL ══*/
+.finder-modal,.compare-modal{position:fixed;inset:0;z-index:340;display:grid;place-items:center;padding:1rem;opacity:0;visibility:hidden;transition:.4s var(--ease);background:rgba(34,38,31,.42);backdrop-filter:blur(6px)}
+.finder-modal.on,.compare-modal.on{opacity:1;visibility:visible}.finder-shell,.compare-shell{width:min(52rem,96vw);max-height:92vh;overflow:auto;background:var(--cream);border-radius:26px;box-shadow:0 34px 90px -36px rgba(34,38,31,.65);transform:translateY(18px) scale(.98);transition:.45s var(--ease);position:relative}
+.finder-modal.on .finder-shell,.compare-modal.on .compare-shell{transform:none}.feature-close{position:absolute;right:1rem;top:1rem;z-index:5;background:rgba(253,251,248,.88)}
+.finder-head{padding:clamp(1.8rem,4vw,3rem) clamp(1.4rem,4vw,3rem) 1.2rem;border-bottom:1px solid var(--line-2)}
+.finder-head h2{font-size:clamp(2rem,4vw,3rem);margin-top:.6rem}.finder-progress{display:flex;gap:.35rem;margin-top:1.5rem}.finder-progress i{height:3px;flex:1;border-radius:99px;background:var(--sand-2);overflow:hidden}.finder-progress i.on{background:var(--sage-700)}
+.finder-body{padding:clamp(1.4rem,4vw,3rem)}.finder-question{font-family:var(--display);font-size:clamp(1.55rem,3vw,2.1rem);font-weight:400;line-height:1.18;margin-bottom:1.3rem}
+.finder-options{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}.finder-option{padding:1.25rem;text-align:left;border:1px solid var(--line);border-radius:18px;background:#fff;min-height:8rem;transition:.3s var(--ease);display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
+.finder-option:hover,.finder-option:focus-visible{border-color:var(--sage-400);background:var(--sage-50);transform:translateY(-2px)}.finder-option b{font-family:var(--display);font-size:1.25rem;font-weight:500}.finder-option small{color:var(--ink-soft);font-size:.76rem;line-height:1.5}
+.finder-result{display:grid;grid-template-columns:12rem 1fr;gap:1.5rem;align-items:center}.finder-result img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px}.finder-result h3{font-family:var(--display);font-size:2rem;font-weight:400;line-height:1.1}.finder-result p{color:var(--ink-soft);font-size:.88rem;margin-top:.7rem}.finder-result .hcta{margin-top:1.2rem}.finder-disclaimer{margin-top:1rem;font-size:.68rem;color:var(--ink-soft);line-height:1.5}
+
+/*══ COMPARE ══*/
+.card-tools{display:flex;gap:.5rem;margin-top:.6rem}.compare-toggle{flex:1;padding:.55rem .75rem;border:1px solid var(--line);border-radius:999px;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);transition:.3s}.compare-toggle:hover,.compare-toggle.on{border-color:var(--sage-400);background:var(--sage-50);color:var(--sage-700)}
+.compare-tray{position:fixed;left:50%;bottom:1.1rem;z-index:260;transform:translate(-50%,140%);opacity:0;width:min(42rem,calc(100vw - 2rem));background:var(--sage-900);color:var(--cream);border-radius:20px;padding:.75rem .85rem .75rem 1rem;display:flex;align-items:center;gap:.8rem;box-shadow:0 18px 55px -18px rgba(44,54,38,.75);transition:.45s var(--ease)}
+.compare-tray.on{transform:translate(-50%,0);opacity:1}.compare-chips{display:flex;gap:.4rem;flex:1;min-width:0}.compare-chip{display:flex;align-items:center;gap:.4rem;padding:.3rem .55rem .3rem .3rem;border-radius:999px;background:rgba(255,255,255,.1);font-size:.66rem;white-space:nowrap}.compare-chip img{width:1.8rem;height:1.8rem;border-radius:50%;object-fit:cover}.compare-chip button{color:var(--rose-200);padding:.1rem}.compare-tray>.btn{padding:.65rem 1.15rem;background:var(--cream);color:var(--sage-900);flex:none}.compare-shell{width:min(68rem,96vw)}.compare-head{padding:1.6rem clamp(1.2rem,3vw,2rem);border-bottom:1px solid var(--line-2)}.compare-head h2{font-size:2.2rem;margin-top:.4rem}.compare-wrap{overflow-x:auto;padding:1rem clamp(1rem,3vw,2rem) 2rem}.compare-table{width:100%;border-collapse:separate;border-spacing:0;min-width:42rem}.compare-table th,.compare-table td{padding:1rem;border-bottom:1px solid var(--line-2);vertical-align:top;text-align:left}.compare-table th:first-child,.compare-table td:first-child{width:9rem;color:var(--ink-soft);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.compare-table thead th{font-family:var(--display);font-size:1.15rem;font-weight:500;color:var(--ink)}.compare-table thead img{width:6rem;aspect-ratio:4/5;object-fit:cover;border-radius:12px;margin-bottom:.65rem}.compare-table td{font-size:.82rem}.compare-table .btn{padding:.65rem 1rem;font-size:.6rem}
+
+/*══ RECENTLY VIEWED + CART RECOMMENDATION ══*/
+.recent-section{padding:0 var(--pad) clamp(3rem,7vw,5rem)}.recent-section[hidden]{display:none}.recent-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.2rem}.recent-head h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:0}.recent-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.recent-card{display:grid;grid-template-columns:4.2rem 1fr;gap:.8rem;align-items:center;padding:.7rem;border:1px solid var(--line-2);border-radius:16px;background:#fff;text-align:left;transition:.3s}.recent-card:hover{border-color:var(--sage-400);transform:translateY(-2px);box-shadow:var(--shadow-sm)}.recent-card img{width:4.2rem;aspect-ratio:4/5;object-fit:cover;border-radius:10px}.recent-card b{font-family:var(--display);font-size:1rem;font-weight:500;display:block;line-height:1.15}.recent-card small{font-size:.68rem;color:var(--sage-700)}
+.cart-suggest{margin:1rem 0 .6rem;padding:1rem;border-radius:16px;background:var(--rose-50);border:1px solid rgba(194,113,138,.14)}.cart-suggest>span{display:block;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-700);font-weight:600}.cart-suggest .in{display:grid;grid-template-columns:3.6rem 1fr auto;gap:.75rem;align-items:center;margin-top:.65rem}.cart-suggest img{width:3.6rem;height:4.2rem;object-fit:cover;border-radius:9px}.cart-suggest b{font-family:var(--display);font-size:1rem;font-weight:500;display:block}.cart-suggest small{font-size:.66rem;color:var(--ink-soft)}.cart-suggest button{padding:.5rem .7rem;border-radius:999px;background:var(--sage-700);color:#fff;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+
+/*══ MOBILE CART BAR ══*/
+.mobile-cart-bar{display:none;position:fixed;left:.75rem;right:.75rem;bottom:.7rem;z-index:250;padding:.5rem .55rem .5rem .85rem;border-radius:18px;background:var(--sage-900);color:var(--cream);box-shadow:0 16px 42px -15px rgba(44,54,38,.78);align-items:center;gap:.75rem}.mobile-cart-bar .mc-info{flex:1;min-width:0}.mobile-cart-bar b{display:block;font-size:.74rem;font-weight:500}.mobile-cart-bar small{display:block;color:var(--sage-200);font-size:.65rem}.mobile-cart-bar button{padding:.68rem .95rem;border-radius:999px;background:var(--cream);color:var(--sage-900);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.is-ar .finder-option,.is-ar .compare-table th,.is-ar .compare-table td{text-align:right}.is-ar .feature-close{right:auto;left:1rem}
+/*══ RESPONSIVE ══*/
+@media(max-width:1080px){
+  .hero{grid-template-columns:1fr;gap:2.6rem}
+  .hmedia{max-width:34rem;margin:0 auto;width:100%}
+  .hmedia .seal{right:.4rem;top:-1rem;width:5.4rem;height:5.4rem}
+  .trust{grid-template-columns:repeat(2,1fr)}
+  .pgrid{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr;gap:2.4rem}
+  .split.rev-order .split-media{order:-1}
+  .steps{grid-template-columns:1fr;gap:2.2rem}
+  .fcols{grid-template-columns:1fr 1fr;gap:2.2rem}
+  .modal{grid-template-columns:1fr;max-height:86vh}
+  .mmedia{aspect-ratio:16/11}
+  .finder-banner{grid-template-columns:1fr}.finder-visual{min-height:25rem}.recent-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .bar{grid-template-columns:auto 1fr auto}
+  nav.main{display:none}
+  .burger{display:grid}
+  .lang{display:none}
+  .hstats{flex-wrap:wrap;gap:1.4rem 2rem}
+  .hmedia .c1{left:-.4rem}.hmedia .c2{right:-.4rem}
+  .tools{flex-direction:column;align-items:stretch}
+  .chips{overflow-x:auto;flex-wrap:nowrap;padding-bottom:.4rem;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .sortwrap{justify-content:flex-end}
+  .finder-options{grid-template-columns:1fr}.finder-option{min-height:auto}.finder-result{grid-template-columns:8rem 1fr}.compare-chips .compare-chip:nth-child(3){display:none}
+}
+@media(max-width:560px){
+  .pgrid{grid-template-columns:1fr;gap:2.2rem}
+  .trust{grid-template-columns:1fr}
+  .fcols{grid-template-columns:1fr}
+  .logo svg{width:30px;height:30px}
+  .logo .wm b{font-size:1.05rem;letter-spacing:.28em}
+  .hero .h1{font-size:clamp(2.5rem,10vw,3.4rem)}
+  .product-ribbon{height:58px}.ribbon-item{min-width:164px;height:46px;grid-template-columns:38px 1fr;padding-right:.65rem}.ribbon-item img{width:38px;height:38px}.ribbon-item b{display:none}
+  .wa-float{right:.75rem;bottom:.75rem;padding:.48rem .7rem;font-size:.66rem;max-width:calc(100vw - 1.5rem)}.wa-float #waFloatLabel{display:inline;white-space:nowrap}.top{right:.75rem;bottom:4.65rem}
+  .finder-banner{margin-inline:.75rem;border-radius:24px}.finder-copy{padding:2rem 1.25rem}.finder-visual{min-height:20rem}.finder-note{align-items:flex-start}.finder-result{grid-template-columns:1fr}.finder-result img{max-height:17rem;aspect-ratio:16/10}.recent-grid{grid-template-columns:1fr}.recent-section{padding-inline:.75rem}.compare-tray{bottom:.75rem}.mobile-cart-bar.on{display:flex}.checkout-actions{flex-direction:column}.cart-suggest .in{grid-template-columns:3.4rem 1fr}.cart-suggest button{grid-column:1/-1;width:100%}
+  .has-mobile-cart .wa-float{bottom:5.25rem}.has-mobile-cart .top{bottom:9.05rem}.has-compare .wa-float{bottom:5.35rem}.has-compare .top{bottom:9.1rem}.has-mobile-cart.has-compare .compare-tray{bottom:5.25rem}.has-mobile-cart.has-compare .wa-float{bottom:9.8rem}.has-mobile-cart.has-compare .top{bottom:13.6rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .rev{opacity:1;transform:none}
+  .h1 .l>span{transform:none}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Lybelle",
+  "description":"Compléments alimentaires et soins d'hygiène formulés au Maroc.",
+  "url":"/"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#shop">Passer au contenu</a>
+<noscript><div style="padding:1rem;background:#2C3626;color:#FDFBF8;text-align:center">Lybelle fonctionne mieux avec JavaScript activé. Le catalogue reste consultable, mais le panier et la recherche nécessitent JavaScript.</div></noscript>
+
+<div id="intro">
+  <div class="in">
+    <div class="logo lg" id="introLogo"></div>
+    <div class="bar"><i></i></div>
+  </div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="ann"><div class="track" id="annTrack"></div></div>
+
+<header id="hdr">
+  <div class="bar">
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+    <nav class="main" id="mainNav"></nav>
+    <a href="#top" class="brandlink logo" id="hdrLogo" aria-label="Lybelle"></a>
+    <div class="utils">
+      <div class="lang" role="group" aria-label="Langue">
+        <button id="btn-fr" aria-pressed="true">FR</button><button id="btn-ar" aria-pressed="false">AR</button>
+      </div>
+      <button class="ibtn" id="searchBtn" aria-label="Recherche">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      </button>
+      <button class="ibtn" id="wishBtn" aria-label="Favoris">
+        <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-7-9.4A4 4 0 0 1 12 7a4 4 0 0 1 7 3.6C19 15.4 12 20 12 20z"/></svg>
+        <span class="pill sage" id="wishPill">0</span>
+      </button>
+      <button class="ibtn" id="cartBtn" aria-label="Panier">
+        <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="pill" id="cartPill">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="product-ribbon" id="productRibbon" aria-label="Produits LYBELLE"></div>
+</header>
+
+<div class="mnav" id="mnav"></div>
+
+<main id="top">
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="rev">
+      <span class="eyebrow" data-t="hero.eyebrow"></span>
+      <h1 class="h1" id="h1"></h1>
+      <p class="lede" data-t="hero.lede"></p>
+      <div class="hcta">
+        <a href="#shop" class="btn btn-solid" data-t="hero.cta1"></a>
+        <a href="#rituel" class="btn btn-ghost" data-t="hero.cta2"></a>
+      </div>
+      <div class="hstats">
+        <div><b>6</b><small data-t="hero.s1"></small></div>
+        <div><b>FR / AR</b><small data-t="hero.s2"></small></div>
+        <div><b>24–72h</b><small data-t="hero.s3"></small></div>
+      </div>
+    </div>
+    <div class="hmedia rev">
+      <div class="shot par"><img loading="eager" decoding="async" fetchpriority="high" alt="Rituel cheveux LYBELLE" src="assets/hero-hair-ritual.webp" width="862" height="1078"></div>
+      <div class="chip c1"><svg viewBox="0 0 24 24"><path d="M12 3c4 4 6 6.7 6 10a6 6 0 0 1-12 0c0-3.3 2-6 6-10z"/></svg><span data-t="hero.chip1"></span></div>
+      <div class="chip c2"><svg viewBox="0 0 24 24"><path d="M20 7L9 18l-5-5"/></svg><span data-t="hero.chip2"></span></div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <defs><path id="circ" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs>
+          <text font-size="9.4" letter-spacing="2.5" fill="currentColor" font-family="Jost, sans-serif">
+            <textPath href="#circ">SCIENCE · NATURE · BIEN-ÊTRE · </textPath>
+          </text>
+        </svg>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TRUST ══ -->
+  <div class="trust">
+    <div><svg viewBox="0 0 24 24"><path d="M3 8h11v8H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>
+      <div><b data-t="tr.1b"></b><small data-t="tr.1s"></small></div></div>
+    <div><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div><b data-t="tr.2b"></b><small data-t="tr.2s"></small></div></div>
+    <div><svg viewBox="0 0 24 24"><path d="M12 21c5-3 8-6.5 8-11a8 8 0 0 0-16 0c0 4.5 3 8 8 11z"/><path d="M12 12c0-3 1.5-5 4-6-.5 3-1.7 4.8-4 6zm0 0c0-3-1.5-5-4-6 .5 3 1.7 4.8 4 6z"/></svg>
+      <div><b data-t="tr.3b"></b><small data-t="tr.3s"></small></div></div>
+    <div><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 15h3"/></svg>
+      <div><b data-t="tr.4b"></b><small data-t="tr.4s"></small></div></div>
+  </div>
+
+  <!-- ══ ROUTINE FINDER ══ -->
+  <section class="finder-banner rev" id="finderBanner">
+    <div class="finder-copy">
+      <span class="eyebrow" id="finderEyebrow">Votre routine LYBELLE</span>
+      <h2 id="finderTitle">Trouvez votre rituel en <em>moins d'une minute</em></h2>
+      <p class="lede" id="finderIntro">Quelques choix simples, puis une suggestion claire et adaptée à votre quotidien.</p>
+      <div class="finder-points" id="finderPoints"></div>
+      <button class="btn btn-solid" id="finderStart" style="margin-top:1.7rem">Créer mon rituel</button>
+      <div class="last-order" id="lastOrderWrap">
+        <div><b id="lastOrderTitle"></b><small id="lastOrderMeta"></small></div>
+        <button id="reorderBtn"></button>
+      </div>
+    </div>
+    <div class="finder-visual">
+      <img src="assets/product-gel-duo.webp" alt="Collection LYBELLE" width="528" height="640" loading="lazy">
+      <div class="finder-note">
+        <div><strong id="finderNoteTitle">Une réponse, pas un diagnostic</strong><small id="finderNoteText">Une orientation simple à partir des informations produit.</small></div>
+        <span class="lbl" id="finderTime">≈ 45 sec</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SHOP ══ -->
+  <section id="shop">
+    <div class="shead rev">
+      <span class="eyebrow" data-t="shop.eyebrow"></span>
+      <h2 data-th="shop.h2"></h2>
+      <p class="lede" data-t="shop.p"></p>
+    </div>
+    <div class="tools rev">
+      <div class="chips" id="chips"></div>
+      <div class="sortwrap">
+        <label for="sort" data-t="shop.sort"></label>
+        <select class="sort" id="sort"></select>
+      </div>
+    </div>
+    <div class="pgrid" id="grid"></div>
+  </section>
+
+  <!-- ══ RECENTLY VIEWED ══ -->
+  <section class="recent-section" id="recentSection" hidden>
+    <div class="recent-head">
+      <div><span class="eyebrow" id="recentEyebrow"></span><h2 id="recentTitle"></h2></div>
+      <button class="link" id="recentClear"></button>
+    </div>
+    <div class="recent-grid" id="recentGrid"></div>
+  </section>
+
+  <!-- ══ RITUAL ══ -->
+  <div class="ritual" id="rituel">
+    <div class="shead rev">
+      <span class="eyebrow" data-t="rit.eyebrow"></span>
+      <h2 data-th="rit.h2"></h2>
+      <p class="lede" data-t="rit.p"></p>
+    </div>
+    <div class="steps" id="steps"></div>
+  </div>
+
+  <!-- ══ VALUES ══ -->
+  <section class="split rev-order" id="apropos">
+    <div class="split-media round rev"><img class="par" src="assets/original-actives.webp" alt="Actifs Lybelle" width="760" height="760" loading="lazy"></div>
+    <div class="rev">
+      <span class="eyebrow" data-t="val.eyebrow"></span>
+      <h2 data-th="val.h2"></h2>
+      <p class="lede" data-t="val.p"></p>
+      <ul class="vlist" id="vlist"></ul>
+    </div>
+  </section>
+
+  <!-- ══ NIGHT ══ -->
+  <section class="night rev">
+    <img src="assets/original-night.webp" alt="Noctiglyc" width="1080" height="606" loading="lazy">
+    <div class="in">
+      <span class="eyebrow" data-t="ngt.eyebrow"></span>
+      <h2 data-th="ngt.h2"></h2>
+      <p data-t="ngt.p"></p>
+      <div class="hcta">
+        <button class="btn btn-inv" data-open="noctiglyc" data-t="ngt.cta"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LOOKBOOK ══ -->
+  <section class="look" id="journal">
+    <div class="shead rev">
+      <span class="eyebrow" data-t="look.eyebrow"></span>
+      <h2 data-th="look.h2"></h2>
+      <p class="lede" data-t="look.p"></p>
+    </div>
+    <div class="strip" id="strip"></div>
+    <div class="arrows">
+      <button id="lbPrev" aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button id="lbNext" aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ══ REVIEWS ══ -->
+  <section class="reviews" hidden>
+    <div class="shead ctr rev">
+      <span class="eyebrow" data-t="rev.eyebrow"></span>
+      <h2 data-th="rev.h2"></h2>
+    </div>
+    <div class="rview"><div class="rtrack" id="rtrack"></div></div>
+    <div class="rnav">
+      <div class="arrows" style="padding:0"><button id="rPrev" aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button></div>
+      <div class="dots" id="rdots"></div>
+      <div class="arrows" style="padding:0"><button id="rNext" aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section id="faq">
+    <div class="shead ctr rev">
+      <span class="eyebrow" data-t="faq.eyebrow"></span>
+      <h2 data-th="faq.h2"></h2>
+    </div>
+    <div class="faqwrap" id="faqList"></div>
+  </section>
+
+  <!-- ══ NEWSLETTER ══ -->
+  <section class="news" id="contact">
+    <div class="rev">
+      <span class="eyebrow" data-t="nl.eyebrow"></span>
+      <h2 data-th="nl.h2"></h2>
+      <p class="lede" data-t="nl.p"></p>
+      <form class="field" id="nlForm" novalidate>
+        <input type="email" id="nlEmail" required aria-label="Email">
+        <button type="submit" class="btn btn-rose" id="nlBtn"></button>
+      </form>
+      <p class="fmsg" id="nlMsg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fcols">
+    <div>
+      <div class="logo" id="footLogo"></div>
+      <p class="fblurb" data-t="foot.blurb"></p>
+      <div class="social" aria-label="Réseaux sociaux">
+        <a href="https://wa.me/212604442881" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +212 604-442881"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.9 7L4 20l1.1-3.9A8 8 0 1 1 20 12z"/><path d="M9.2 9.4c.3-.6.6-.5.9-.5s.6.1.8.6l.5 1.1c.1.3 0 .5-.2.7l-.3.3c.5 1 1.3 1.7 2.2 2.1l.3-.4c.2-.2.4-.3.7-.2l1.1.5c.4.2.5.4.5.7s-.1.9-.6 1.1c-1.4.6-4.6-1.7-5.9-4.5-.2-.5-.3-1-.1-1.5z"/></svg></a>
+      </div>
+      <div class="pay"><i>Visa</i><i>Mastercard</i><i>CMI</i><i data-t="foot.cod"></i></div>
+    </div>
+    <div><h4 data-t="foot.c1"></h4><ul id="fc1"></ul></div>
+    <div><h4 data-t="foot.c2"></h4><ul id="fc2"></ul></div>
+    <div><h4 data-t="foot.c3"></h4><ul id="fc3"></ul></div>
+  </div>
+  <div class="fbot">
+    <span id="rights"></span>
+    <span class="legal" data-t="foot.legal"></span>
+  </div>
+</footer>
+
+<!-- ══ CART ══ -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cart" role="dialog" aria-modal="true" aria-label="Panier">
+  <div class="dhead"><span class="t" id="cartTitle"></span>
+    <button class="x" id="cartX" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="ship" id="shipWrap"><span id="shipMsg"></span><div class="track"><i id="shipBar"></i></div></div>
+  <div class="dbody" id="cartBody"></div>
+  <div class="checkout-panel" id="checkoutPanel" hidden>
+    <div class="checkout-head">
+      <span class="lbl" id="checkoutEyebrow">Commande</span>
+      <h3 id="checkoutTitle">Vos coordonnées</h3>
+    </div>
+    <form id="checkoutForm" class="checkout-form">
+      <label><span id="coNameLbl">Nom complet</span><input id="coName" name="name" autocomplete="name" required></label>
+      <label><span id="coPhoneLbl">Téléphone</span><input id="coPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+      <label><span id="coCityLbl">Ville</span><input id="coCity" name="city" autocomplete="address-level2" required></label>
+      <label><span id="coAddressLbl">Adresse</span><input id="coAddress" name="address" autocomplete="street-address" required></label>
+      <label><span id="coNoteLbl">Note (optionnel)</span><textarea id="coNote" name="note" rows="3"></textarea></label>
+      <div class="checkout-summary" id="checkoutSummary"></div>
+      <p class="checkout-note" id="checkoutNote">Aucun paiement n'est déclenché ici : cette version prépare votre demande de commande.</p>
+      <div class="checkout-actions">
+        <button type="button" class="btn btn-ghost" id="checkoutBack">Retour</button>
+        <button type="submit" class="btn btn-solid" id="checkoutSubmit">Commander sur WhatsApp</button>
+      </div>
+      <p class="fmsg" id="checkoutMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <div class="dfoot" id="cartFoot">
+    <div class="promo">
+      <input id="promoIn" aria-label="Code promo">
+      <button id="promoBtn"></button>
+    </div>
+    <p class="pmsg" id="promoMsg"></p>
+    <div class="row"><span id="subLbl"></span><span id="subVal">—</span></div>
+    <div class="row" id="discRow" style="display:none"><span id="discLbl"></span><span id="discVal"></span></div>
+    <div class="row"><span id="shLbl"></span><span id="shVal">—</span></div>
+    <div class="row tot"><span id="totLbl"></span><span id="totVal">—</span></div>
+    <button class="btn btn-solid" style="width:100%;margin-top:.9rem" id="checkout"></button>
+  </div>
+</aside>
+
+<!-- ══ WISHLIST ══ -->
+<aside class="drawer" id="wish" role="dialog" aria-modal="true" aria-label="Favoris">
+  <div class="dhead"><span class="t" id="wishTitle"></span>
+    <button class="x" id="wishX" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="dbody" id="wishBody"></div>
+</aside>
+
+<!-- ══ QUICK VIEW ══ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Produit">
+  <div class="mmedia"><button class="x" id="modalX" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button><img id="modalImg" src="" alt=""></div>
+  <div class="mbody" id="modalBody"></div>
+</div>
+
+<!-- ══ ROUTINE FINDER MODAL ══ -->
+<div class="finder-modal" id="finderModal" role="dialog" aria-modal="true" aria-labelledby="finderModalTitle">
+  <div class="finder-shell">
+    <button class="x feature-close" id="finderX" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="finder-head">
+      <span class="lbl" id="finderStepLabel"></span>
+      <h2 id="finderModalTitle"></h2>
+      <div class="finder-progress" id="finderProgress" aria-hidden="true"><i></i><i></i><i></i></div>
+    </div>
+    <div class="finder-body" id="finderBody"></div>
+  </div>
+</div>
+
+<!-- ══ PRODUCT COMPARISON ══ -->
+<div class="compare-modal" id="compareModal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+  <div class="compare-shell">
+    <button class="x feature-close" id="compareX" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="compare-head"><span class="lbl" id="compareEyebrow"></span><h2 id="compareTitle"></h2></div>
+    <div class="compare-wrap" id="compareBody"></div>
+  </div>
+</div>
+
+<!-- ══ SEARCH ══ -->
+<div class="search" id="search" role="dialog" aria-modal="true" aria-label="Recherche">
+  <button class="x search-close" id="searchX" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="inwrap">
+    <input id="searchIn" type="search" autocomplete="off" aria-label="Recherche">
+  </div>
+  <div class="sres" id="sres"></div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="compare-tray" id="compareTray" aria-live="polite">
+  <div class="compare-chips" id="compareChips"></div>
+  <button class="btn" id="compareOpen"></button>
+</div>
+<a class="wa-float" id="whatsappFloat" href="https://wa.me/212604442881" target="_blank" rel="noopener noreferrer" aria-label="Commander sur WhatsApp">
+  <span class="wa-dot" aria-hidden="true">W</span><span id="waFloatLabel">Commander sur WhatsApp</span>
+</a>
+<button class="top" id="toTop" aria-label="Haut de page"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="mobile-cart-bar" id="mobileCartBar">
+  <div class="mc-info"><b id="mobileCartCount"></b><small id="mobileCartTotal"></small></div>
+  <button id="mobileCartOpen"></button>
+</div>
+<script>
+"use strict";
+/*═══════════════════════════════════════════════════════════════
+  LYBELLE — storefront engine
+═══════════════════════════════════════════════════════════════*/
+
+/*──── production-safe front-end configuration ────*/
+const STORE_CONFIG = {
+  siteName: "Lybelle",
+  currency: "MAD",
+  freeShipping: 400,
+  shippingFee: 35,
+  promoWelcome: 0.15,
+  whatsappNumber: "212604442881",
+  whatsappDisplay: "+212 604-442881",
+  newsletterEndpoint: "", // Optional POST endpoint for a real newsletter provider
+  orderEndpoint: "" // Optional POST endpoint for a real order backend
+};
+
+const STORAGE_KEYS = {
+  cart:"lybelle-cart-v1", wish:"lybelle-wish-v1", lang:"lybelle-lang-v1", promo:"lybelle-promo-v1",
+  viewed:"lybelle-viewed-v1", lastOrder:"lybelle-last-order", profile:"lybelle-checkout-profile-v1"
+};
+function safeLoad(key, fallback){ try { const raw=localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; } catch { return fallback; } }
+function safeSave(key, value){ try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
+function orderRef(){ return "LYB-" + Date.now().toString(36).toUpperCase().slice(-7); }
+function persist(){
+  safeSave(STORAGE_KEYS.cart, cart);
+  safeSave(STORAGE_KEYS.wish, Array.from(wish));
+  safeSave(STORAGE_KEYS.lang, lang);
+  safeSave(STORAGE_KEYS.promo, discount);
+  safeSave(STORAGE_KEYS.viewed, viewed);
+}
+
+/*──── imagery ────*/
+const IMG = {
+  hero: "assets/hero-hair-ritual.webp",
+  actives: "assets/original-actives.webp",
+  night: "assets/original-night.webp",
+  nightR: "assets/original-nightR.webp",
+  daily: "assets/product-gel-duo.webp",
+  huile: "assets/product-hair-oil.webp",
+  noctiglyc: "assets/product-noctiglyc.webp",
+  selenium: "assets/product-selenium-x.webp",
+  gel: "assets/product-gel-intime.webp",
+  rituel: "assets/hero-hair-ritual.webp"
+};
+
+/*──── brand mark ────*/
+const PETAL = "M0,-46 C11,-27 15,-10 0,0 C-15,-10 -11,-27 0,-46Z";
+function mark(w){
+  const h = Math.round(w*70/124);
+  return `<svg viewBox="0 14 124 70" width="${w}" height="${h}" aria-hidden="true">
+  <path d="M62 68 C46 78 22 76 10 64 C24 54 48 54 62 68Z" fill="#5F7350"/>
+  <path d="M62 68 C78 78 102 76 114 64 C100 54 76 54 62 68Z" fill="#5F7350"/>
+  <g transform="translate(62,66)">
+    <path d="${PETAL}" fill="#C2718A" transform="rotate(-63) scale(.6)"/>
+    <path d="${PETAL}" fill="#C2718A" transform="rotate(63) scale(.6)"/>
+    <path d="${PETAL}" fill="#5F7350" transform="rotate(-33) scale(.86)"/>
+    <path d="${PETAL}" fill="#5F7350" transform="rotate(33) scale(.86)"/>
+    <path d="${PETAL}" fill="#C2718A"/>
+  </g></svg>`;
+}
+const logoHTML = (w,tag) => `${mark(w)}<span class="wm"><b>L<i>Y</i>BELLE</b><small>${tag}</small></span>`;
+
+/*──── catalogue ────*/
+const PRODUCTS = [
+  { id:"selenium",  cat:"complements", price:249, was:299, img:"selenium",  rating:4.8, reviews:214, badge:"best" },
+  { id:"noctiglyc", cat:"complements", price:279, was:null, img:"noctiglyc", rating:4.9, reviews:167, badge:"new" },
+  { id:"huile",     cat:"capillaire",  price:189, was:null, img:"huile",     rating:4.7, reviews:143, badge:null },
+  { id:"gel",       cat:"intime",      price:129, was:null, img:"gel",       rating:4.6, reviews:302, badge:null },
+  { id:"duo",       cat:"coffrets",    price:219, was:258, img:"daily",      rating:4.8, reviews:88,  badge:"save" },
+  { id:"rituel",    cat:"coffrets",    price:399, was:438, img:"rituel",     rating:4.9, reviews:64,  badge:"save" }
+];
+const PRODUCT_BY_ID = new Map(PRODUCTS.map(product => [product.id, product]));
+
+function normaliseCart(value){
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.entries(value).reduce((clean, [id, quantity]) => {
+    const qty = Math.min(99, Math.max(0, Math.floor(Number(quantity) || 0)));
+    if (PRODUCT_BY_ID.has(id) && qty > 0) clean[id] = qty;
+    return clean;
+  }, {});
+}
+
+const CATS = ["complements","capillaire","intime","coffrets"];
+const SET = { currency:"DH", freeShip:400, shipFee:35, promo:{ LYBELLE10:.10, BIENVENUE:.15 } };
+
+/*──── premium feature copy ────*/
+const FEATURE_COPY = {
+fr:{
+  finderEyebrow:"Votre routine LYBELLE", finderTitle:"Trouvez votre rituel en <em>moins d'une minute</em>",
+  finderIntro:"Quelques choix simples, puis une suggestion claire et adaptée à votre quotidien.",
+  finderPoints:["3 choix simples","Résultat instantané","Conseil responsable"], finderStart:"Créer mon rituel",
+  finderNoteTitle:"Une réponse, pas un diagnostic", finderNoteText:"Une orientation simple à partir des informations produit.", finderTime:"≈ 45 sec",
+  lastOrder:"Votre dernière commande", reorder:"Recommander", lastOrderItems:"{x} article(s)",
+  finderModalTitle:"Composons votre routine", step:"Étape {x} sur 3",
+  q1:"Quel moment de votre quotidien voulez-vous accompagner ?",
+  q1o:[{v:"hair",b:"Cheveux & ongles",s:"Un rituel simple pour votre routine capillaire."},{v:"night",b:"Routine du soir",s:"Un produit à intégrer à votre rituel du soir."},{v:"intimate",b:"Soin quotidien",s:"Une option douce et pratique au quotidien."}],
+  q2:"Quel type de routine vous ressemble le plus ?",
+  q2o:[{v:"simple",b:"L'essentiel",s:"Un seul produit, facile à adopter."},{v:"complete",b:"La routine complète",s:"Une combinaison pensée pour aller ensemble."},{v:"flex",b:"La plus flexible",s:"Un format qui suit votre rythme."}],
+  q3:"Où utiliserez-vous votre routine le plus souvent ?",
+  q3o:[{v:"home",b:"À la maison",s:"Un essentiel toujours à portée de main."},{v:"move",b:"En déplacement",s:"Un format pratique pour votre quotidien."},{v:"both",b:"Les deux",s:"Une routine à garder et à emporter."}],
+  resultEyebrow:"Votre suggestion LYBELLE", resultTitle:"Voici votre point de départ", resultAdd:"Ajouter cette routine", resultView:"Voir les détails", resultWhatsApp:"Demander conseil sur WhatsApp",
+  resultNote:"Cette orientation générale ne remplace pas l'avis d'un professionnel de santé. Lisez toujours l'étiquette et les conseils d'utilisation.",
+  compare:"Comparer", compared:"Sélectionné", compareOpen:"Comparer ({x})", compareNeed:"Choisissez au moins 2 produits", compareMax:"Vous pouvez comparer jusqu'à 3 produits.", compareEyebrow:"Comparateur LYBELLE", compareTitle:"Choisissez avec clarté", compareFormat:"Format", compareIdeal:"Idéal pour", compareRoutine:"Place dans la routine", comparePrice:"Prix", compareAdd:"Ajouter",
+  recentEyebrow:"Votre sélection", recentTitle:"Récemment consultés", recentClear:"Effacer",
+  cartSuggest:"Complétez votre rituel", cartSuggestAdd:"Ajouter", mobileCart:"{x} article(s) dans votre panier", mobileOpen:"Voir le panier",
+  share:"Partager", shareDone:"Lien du produit copié", finderAdded:"Votre suggestion a été ajoutée au panier",
+  reorderDone:"Votre dernière commande a été remise dans le panier"
+},
+ar:{
+  finderEyebrow:"روتين LYBELLE الخاص بك", finderTitle:"اكتشفي روتينك في <em>أقل من دقيقة</em>",
+  finderIntro:"ثلاثة اختيارات بسيطة، ثم اقتراح واضح يناسب روتينك اليومي.",
+  finderPoints:["3 اختيارات بسيطة","نتيجة فورية","توجيه مسؤول"], finderStart:"ابدئي اختيار الروتين",
+  finderNoteTitle:"توجيه بسيط وليس تشخيصاً", finderNoteText:"اقتراح عام انطلاقاً من معلومات المنتجات.", finderTime:"حوالي 45 ثانية",
+  lastOrder:"طلبك الأخير", reorder:"إعادة الطلب", lastOrderItems:"{x} منتج",
+  finderModalTitle:"لنختَر روتينك", step:"الخطوة {x} من 3",
+  q1:"أي جزء من روتينك اليومي تريدين مرافقته؟",
+  q1o:[{v:"hair",b:"الشعر والأظافر",s:"روتين بسيط للعناية اليومية بالشعر."},{v:"night",b:"روتين المساء",s:"منتج يندمج بسهولة في طقوس المساء."},{v:"intimate",b:"العناية اليومية",s:"خيار لطيف وعملي للاستخدام اليومي."}],
+  q2:"أي نوع من الروتين يناسبك أكثر؟",
+  q2o:[{v:"simple",b:"الأساسيات",s:"منتج واحد سهل الاعتماد."},{v:"complete",b:"روتين متكامل",s:"منتجات مصممة لتنسجم معاً."},{v:"flex",b:"الأكثر مرونة",s:"خيار يرافق إيقاع يومك."}],
+  q3:"أين ستستخدمين روتينك غالباً؟",
+  q3o:[{v:"home",b:"في المنزل",s:"منتج أساسي قريب منك دائماً."},{v:"move",b:"أثناء التنقل",s:"خيار عملي لروتينك اليومي."},{v:"both",b:"في الاثنين",s:"روتين في البيت وأثناء التنقل."}],
+  resultEyebrow:"اقتراح LYBELLE لك", resultTitle:"هذه نقطة بداية مناسبة", resultAdd:"أضف الروتين للسلة", resultView:"عرض التفاصيل", resultWhatsApp:"اطلبي نصيحة عبر واتساب",
+  resultNote:"هذا توجيه عام ولا يعوض رأي مختص في الصحة. اقرئي دائماً الملصق وتعليمات الاستخدام.",
+  compare:"قارن", compared:"تم الاختيار", compareOpen:"مقارنة ({x})", compareNeed:"اختاري منتجين على الأقل", compareMax:"يمكنك مقارنة 3 منتجات كحد أقصى.", compareEyebrow:"مقارنة منتجات LYBELLE", compareTitle:"اختاري بكل وضوح", compareFormat:"الحجم", compareIdeal:"مناسب لـ", compareRoutine:"مكانه في الروتين", comparePrice:"السعر", compareAdd:"أضف للسلة",
+  recentEyebrow:"اختياراتك", recentTitle:"شوهد مؤخراً", recentClear:"مسح",
+  cartSuggest:"أكملي روتينك", cartSuggestAdd:"أضف", mobileCart:"{x} منتج في سلتك", mobileOpen:"عرض السلة",
+  share:"مشاركة", shareDone:"تم نسخ رابط المنتج", finderAdded:"تمت إضافة اقتراحك إلى السلة",
+  reorderDone:"تمت إعادة طلبك الأخير إلى السلة"
+}};
+
+const PRODUCT_META = {
+fr:{
+  selenium:{ideal:"Routine cheveux et ongles",routine:"Quotidien · selon l'emballage"}, noctiglyc:{ideal:"Rituel du soir",routine:"Le soir · selon l'emballage"},
+  huile:{ideal:"Longueurs et pointes",routine:"Soin externe · selon le besoin"}, gel:{ideal:"Hygiène intime quotidienne",routine:"Usage externe"},
+  duo:{ideal:"Maison et déplacement",routine:"Usage externe · format duo"}, rituel:{ideal:"Routine capillaire complète",routine:"Soin interne et externe"}
+},
+ar:{
+  selenium:{ideal:"روتين الشعر والأظافر",routine:"يومياً · حسب تعليمات العبوة"}, noctiglyc:{ideal:"طقوس المساء",routine:"مساءً · حسب تعليمات العبوة"},
+  huile:{ideal:"أطراف الشعر",routine:"عناية خارجية · حسب الحاجة"}, gel:{ideal:"العناية الحميمة اليومية",routine:"للاستخدام الخارجي"},
+  duo:{ideal:"المنزل والتنقل",routine:"استخدام خارجي · عبوتان"}, rituel:{ideal:"روتين متكامل للشعر",routine:"عناية داخلية وخارجية"}
+}};
+
+/*──── copy ────*/
+const COPY = {
+fr:{
+  tagline:"Science. Nature. Bien-être.",
+  "ann.1":"Livraison offerte dès 400 DH partout au Maroc",
+  "ann.2":"Paiement à la livraison disponible",
+  "ann.3":"Formulé et fabriqué au Maroc",
+  "ann.4":"−15% sur votre première commande avec BIENVENUE",
+  "nav.1":"Boutique","nav.2":"Le rituel","nav.3":"Notre approche","nav.4":"Journal","nav.5":"Contact",
+  "hero.eyebrow":"Beauté & bien-être au quotidien",
+  "hero.h1":"Prenez soin|de vous|<em>à votre façon</em>",
+  "hero.lede":"Des produits pensés pour accompagner votre quotidien, votre bien-être et votre routine.",
+  "hero.cta1":"Découvrir la gamme","hero.cta2":"Notre rituel",
+  "hero.s1":"Produits à découvrir","hero.s2":"Site bilingue","hero.s3":"Livraison au Maroc",
+  "hero.chip1":"Routine simple","hero.chip2":"Commande sur WhatsApp",
+  "tr.1b":"Livraison 24–72h","tr.1s":"Offerte dès 400 DH",
+  "tr.2b":"Informations claires","tr.2s":"Des descriptions simples à consulter",
+  "tr.3b":"Routine pratique","tr.3s":"Des essentiels pour votre quotidien",
+  "tr.4b":"Commande flexible","tr.4s":"WhatsApp ou paiement à la livraison",
+  "shop.eyebrow":"La collection",
+  "shop.h2":"Quatre gestes, <em>une routine complète</em>",
+  "shop.p":"Compléments, soin capillaire et hygiène intime : chaque produit répond à un besoin précis, et se combine avec les autres.",
+  "shop.sort":"Trier",
+  "sort.feat":"Sélection","sort.asc":"Prix croissant","sort.desc":"Prix décroissant","sort.rate":"Les mieux notés",
+  "cat.all":"Tout","cat.complements":"Compléments","cat.capillaire":"Capillaire","cat.intime":"Hygiène intime","cat.coffrets":"Coffrets",
+  "badge.best":"Best-seller","badge.new":"Nouveauté","badge.save":"Offre duo",
+  "rit.eyebrow":"Le rituel Lybelle",
+  "rit.h2":"Trois temps, <em>matin et soir</em>",
+  "rit.p":"Une routine simple à tenir : c'est la régularité, pas la quantité, qui fait les résultats.",
+  "step.1.h":"Votre routine du matin","step.1.p":"Intégrez Selenium X à votre routine quotidienne en respectant les conseils d'utilisation indiqués sur l'emballage.",
+  "step.2.h":"Soigner en surface","step.2.p":"Quelques gouttes d'Huile Capillaire sur les longueurs, ou en bain d'huile avant le shampoing. L'argan gaine, assouplit et fait briller.",
+  "step.3.h":"Votre rituel du soir","step.3.p":"Noctiglyc associe magnésium bisglycinate et mélatonine pour accompagner votre routine du soir, selon les conseils d'utilisation.",
+  "val.eyebrow":"Notre approche",
+  "val.h2":"La simplicité avant <em>la promesse</em>",
+  "val.p":"Des informations faciles à comprendre pour vous aider à choisir un produit adapté à votre routine.",
+  "val.1.b":"Informations claires","val.1.d":"Les ingrédients, le format et les conseils d'utilisation sont présentés sans détour.",
+  "val.2.b":"Choix simples","val.2.d":"Une sélection pensée pour la beauté, le bien-être et les gestes du quotidien.",
+  "val.3.b":"Disponible au Maroc","val.3.d":"Commande directe et livraison dans plusieurs villes du Maroc.",
+  "val.4.b":"Routines accessibles","val.4.d":"Des produits faciles à intégrer le matin, le soir ou selon vos besoins.",
+  "val.5.b":"Usage responsable","val.5.d":"Respectez les indications de l'emballage et demandez conseil à un professionnel si nécessaire.",
+  "ngt.eyebrow":"Bien-être nocturne",
+  "ngt.h2":"Votre rituel du soir <em>commence ici</em>",
+  "ngt.p":"Noctiglyc associe magnésium bisglycinate et mélatonine dans une formule conçue pour accompagner votre routine du soir.",
+  "ngt.cta":"Découvrir Noctiglyc",
+  "look.eyebrow":"En situation",
+  "look.h2":"Le quotidien, <em>simplement</em>",
+  "look.p":"Nos produits photographiés là où ils vivent vraiment : sur une table de nuit, au bord d'un lavabo, dans la lumière du matin.",
+  "look.1":"Le rituel cheveux","look.2":"Duo Gel Intime","look.3":"Rituel du soir","look.4":"Huile Capillaire","look.5":"Noctiglyc","look.6":"Selenium X",
+  "rev.eyebrow":"Vos retours",
+  "rev.h2":"Ce qu'elles <em>en disent</em>",
+  "rev.1.q":"Trois mois de Selenium X et ma chute a nettement ralenti. Mes cheveux repoussent plus épais, et mes ongles ne se dédoublent plus.",
+  "rev.1.n":"Salma B.","rev.1.w":"Casablanca · Selenium X",
+  "rev.2.q":"Je dormais mal depuis des années. Avec Noctiglyc je m'endors en vingt minutes et je me réveille sans cette sensation de brouillard.",
+  "rev.2.n":"Nadia E.","rev.2.w":"Rabat · Noctiglyc",
+  "rev.3.q":"Le gel intime est très doux, aucune irritation, et l'odeur reste discrète. Je l'ai adopté pour toute la famille.",
+  "rev.3.n":"Imane K.","rev.3.w":"Marrakech · Gel Intime",
+  "rev.4.q":"L'huile capillaire ne graisse pas du tout. Deux gouttes sur les pointes le matin et mes longueurs restent souples toute la journée.",
+  "rev.4.n":"Hajar T.","rev.4.w":"Tanger · Huile Capillaire",
+  "faq.eyebrow":"Questions fréquentes","faq.h2":"Tout ce qu'il faut <em>savoir</em>",
+  "faq.1.q":"Comment choisir le produit LYBELLE qui me convient ?",
+  "faq.1.a":"Partez de votre objectif, puis consultez la description, la composition et les instructions indiquées sur la fiche et l'emballage. Notre équipe peut aussi vous orienter sur WhatsApp.",
+  "faq.2.q":"Comment utiliser les produits LYBELLE ?",
+  "faq.2.a":"Suivez toujours les instructions et la dose indiquées sur l'emballage. En cas de traitement ou de doute, demandez conseil à un professionnel de santé.",
+  "faq.3.q":"Où sont fabriqués les produits ?",
+  "faq.3.a":"Les informations de fabrication propres à chaque référence sont indiquées sur son emballage. Contactez-nous si vous souhaitez vérifier un lot précis.",
+  "faq.4.q":"Quels sont les délais et frais de livraison ?",
+  "faq.4.a":"24 à 48h sur Casablanca et Rabat, 48 à 72h ailleurs au Maroc. Livraison offerte à partir de 400 DH d'achat, sinon 35 DH de participation. Le paiement à la livraison est disponible partout.",
+  "faq.5.q":"Puis-je retourner un produit ?",
+  "faq.5.a":"Oui, sous 14 jours, pour tout produit non ouvert et dans son emballage d'origine. Écrivez-nous et nous organisons le retour ; le remboursement intervient sous 7 jours ouvrés.",
+  "nl.eyebrow":"Lettre Lybelle","nl.h2":"Le bien-être, <em>sans le bruit</em>",
+  "nl.p":"Un message par mois : conseils de cure, coulisses de formulation et accès anticipé aux nouveautés. −15% sur votre première commande.",
+  "foot.blurb":"Lybelle formule des compléments alimentaires et des soins d'hygiène pour le bien-être féminin, avec des actifs choisis pour leur efficacité démontrée.",
+  "foot.cod":"Paiement à la livraison",
+  "foot.c1":"Boutique","foot.c2":"Maison Lybelle","foot.c3":"Aide",
+  "foot.c1.1":"Compléments","foot.c1.2":"Soin capillaire","foot.c1.3":"Hygiène intime","foot.c1.4":"Coffrets",
+  "foot.c2.1":"Notre approche","foot.c2.2":"Nos actifs","foot.c2.3":"Fabrication","foot.c2.4":"Journal",
+  "foot.c3.1":"Livraison","foot.c3.2":"Retours","foot.c3.3":"Nous contacter","foot.c3.4":"FAQ",
+  "foot.legal":"Les compléments alimentaires ne se substituent pas à une alimentation variée et équilibrée ni à un mode de vie sain. Tenir hors de portée des enfants. Ne pas dépasser la dose journalière recommandée.",
+  rights:"© 2026 Lybelle. Tous droits réservés.",
+  ui:{ cart:"Panier", cartTitle:"Votre panier", wishTitle:"Vos favoris", empty:"Votre panier est vide.",
+    emptyWish:"Aucun favori pour l'instant.", add:"Ajouter au panier", added:"Ajouté", quick:"Aperçu",
+    sub:"Sous-total", ship:"Livraison", free:"Offerte", disc:"Remise", total:"Total", checkout:"Passer commande",
+    remove:"Retirer", subscribe:"Je m'inscris", emailPh:"Votre adresse e-mail", promoPh:"Code promo", apply:"Appliquer",
+    ok:"Merci — votre code de bienvenue arrive par e-mail.", err:"Merci de saisir une adresse e-mail valide.",
+    toastAdd:"ajouté au panier", toastWish:"ajouté aux favoris", toastUnwish:"retiré des favoris",
+    promoOk:"Code appliqué", promoBad:"Code invalide", promoUsed:"Code déjà appliqué",
+    shipLeft:"Plus que {x} DH pour la livraison offerte", shipFree:"Livraison offerte débloquée",
+    doneH:"Commande confirmée", doneP:"Merci pour votre confiance. Un e-mail de confirmation vous a été envoyé ; votre colis part sous 24h.",
+    searchPh:"Rechercher un produit…", noRes:"Aucun produit ne correspond.", reviews:"avis", none:"Aucun produit dans cette catégorie.",
+    qty:"Quantité", back:"Continuer mes achats", off:"−{x}%" }
+},
+en:{
+  tagline:"Science. Nature. Well-being.",
+  "ann.1":"Free delivery over 400 DH across Morocco",
+  "ann.2":"Cash on delivery available",
+  "ann.3":"Formulated and made in Morocco",
+  "ann.4":"−15% on your first order with BIENVENUE",
+  "nav.1":"Shop","nav.2":"The ritual","nav.3":"Our approach","nav.4":"Journal","nav.5":"Contact",
+  "hero.eyebrow":"Women's well-being",
+  "hero.h1":"Balance is|something you|<em>build daily</em>",
+  "hero.lede":"Short, readable formulas — selenium, magnesium bisglycinate, argan — designed for hair, sleep and intimate comfort. Nothing superfluous.",
+  "hero.cta1":"Shop the range","hero.cta2":"Our ritual",
+  "hero.s1":"Women supported","hero.s2":"Average rating","hero.s3":"GMO & gluten free",
+  "hero.chip1":"Natural actives","hero.chip2":"Dermatologically tested",
+  "tr.1b":"24–72h delivery","tr.1s":"Free over 400 DH",
+  "tr.2b":"Certified quality","tr.2s":"Made in Morocco, IMANOR certified",
+  "tr.3b":"Clean formulas","tr.3s":"No GMO, gluten, lactose or dye",
+  "tr.4b":"Secure payment","tr.4s":"CMI, card or cash on delivery",
+  "shop.eyebrow":"The collection",
+  "shop.h2":"Four gestures, <em>one complete routine</em>",
+  "shop.p":"Supplements, hair care and intimate hygiene: each product answers one precise need — and works with the others.",
+  "shop.sort":"Sort",
+  "sort.feat":"Featured","sort.asc":"Price: low to high","sort.desc":"Price: high to low","sort.rate":"Top rated",
+  "cat.all":"All","cat.complements":"Supplements","cat.capillaire":"Hair care","cat.intime":"Intimate care","cat.coffrets":"Sets",
+  "badge.best":"Best-seller","badge.new":"New","badge.save":"Duo offer",
+  "rit.eyebrow":"The Lybelle ritual",
+  "rit.h2":"Three moments, <em>morning and night</em>",
+  "rit.p":"A routine simple enough to keep: consistency, not quantity, is what delivers results.",
+  "step.1.h":"Nourish from within","step.1.p":"Two Selenium X capsules with breakfast. Selenium, zinc and biotin support the hair fibre, the nails and skin radiance.",
+  "step.2.h":"Care on the surface","step.2.p":"A few drops of Hair Oil through the lengths, or as a pre-shampoo oil bath. Argan coats, softens and adds shine.",
+  "step.3.h":"Recover overnight","step.3.p":"One Noctiglyc capsule thirty minutes before bed. Magnesium bisglycinate and melatonin for a gentler drift into sleep.",
+  "val.eyebrow":"Our approach",
+  "val.h2":"Evidence before <em>the promise</em>",
+  "val.p":"We start from the dose, not the marketing. Every active earns its place by what it actually does, at an amount that matters.",
+  "val.1.b":"Meaningful doses","val.1.d":"Selenium, zinc, biotin, magnesium bisglycinate — bioavailable forms at doses that count.",
+  "val.2.b":"Short lists","val.2.d":"No artificial dye, no GMO, no gluten or lactose. If it isn't useful, it isn't in there.",
+  "val.3.b":"Made in Morocco","val.3.d":"Produced in Benslimane, IMANOR certified and registered with the Ministry of Health.",
+  "val.4.b":"Local botanicals","val.4.d":"Moroccan-pressed argan, calendula, lavender and clary sage in the care range.",
+  "val.5.b":"Tested and tolerated","val.5.d":"Physiological pH for intimate hygiene, tolerance assessed under dermatological control.",
+  "ngt.eyebrow":"Night well-being",
+  "ngt.h2":"The night does <em>half the work</em>",
+  "ngt.p":"Noctiglyc pairs magnesium bisglycinate — the best tolerated form — with melatonin, for a faster drift into sleep and a morning without the fog.",
+  "ngt.cta":"Discover Noctiglyc",
+  "look.eyebrow":"In context",
+  "look.h2":"Everyday life, <em>simply</em>",
+  "look.p":"Our products photographed where they actually live: on a nightstand, beside a basin, in the morning light.",
+  "look.1":"Hair ritual","look.2":"Intimate Gel Duo","look.3":"Night ritual","look.4":"Hair Oil","look.5":"Noctiglyc","look.6":"Selenium X",
+  "rev.eyebrow":"Your feedback",
+  "rev.h2":"What they <em>say about it</em>",
+  "rev.1.q":"Three months on Selenium X and my hair loss has clearly slowed. It's growing back thicker, and my nails no longer split.",
+  "rev.1.n":"Salma B.","rev.1.w":"Casablanca · Selenium X",
+  "rev.2.q":"I'd slept badly for years. With Noctiglyc I fall asleep within twenty minutes and wake up without that foggy feeling.",
+  "rev.2.n":"Nadia E.","rev.2.w":"Rabat · Noctiglyc",
+  "rev.3.q":"The intimate gel is very gentle, no irritation at all, and the scent stays discreet. It's become a family staple.",
+  "rev.3.n":"Imane K.","rev.3.w":"Marrakech · Intimate Gel",
+  "rev.4.q":"The hair oil isn't greasy in the slightest. Two drops on the ends in the morning and my lengths stay supple all day.",
+  "rev.4.n":"Hajar T.","rev.4.w":"Tangier · Hair Oil",
+  "faq.eyebrow":"Frequently asked","faq.h2":"Everything worth <em>knowing</em>",
+  "faq.1.q":"How long before I see results?",
+  "faq.1.a":"Allow one full month for the first signs, and two to three months for a visible change in hair density. The hair cycle is slow: consistency matters more than dose.",
+  "faq.2.q":"Can I combine several Lybelle products?",
+  "faq.2.a":"Yes. Selenium X in the morning and Noctiglyc at night complement each other with no interaction. The Hair Oil is external and can be used any time. If you are on medication, ask your doctor first.",
+  "faq.3.q":"Are your products suitable during pregnancy?",
+  "faq.3.a":"The physiological-pH Intimate Gel is suitable. For food supplements — especially those containing melatonin — advice from a healthcare professional is essential before use.",
+  "faq.4.q":"What are the delivery times and costs?",
+  "faq.4.a":"24 to 48h in Casablanca and Rabat, 48 to 72h elsewhere in Morocco. Delivery is free from 400 DH, otherwise a 35 DH contribution applies. Cash on delivery is available everywhere.",
+  "faq.5.q":"Can I return a product?",
+  "faq.5.a":"Yes, within 14 days, for any unopened product in its original packaging. Write to us and we'll arrange the return; refunds are issued within 7 working days.",
+  "nl.eyebrow":"The Lybelle letter","nl.h2":"Well-being, <em>without the noise</em>",
+  "nl.p":"One message a month: course advice, formulation notes and early access to new products. −15% on your first order.",
+  "foot.blurb":"Lybelle formulates food supplements and hygiene care for women's well-being, with actives chosen for demonstrated efficacy.",
+  "foot.cod":"Cash on delivery",
+  "foot.c1":"Shop","foot.c2":"Maison Lybelle","foot.c3":"Help",
+  "foot.c1.1":"Supplements","foot.c1.2":"Hair care","foot.c1.3":"Intimate care","foot.c1.4":"Sets",
+  "foot.c2.1":"Our approach","foot.c2.2":"Our actives","foot.c2.3":"Manufacturing","foot.c2.4":"Journal",
+  "foot.c3.1":"Delivery","foot.c3.2":"Returns","foot.c3.3":"Contact us","foot.c3.4":"FAQ",
+  "foot.legal":"Food supplements are not a substitute for a varied, balanced diet or a healthy lifestyle. Keep out of reach of children. Do not exceed the recommended daily dose.",
+  rights:"© 2026 Lybelle. All rights reserved.",
+  ui:{ cart:"Cart", cartTitle:"Your cart", wishTitle:"Your favourites", empty:"Your cart is empty.",
+    emptyWish:"No favourites yet.", add:"Add to cart", added:"Added", quick:"Quick view",
+    sub:"Subtotal", ship:"Delivery", free:"Free", disc:"Discount", total:"Total", checkout:"Checkout",
+    remove:"Remove", subscribe:"Subscribe", emailPh:"Your email address", promoPh:"Promo code", apply:"Apply",
+    ok:"Thank you — your welcome code is on its way by email.", err:"Please enter a valid email address.",
+    toastAdd:"added to cart", toastWish:"added to favourites", toastUnwish:"removed from favourites",
+    promoOk:"Code applied", promoBad:"Invalid code", promoUsed:"Code already applied",
+    shipLeft:"{x} DH away from free delivery", shipFree:"Free delivery unlocked",
+    doneH:"Order confirmed", doneP:"Thank you for your trust. A confirmation email is on its way; your parcel ships within 24h.",
+    searchPh:"Search for a product…", noRes:"No product matches.", reviews:"reviews", none:"No product in this category.",
+    qty:"Quantity", back:"Continue shopping", off:"−{x}%" }
+}};
+
+COPY.ar = {
+  ...COPY.fr,
+  tagline:"العلم. الطبيعة. العافية.",
+  "ann.1":"توصيل مجاني ابتداءً من 400 درهم في جميع أنحاء المغرب","ann.2":"الدفع عند الاستلام متاح","ann.3":"منتجات مصممة لروتينك اليومي","ann.4":"خصم 15% على طلبك الأول باستعمال BIENVENUE",
+  "nav.1":"المتجر","nav.2":"الروتين","nav.3":"نهجنا","nav.4":"المجلة","nav.5":"تواصل معنا",
+  "hero.eyebrow":"الجمال والعافية لكل يوم","hero.h1":"اعتنِ بنفسك|كل يوم|<em>بطريقتك</em>","hero.lede":"منتجات مصممة لترافق حياتك اليومية ورفاهيتك وروتينك: مكملات غذائية وعناية بالجمال وأساسيات للعافية.","hero.cta1":"اكتشف مجموعتنا","hero.cta2":"اكتشف الروتين",
+  "hero.s1":"روتين بسيط","hero.s2":"اختيار واضح","hero.s3":"خدمة في المغرب","hero.chip1":"عناية يومية","hero.chip2":"تركيبات عملية",
+  "tr.1b":"التوصيل إلى جميع أنحاء المغرب","tr.1s":"مجاني ابتداءً من 400 درهم","tr.2b":"اختيار واضح","tr.2s":"معلومات سهلة ومباشرة","tr.3b":"روتين عملي","tr.3s":"منتجات تناسب حياتك اليومية","tr.4b":"دفع آمن","tr.4s":"بالبطاقة أو عند الاستلام",
+  "shop.eyebrow":"المجموعة","shop.h2":"متجر LYBELLE <em>للعناية اليومية</em>","shop.p":"اكتشف مكملاتنا الغذائية ومنتجات الجمال والعناية والرفاهية.","shop.sort":"ترتيب",
+  "sort.feat":"مختاراتنا","sort.asc":"السعر: من الأقل","sort.desc":"السعر: من الأعلى","sort.rate":"الأعلى تقييماً","cat.all":"الكل","cat.complements":"المكملات","cat.capillaire":"العناية بالشعر","cat.intime":"العناية الحميمة","cat.coffrets":"العروض","badge.best":"الأكثر طلباً","badge.new":"جديد","badge.save":"عرض ثنائي",
+  "rit.eyebrow":"روتين LYBELLE","rit.h2":"خطوات بسيطة <em>صباحاً ومساءً</em>","rit.p":"روتين واضح وسهل الاندماج في حياتك اليومية.","step.1.h":"العناية من الداخل","step.1.p":"أدخل Selenium X ضمن روتينك اليومي وفق تعليمات الاستعمال المكتوبة على العبوة.","step.2.h":"العناية بالشعر","step.2.p":"ضعي بضع قطرات من زيت الشعر على الأطراف أو استعمليه قبل غسل الشعر حسب التعليمات.","step.3.h":"طقوس المساء","step.3.p":"Noctiglyc يجمع بين مغنيسيوم بيسغليسينات والميلاتونين لمرافقة روتينك المسائي.",
+  "val.eyebrow":"نهجنا","val.h2":"البساطة قبل <em>الوعود</em>","val.p":"نقدم معلومات واضحة ونشجعك على قراءة الملصق واتباع تعليمات الاستعمال الخاصة بكل منتج.","val.1.b":"معلومات واضحة","val.1.d":"المكونات وطريقة الاستخدام معروضة بطريقة سهلة الفهم.","val.2.b":"اختيارات بسيطة","val.2.d":"كل منتج مصمم ليأخذ مكانه بسهولة في روتينك اليومي.","val.3.b":"متوفر في المغرب","val.3.d":"طلب مباشر وخدمة توصيل إلى مختلف مدن المغرب.","val.4.b":"عناية يومية","val.4.d":"خيارات للشعر والجمال والعافية والراحة اليومية.","val.5.b":"إرشادات مسؤولة","val.5.d":"احترم تعليمات العبوة واستشر مختصاً عند الحاجة.",
+  "ngt.eyebrow":"روتين المساء","ngt.h2":"طقوسك المسائية <em>تبدأ من هنا</em>","ngt.p":"تركيبة تجمع بين مغنيسيوم بيسغليسينات والميلاتونين، مصممة لترافق روتينك المسائي.","ngt.cta":"اكتشف نوكتيغليك","look.eyebrow":"في حياتك اليومية","look.h2":"العناية، <em>ببساطة</em>","look.p":"منتجات LYBELLE ترافقك في روتين الصباح والمساء.","look.1":"روتين الشعر","look.2":"ثنائي الجل الحميمي","look.3":"روتين المساء","look.4":"زيت الشعر","look.5":"Noctiglyc","look.6":"Selenium X",
+  "rev.eyebrow":"LYBELLE","rev.h2":"رفاهيتك. روتينك. <em>LYBELLE الخاصة بك.</em>","faq.eyebrow":"الأسئلة الشائعة","faq.h2":"كل ما تحتاج <em>لمعرفته</em>","faq.1.q":"كيف أختار منتج LYBELLE المناسب لي؟","faq.1.a":"ابدأ من هدف روتينك واقرأ وصف المنتج ومكوناته وتعليمات استعماله. تواصل معنا على واتساب إذا احتجت مساعدة عامة في الاختيار.","faq.2.q":"كيف أستخدم منتجات LYBELLE؟","faq.2.a":"اتبع دائماً تعليمات الاستعمال والجرعة المدونة على عبوة كل منتج ولا تتجاوزها.","faq.3.q":"هل يمكن استعمال المكملات أثناء الحمل؟","faq.3.a":"استشيري الطبيب أو الصيدلي قبل تناول أي مكمل غذائي أثناء الحمل أو الرضاعة أو عند استعمال دواء.","faq.4.q":"هل تقومون بالتوصيل إلى جميع أنحاء المغرب؟","faq.4.a":"نعم، نوصل إلى مختلف مدن المغرب. التوصيل مجاني ابتداءً من 400 درهم، وإلا فتضاف 35 درهماً.","faq.5.q":"هل يمكن إرجاع المنتج؟","faq.5.a":"يمكن إرجاع المنتج غير المفتوح وفي عبوته الأصلية خلال 14 يوماً. تواصل معنا لترتيب العملية.",
+  "nl.eyebrow":"مجلة LYBELLE","nl.h2":"نصائح مفيدة <em>بدون تعقيد</em>","nl.p":"نصائح بسيطة حول الرفاهية والتغذية والجمال والروتين اليومي، مع خصم ترحيبي على أول طلب.","foot.blurb":"تبتكر LYBELLE منتجات تنسجم بسهولة مع حياتك اليومية: مكملات غذائية ومنتجات عناية وأساسيات للرفاهية.","foot.cod":"الدفع عند الاستلام","foot.c1":"المتجر","foot.c2":"LYBELLE","foot.c3":"المساعدة","foot.c1.1":"المكملات","foot.c1.2":"العناية بالشعر","foot.c1.3":"العناية الحميمة","foot.c1.4":"العروض","foot.c2.1":"نهجنا","foot.c2.2":"منتجاتنا","foot.c2.3":"عن LYBELLE","foot.c2.4":"المجلة","foot.c3.1":"التوصيل","foot.c3.2":"الإرجاع","foot.c3.3":"تواصل معنا","foot.c3.4":"الأسئلة الشائعة","foot.legal":"المكملات الغذائية لا تغني عن نظام غذائي متنوع ومتوازن ونمط حياة صحي. تحفظ بعيداً عن متناول الأطفال. لا تتجاوز الجرعة اليومية الموصى بها.",rights:"© 2026 LYBELLE. جميع الحقوق محفوظة.",
+  ui:{cart:"السلة",cartTitle:"سلة التسوق",wishTitle:"المفضلة",empty:"سلة التسوق فارغة.",emptyWish:"لا توجد منتجات مفضلة بعد.",add:"أضف إلى السلة",added:"تمت الإضافة",quick:"عرض سريع",sub:"المجموع الفرعي",ship:"التوصيل",free:"مجاني",disc:"الخصم",total:"المجموع",checkout:"إتمام الطلب",remove:"حذف",subscribe:"اشترك",emailPh:"بريدك الإلكتروني",promoPh:"رمز التخفيض",apply:"تطبيق",ok:"شكراً لك — تم تسجيل بريدك.",err:"يرجى إدخال بريد إلكتروني صحيح.",toastAdd:"تمت إضافته إلى السلة",toastWish:"تمت إضافته إلى المفضلة",toastUnwish:"تم حذفه من المفضلة",promoOk:"تم تطبيق الرمز",promoBad:"الرمز غير صحيح",promoUsed:"تم تطبيق رمز مسبقاً",shipLeft:"بقي {x} درهم للتوصيل المجاني",shipFree:"حصلت على التوصيل المجاني",doneH:"تم تجهيز الطلب",doneP:"شكراً لثقتك.",searchPh:"ابحث عن منتج…",noRes:"لا يوجد منتج مطابق.",reviews:"تقييم",none:"لا توجد منتجات في هذه الفئة.",qty:"الكمية",back:"متابعة التسوق",off:"خصم {x}%"}
+};
+
+/*──── product wording ────*/
+const P = {
+fr:{
+  selenium:{n:"Selenium X", d:"Complément alimentaire au sélénium, zinc et biotine, pensé pour votre routine cheveux et ongles.", s:"60 gélules · cure 1 mois",
+    b:["Routine quotidienne simple","Sélénium, zinc et biotine","Suivre les conseils de l'emballage"]},
+  noctiglyc:{n:"Noctiglyc", d:"Magnésium bisglycinate et mélatonine pour accompagner votre routine du soir.", s:"60 gélules · 45 g",
+    b:["Rituel du soir","Formule pratique","Suivre les conseils de l'emballage"]},
+  huile:{n:"Huile Capillaire", d:"Concentré d'argan et d'actifs botaniques pour nourrir la fibre en profondeur.", s:"30 ml · flacon compte-gouttes",
+    b:["Nourrit les longueurs sèches","Discipline et fait briller","Texture non grasse"]},
+  gel:{n:"Gel Intime", d:"Un soin intime féminin pensé pour accompagner la routine quotidienne avec douceur.", s:"120 ml · usage quotidien",
+    b:["Soin intime féminin","Pensé pour le quotidien","Usage externe"]},
+  duo:{n:"Duo Intime Quotidien", d:"Deux Gels Intimes : un pour la salle de bain, un pour le sac de sport.", s:"2 × 120 ml",
+    b:["Deux flacons, un tarif duo","Formule pH physiologique","Idéal en voyage"]},
+  rituel:{n:"Rituel Cheveux Intense", d:"Selenium X et Huile Capillaire réunis dans une routine cheveux complète.", s:"Coffret · 60 gélules + 30 ml",
+    b:["Action interne et externe","Cure d'un mois complète","Économie de 39 DH"]}
+},
+en:{
+  selenium:{n:"Selenium X", d:"Strengthening course for hair, nails and skin. Selenium, zinc and biotin at meaningful doses.", s:"60 capsules · 1-month course",
+    b:["Slows hair loss and densifies","Strengthens fibre and nails","No GMO, gluten or dye"]},
+  noctiglyc:{n:"Noctiglyc", d:"Magnesium bisglycinate and melatonin for deep, restorative sleep.", s:"60 capsules · 45 g",
+    b:["Faster drift into sleep","Muscular and nervous relaxation","Wake up without the fog"]},
+  huile:{n:"Hair Oil", d:"An argan and botanical concentrate that nourishes the fibre deep down.", s:"30 ml · dropper bottle",
+    b:["Feeds dry lengths","Smooths and adds shine","Non-greasy texture"]},
+  gel:{n:"Intimate Gel", d:"A gentle cleanser at physiological pH, respectful of the vaginal flora.", s:"120 ml · daily use",
+    b:["Physiological pH respected","Calendula, lavender, clary sage","Lasting freshness and comfort"]},
+  duo:{n:"Daily Intimate Duo", d:"Two Intimate Gels: one for the bathroom, one for the gym bag.", s:"2 × 120 ml",
+    b:["Two bottles, one duo price","Physiological pH formula","Ideal for travel"]},
+  rituel:{n:"Intense Hair Ritual", d:"Selenium X and Hair Oil together: the complete anti-hair-loss routine, inside and out.", s:"Set · 60 capsules + 30 ml",
+    b:["Internal and external action","A full one-month course","Save 39 DH"]}
+}};
+
+P.ar = {
+  selenium:{n:"Selenium X",d:"مكمل غذائي يحتوي على السيلينيوم والزنك والبيوتين، مصمم لروتين الشعر والأظافر.",s:"60 كبسولة · برنامج شهر",b:["روتين يومي بسيط","سيلينيوم وزنك وبيوتين","اتبع تعليمات العبوة"]},
+  noctiglyc:{n:"Noctiglyc",d:"مغنيسيوم بيسغليسينات وميلاتونين لمرافقة روتينك المسائي.",s:"60 كبسولة · 45 غ",b:["روتين مسائي","تركيبة عملية","اتبع تعليمات العبوة"]},
+  huile:{n:"زيت الشعر",d:"زيت للعناية بالشعر مصمم لتغذية الأطراف وإضفاء مظهر لامع.",s:"30 مل · عبوة بقطارة",b:["يغذي الأطراف","يساعد على النعومة واللمعان","قوام خفيف"]},
+  gel:{n:"LYBELLE GEL INTIM",d:"عناية حميمة للنساء مصممة لمرافقة الروتين اليومي بلطف وبساطة.",s:"120 مل · استعمال يومي",b:["عناية لطيفة","مصمم للروتين اليومي","للاستعمال الخارجي"]},
+  duo:{n:"عرض الجل الحميم",d:"عبوتان من LYBELLE GEL INTIM لروتين يومي عملي.",s:"2 × 120 مل",b:["عبوتان بسعر العرض","روتين يومي","عملي للسفر"]},
+  rituel:{n:"روتين الشعر المتكامل",d:"Selenium X وزيت الشعر معاً في مجموعة واحدة للعناية اليومية.",s:"مجموعة · 60 كبسولة + 30 مل",b:["عناية من الداخل والخارج","برنامج شهر","توفير 39 درهماً"]}
+};
+
+/*──── state ────*/
+let lang = safeLoad(STORAGE_KEYS.lang,"fr");
+if (!COPY[lang]) lang = "fr";
+let cart = normaliseCart(safeLoad(STORAGE_KEYS.cart,{}));
+const savedWish = safeLoad(STORAGE_KEYS.wish,[]);
+let wish = new Set(Array.isArray(savedWish) ? savedWish.filter(id => PRODUCT_BY_ID.has(id)) : []);
+const savedViewed = safeLoad(STORAGE_KEYS.viewed,[]);
+let viewed = Array.isArray(savedViewed) ? savedViewed.filter(id=>PRODUCT_BY_ID.has(id)).slice(0,4) : [];
+let compareSet = new Set(), finderState = {step:0,answers:[]};
+let lastOrder = safeLoad(STORAGE_KEYS.lastOrder,null);
+let filter = "all", sort = "feat", discount = Number(safeLoad(STORAGE_KEYS.promo,0)) || 0, rIdx = 0, rTimer;
+safeSave(STORAGE_KEYS.cart, cart);
+safeSave(STORAGE_KEYS.wish, Array.from(wish));
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const t  = k => { const v = COPY[lang][k]; return v === undefined ? "" : v; };
+const u  = k => COPY[lang].ui[k];
+const ft = k => FEATURE_COPY[lang][k];
+const p  = (id,f) => P[lang][id][f];
+const money = n => `${Math.round(n)} ${SET.currency}`;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/*──── icons ────*/
+const IC = {
+  star:'<svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4 6.2 20.5l1.1-6.5L2.6 9.4l6.5-.9z"/></svg>',
+  starE:'<svg viewBox="0 0 24 24" class="e"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4 6.2 20.5l1.1-6.5L2.6 9.4l6.5-.9z"/></svg>',
+  heart:'<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-7-9.4A4 4 0 0 1 12 7a4 4 0 0 1 7 3.6C19 15.4 12 20 12 20z"/></svg>',
+  check:'<svg viewBox="0 0 24 24"><path d="M20 7L9 18l-5-5"/></svg>',
+  bag:'<svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>',
+  x:'<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+};
+const stars = r => { let h = ""; for (let i = 1; i <= 5; i++) h += (i <= Math.round(r) ? IC.star : IC.starE); return h; };
+
+/*═══════ RENDER ═══════*/
+function renderStatic(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.body.classList.toggle("is-ar",lang === "ar");
+  document.querySelector('meta[name="description"]').content = lang === "ar" ? "اكتشف LYBELLE: مكملات غذائية ومنتجات للعناية والجمال والرفاهية للجميع. التوصيل في المغرب." : "Découvrez LYBELLE : compléments alimentaires, soins beauté et produits bien-être pour tous. Livraison partout au Maroc.";
+  $("#introLogo").innerHTML = logoHTML(84, t("tagline"));
+  $("#hdrLogo").innerHTML   = logoHTML(40, t("tagline"));
+  $("#footLogo").innerHTML  = logoHTML(46, t("tagline"));
+
+  const unit = `<div class="unit">${[1,2,3,4].map(i=>`<span>${esc(t("ann."+i))}</span>`).join("")}</div>`;
+  $("#annTrack").innerHTML = unit + unit;
+
+  const links = [["#shop",1],["#rituel",2],["#apropos",3],["#journal",4],["#contact",5]];
+  $("#mainNav").innerHTML = links.map(([h,i])=>`<a href="${h}">${esc(t("nav."+i))}</a>`).join("");
+  $("#mnav").innerHTML = links.map(([h,i],k)=>
+    `<a href="${h}" style="animation-delay:${k*70+120}ms">${esc(t("nav."+i))}</a>`).join("")
+    + `<div class="mfoot"><div class="lang" style="display:flex">
+         <button data-ml="fr" aria-pressed="${lang==="fr"}">FR</button><button data-ml="ar" aria-pressed="${lang==="ar"}">AR</button>
+       </div></div>`;
+
+  $("#btn-fr").setAttribute("aria-pressed",lang === "fr");
+  $("#btn-ar").setAttribute("aria-pressed",lang === "ar");
+  const aria = lang === "ar"
+    ? {close:"إغلاق",search:"بحث",wish:"المفضلة",cart:"سلة التسوق",top:"أعلى الصفحة"}
+    : {close:"Fermer",search:"Recherche",wish:"Favoris",cart:"Panier",top:"Haut de page"};
+  ["cartX","wishX","modalX","searchX","finderX","compareX"].forEach(id=>$("#"+id).setAttribute("aria-label",aria.close));
+  $("#searchBtn").setAttribute("aria-label",aria.search); $("#wishBtn").setAttribute("aria-label",aria.wish); $("#cartBtn").setAttribute("aria-label",aria.cart); $("#toTop").setAttribute("aria-label",aria.top);
+  const ribbonItems = PRODUCTS.map(pr=>`<button class="ribbon-item" data-open="${pr.id}"><img src="${IMG[pr.img]}" alt=""><span>${esc(p(pr.id,"n"))}</span><b>${money(pr.price)}</b></button>`).join("");
+  $("#productRibbon").innerHTML = `<div class="ribbon-track"><div class="ribbon-set">${ribbonItems}</div><div class="ribbon-set" aria-hidden="true">${ribbonItems}</div></div>`;
+  $(".hmedia .shot img").src = IMG.hero;
+  $("#whatsappFloat").href = `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(lang === "ar" ? "مرحباً LYBELLE، أريد الاستفسار عن أحد المنتجات." : "Bonjour LYBELLE, je souhaite me renseigner sur un produit.")}`;
+  $("#waFloatLabel").innerHTML = lang === "ar" ? `اطلب عبر واتساب · <bdi dir="ltr">${STORE_CONFIG.whatsappDisplay}</bdi>` : `WhatsApp · ${STORE_CONFIG.whatsappDisplay}`;
+  const checkoutCopy = lang === "ar"
+    ? ["الطلب","بياناتك","الاسم الكامل","الهاتف","المدينة","العنوان","ملاحظة (اختياري)","لن يتم خصم أي مبلغ هنا. سنفتح طلبك الجاهز في واتساب.","رجوع","اطلب عبر واتساب"]
+    : ["Commande","Vos coordonnées","Nom complet","Téléphone","Ville","Adresse","Note (optionnel)","Aucun paiement n'est déclenché ici : votre commande prête sera ouverte dans WhatsApp.","Retour","Commander sur WhatsApp"];
+  ["checkoutEyebrow","checkoutTitle","coNameLbl","coPhoneLbl","coCityLbl","coAddressLbl","coNoteLbl","checkoutNote","checkoutBack","checkoutSubmit"].forEach((id,i)=>$("#"+id).textContent=checkoutCopy[i]);
+
+  $("#finderEyebrow").textContent = ft("finderEyebrow");
+  $("#finderTitle").innerHTML = ft("finderTitle");
+  $("#finderIntro").textContent = ft("finderIntro");
+  $("#finderPoints").innerHTML = ft("finderPoints").map(x=>`<span>${esc(x)}</span>`).join("");
+  $("#finderStart").textContent = ft("finderStart");
+  $("#finderNoteTitle").textContent = ft("finderNoteTitle");
+  $("#finderNoteText").textContent = ft("finderNoteText");
+  $("#finderTime").textContent = ft("finderTime");
+  $("#recentEyebrow").textContent = ft("recentEyebrow");
+  $("#recentTitle").textContent = ft("recentTitle");
+  $("#recentClear").textContent = ft("recentClear");
+  $("#compareEyebrow").textContent = ft("compareEyebrow");
+  $("#compareTitle").textContent = ft("compareTitle");
+  $("#mobileCartOpen").textContent = ft("mobileOpen");
+
+  $("#h1").innerHTML = t("hero.h1").split("|").map(x=>`<span class="l"><span>${x}</span></span>`).join("");
+
+  $$("[data-t]").forEach(el => el.textContent = t(el.dataset.t));
+  $$("[data-th]").forEach(el => el.innerHTML = t(el.dataset.th));
+
+  $("#chips").innerHTML = ["all",...CATS].map(k=>
+    `<button class="chip-f" data-f="${k}" aria-pressed="${filter===k}">${esc(t("cat."+k))}</button>`).join("");
+
+  $("#sort").innerHTML = ["feat","asc","desc"].map(k=>
+    `<option value="${k}"${sort===k?" selected":""}>${esc(t("sort."+k))}</option>`).join("");
+
+  $("#steps").innerHTML = [1,2,3].map(i=>
+    `<div class="step rev"><span class="num">0${i}</span>
+      <h3>${esc(t(`step.${i}.h`))}</h3><p>${esc(t(`step.${i}.p`))}</p></div>`).join("");
+
+  $("#vlist").innerHTML = [1,2,3,4,5].map(i=>
+    `<li><span class="ic">${IC.check}</span><div><b>${esc(t(`val.${i}.b`))}</b><p>${esc(t(`val.${i}.d`))}</p></div></li>`).join("");
+
+  const look = [["hero",1],["daily",2],["nightR",3],["huile",4],["noctiglyc",5],["selenium",6]];
+  $("#strip").innerHTML = look.map(([k,i])=>
+    `<figure><img src="${IMG[k]}" alt="${esc(t("look."+i))}" loading="lazy" draggable="false">
+      <figcaption>${esc(t("look."+i))}</figcaption></figure>`).join("");
+
+  $("#rtrack").innerHTML = [1,2,3,4].map(i=>
+    `<div class="rslide"><span class="qm">&ldquo;</span>
+      <div class="stars"><i>${stars(5)}</i></div>
+      <blockquote>${esc(t(`rev.${i}.q`))}</blockquote>
+      <div class="who">${esc(t(`rev.${i}.n`))}</div>
+      <div class="where">${esc(t(`rev.${i}.w`))}</div></div>`).join("");
+  $("#rdots").innerHTML = [0,1,2,3].map(i=>
+    `<button data-r="${i}" class="${i===rIdx?"on":""}" aria-label="${i+1}"></button>`).join("");
+  goReview(rIdx, false);
+
+  $("#faqList").innerHTML = [1,2,3,4,5].map(i=>
+    `<div class="acc"><button aria-expanded="false"><span class="q">${esc(t(`faq.${i}.q`))}</span><span class="ic"></span></button>
+      <div class="panel"><p>${esc(t(`faq.${i}.a`))}</p></div></div>`).join("");
+
+  [1,2,3].forEach(n=>{
+    $("#fc"+n).innerHTML = [1,2,3,4].map(i=>
+      `<li><a href="#shop">${esc(t(`foot.c${n}.${i}`))}</a></li>`).join("");
+  });
+
+  $("#rights").textContent   = t("rights");
+  $("#cartTitle").textContent= u("cartTitle");
+  $("#wishTitle").textContent= u("wishTitle");
+  $("#subLbl").textContent   = u("sub");
+  $("#shLbl").textContent    = u("ship");
+  $("#totLbl").textContent   = u("total");
+  $("#discLbl").textContent  = u("disc");
+  $("#checkout").textContent = u("checkout");
+  $("#promoBtn").textContent = u("apply");
+  $("#promoIn").placeholder  = u("promoPh");
+  $("#nlBtn").textContent    = u("subscribe");
+  $("#nlEmail").placeholder  = u("emailPh");
+  $("#searchIn").placeholder = u("searchPh");
+  $("#btn-fr").setAttribute("aria-pressed", lang === "fr");
+  $("#btn-ar").setAttribute("aria-pressed", lang === "ar");
+  document.documentElement.lang = lang;
+  document.title = "LYBELLE — " + t("tagline");
+  renderLastOrder();
+  renderRecent();
+  renderCompareTray();
+}
+
+function sorted(list){
+  const l = list.slice();
+  if (sort === "asc")  l.sort((a,b)=>a.price-b.price);
+  if (sort === "desc") l.sort((a,b)=>b.price-a.price);
+  if (sort === "rate") l.sort((a,b)=>b.rating-a.rating);
+  return l;
+}
+
+function cardHTML(pr,i){
+  const off = pr.was ? Math.round((1-pr.price/pr.was)*100) : 0;
+  return `<article class="card" style="animation-delay:${i*70}ms">
+    <div class="cmedia">
+      ${pr.badge?`<span class="badge ${pr.badge==="save"?"rose":pr.badge==="new"?"gold":""}">${esc(t("badge."+pr.badge))}</span>`:""}
+      <button class="heart${wish.has(pr.id)?" on":""}" data-wish="${pr.id}" aria-label="♥">${IC.heart}</button>
+      <img src="${IMG[pr.img]}" alt="${esc(p(pr.id,"n"))}" loading="lazy">
+      <button class="quick" data-open="${pr.id}">${esc(u("quick"))}</button>
+    </div>
+    <div class="cbody">
+      <h3 class="cname">${esc(p(pr.id,"n"))}</h3>
+      <p class="cdesc">${esc(p(pr.id,"d"))}</p>
+      <div class="csize">${esc(p(pr.id,"s"))}</div>
+      <div class="cmeta">
+        <span class="price">${money(pr.price)}</span>
+        ${pr.was?`<span class="was">${money(pr.was)}</span><span class="save">${u("off").replace("{x}",off)}</span>`:""}
+      </div>
+      <button class="add" data-add="${pr.id}">${esc(u("add"))}</button>
+      <div class="card-tools"><button class="compare-toggle${compareSet.has(pr.id)?" on":""}" data-compare="${pr.id}" aria-pressed="${compareSet.has(pr.id)}">${esc(compareSet.has(pr.id)?ft("compared"):ft("compare"))}</button></div>
+    </div></article>`;
+}
+
+function renderGrid(){
+  const list = sorted(filter === "all" ? PRODUCTS : PRODUCTS.filter(x=>x.cat===filter));
+  $("#grid").innerHTML = list.length
+    ? list.map(cardHTML).join("")
+    : `<p class="empty-grid">${esc(u("none"))}</p>`;
+  renderCompareTray();
+  observe();
+}
+
+/*═══════ DISCOVERY FEATURES ═══════*/
+function renderLastOrder(){
+  const wrap = $("#lastOrderWrap");
+  const valid = lastOrder && Array.isArray(lastOrder.items) && lastOrder.items.some(i=>PRODUCT_BY_ID.has(i.id));
+  wrap.classList.toggle("on", Boolean(valid));
+  if(!valid) return;
+  const count = lastOrder.items.reduce((sum,item)=>sum + Math.max(1,Number(item.qty)||1),0);
+  $("#lastOrderTitle").textContent = ft("lastOrder");
+  $("#lastOrderMeta").textContent = `${lastOrder.id || "LYBELLE"} · ${ft("lastOrderItems").replace("{x}",count)} · ${money(lastOrder.total || 0)}`;
+  $("#reorderBtn").textContent = ft("reorder");
+}
+
+function recordViewed(id){
+  if(!PRODUCT_BY_ID.has(id)) return;
+  viewed = [id,...viewed.filter(x=>x!==id)].slice(0,4);
+  persist();
+  renderRecent();
+}
+
+function renderRecent(){
+  const section = $("#recentSection");
+  const ids = viewed.filter(id=>PRODUCT_BY_ID.has(id));
+  section.hidden = ids.length === 0;
+  if(!ids.length){ $("#recentGrid").innerHTML = ""; return; }
+  $("#recentGrid").innerHTML = ids.map(id=>{
+    const pr=PRODUCT_BY_ID.get(id);
+    return `<button class="recent-card" data-open="${id}"><img src="${IMG[pr.img]}" alt="${esc(p(id,"n"))}" loading="lazy"><span><b>${esc(p(id,"n"))}</b><small>${money(pr.price)}</small></span></button>`;
+  }).join("");
+}
+
+function renderCompareTray(){
+  const ids = Array.from(compareSet).filter(id=>PRODUCT_BY_ID.has(id));
+  compareSet = new Set(ids.slice(0,3));
+  const tray=$("#compareTray");
+  tray.classList.toggle("on", ids.length>0);
+  document.body.classList.toggle("has-compare",ids.length>0);
+  $("#compareChips").innerHTML = ids.map(id=>{
+    const pr=PRODUCT_BY_ID.get(id);
+    return `<span class="compare-chip"><img src="${IMG[pr.img]}" alt=""><span>${esc(p(id,"n"))}</span><button data-uncompare="${id}" aria-label="${esc(u("remove"))}">×</button></span>`;
+  }).join("");
+  const btn=$("#compareOpen");
+  btn.textContent = ids.length < 2 ? ft("compareNeed") : ft("compareOpen").replace("{x}",ids.length);
+  btn.disabled = ids.length < 2;
+}
+
+function renderComparison(){
+  const ids=Array.from(compareSet).filter(id=>PRODUCT_BY_ID.has(id));
+  if(ids.length<2) return false;
+  const head = `<thead><tr><th></th>${ids.map(id=>{const pr=PRODUCT_BY_ID.get(id);return `<th><img src="${IMG[pr.img]}" alt="${esc(p(id,"n"))}">${esc(p(id,"n"))}</th>`;}).join("")}</tr></thead>`;
+  const row = (label,content)=>`<tr><td>${esc(label)}</td>${ids.map(id=>`<td>${content(id)}</td>`).join("")}</tr>`;
+  $("#compareBody").innerHTML = `<table class="compare-table">${head}<tbody>
+    ${row(ft("compareFormat"),id=>esc(p(id,"s")))}
+    ${row(ft("compareIdeal"),id=>esc(PRODUCT_META[lang][id].ideal))}
+    ${row(ft("compareRoutine"),id=>esc(PRODUCT_META[lang][id].routine))}
+    ${row(ft("comparePrice"),id=>`<strong>${money(PRODUCT_BY_ID.get(id).price)}</strong>`)}
+    ${row("",id=>`<button class="btn btn-solid" data-compare-add="${id}">${esc(ft("compareAdd"))}</button>`)}
+  </tbody></table>`;
+  return true;
+}
+
+function finderResultId(){
+  const [goal,routine,place] = finderState.answers;
+  if(goal === "night") return "noctiglyc";
+  if(goal === "intimate") return routine === "complete" || place === "both" ? "duo" : "gel";
+  if(routine === "complete") return "rituel";
+  if(place === "move") return "huile";
+  return "selenium";
+}
+
+function renderFinder(){
+  const step=Math.min(finderState.step,3);
+  $("#finderModalTitle").textContent = step<3 ? ft("finderModalTitle") : ft("resultTitle");
+  $("#finderStepLabel").textContent = step<3 ? ft("step").replace("{x}",step+1) : ft("resultEyebrow");
+  $$("#finderProgress i").forEach((bar,i)=>bar.classList.toggle("on",i<=Math.min(step,2)));
+  if(step<3){
+    const n=step+1, options=ft(`q${n}o`);
+    $("#finderBody").innerHTML = `<h3 class="finder-question">${esc(ft(`q${n}`))}</h3><div class="finder-options">${options.map(o=>`<button class="finder-option" data-finder-answer="${o.v}"><b>${esc(o.b)}</b><small>${esc(o.s)}</small></button>`).join("")}</div>`;
+    return;
+  }
+  const id=finderResultId(), pr=PRODUCT_BY_ID.get(id);
+  const waText = lang === "ar" ? `مرحباً LYBELLE، أريد نصيحة حول ${p(id,"n")}.` : `Bonjour LYBELLE, je souhaite un conseil sur ${p(id,"n")}.`;
+  $("#finderBody").innerHTML = `<div class="finder-result"><img src="${IMG[pr.img]}" alt="${esc(p(id,"n"))}"><div><span class="lbl">${esc(ft("resultEyebrow"))}</span><h3>${esc(p(id,"n"))}</h3><p>${esc(p(id,"d"))}</p><div class="mprice"><span class="price">${money(pr.price)}</span></div><div class="hcta"><button class="btn btn-solid" data-finder-add="${id}">${esc(ft("resultAdd"))}</button><button class="btn btn-ghost" data-open="${id}">${esc(ft("resultView"))}</button></div><a class="link" style="margin-top:1rem" href="https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(waText)}" target="_blank" rel="noopener noreferrer">${esc(ft("resultWhatsApp"))}</a><p class="finder-disclaimer">${esc(ft("resultNote"))}</p></div></div>`;
+}
+
+function recommendedProduct(ids){
+  const rules={selenium:"huile",huile:"selenium",gel:"duo",duo:"gel",noctiglyc:"selenium",rituel:"noctiglyc"};
+  for(const id of ids){ const candidate=rules[id]; if(candidate && !ids.includes(candidate)) return PRODUCT_BY_ID.get(candidate); }
+  return PRODUCTS.find(pr=>!ids.includes(pr.id)) || null;
+}
+
+function renderMobileCart(T){
+  const bar=$("#mobileCartBar");
+  bar.classList.toggle("on",T.count>0);
+  document.body.classList.toggle("has-mobile-cart",T.count>0);
+  $("#mobileCartCount").textContent = ft("mobileCart").replace("{x}",T.count);
+  $("#mobileCartTotal").textContent = money(T.total);
+}
+
+function totals(){
+  cart = normaliseCart(cart);
+  const ids = Object.keys(cart);
+  const sub = ids.reduce((s,id)=>s + PRODUCT_BY_ID.get(id).price * cart[id], 0);
+  const dis = Math.round(sub * discount);
+  const net = sub - dis;
+  const ship= net === 0 ? 0 : (net >= SET.freeShip ? 0 : SET.shipFee);
+  return { ids, sub, dis, net, ship, total: net + ship, count: ids.reduce((s,k)=>s+cart[k],0) };
+}
+
+function renderCart(){
+  const T = totals();
+  renderMobileCart(T);
+  const pill = $("#cartPill");
+  pill.textContent = T.count; pill.classList.toggle("on", T.count > 0);
+
+  const wp = $("#wishPill");
+  wp.textContent = wish.size; wp.classList.toggle("on", wish.size > 0);
+
+  const left = Math.max(0, SET.freeShip - T.net);
+  $("#shipMsg").textContent = T.net > 0 && left > 0
+    ? u("shipLeft").replace("{x}", Math.round(left)) : u("shipFree");
+  $("#shipBar").style.width = (T.net <= 0 ? 0 : Math.min(100, T.net / SET.freeShip * 100)) + "%";
+
+  const body = $("#cartBody");
+  if (!T.ids.length){
+    body.innerHTML = `<div class="empty">${IC.bag}<p>${esc(u("empty"))}</p></div>`;
+    $("#subVal").textContent = "—"; $("#totVal").textContent = "—"; $("#shVal").textContent = "—";
+    $("#discRow").style.display = "none";
+    $("#checkout").disabled = true;
+    return;
+  }
+  $("#checkout").disabled = false;
+  body.innerHTML = T.ids.map(id=>{
+    const pr = PRODUCTS.find(x=>x.id===id);
+    return `<div class="li">
+      <div class="thumb"><img src="${IMG[pr.img]}" alt="${esc(p(id,"n"))}" loading="lazy" decoding="async"></div>
+      <div><div class="nm">${esc(p(id,"n"))}</div><div class="sz">${esc(p(id,"s"))}</div>
+        <div class="qty"><button data-dec="${id}" aria-label="−">−</button><span>${cart[id]}</span><button data-inc="${id}" aria-label="+">+</button></div>
+        <button class="rm" data-rm="${id}">${esc(u("remove"))}</button></div>
+      <div class="lp">${money(pr.price*cart[id])}</div></div>`;
+  }).join("");
+  const rec=recommendedProduct(T.ids);
+  if(rec){
+    body.insertAdjacentHTML("beforeend",`<div class="cart-suggest"><span>${esc(ft("cartSuggest"))}</span><div class="in"><img src="${IMG[rec.img]}" alt="${esc(p(rec.id,"n"))}"><div><b>${esc(p(rec.id,"n"))}</b><small>${money(rec.price)}</small></div><button data-suggest-add="${rec.id}">${esc(ft("cartSuggestAdd"))}</button></div></div>`);
+  }
+  $("#subVal").textContent = money(T.sub);
+  $("#discRow").style.display = T.dis ? "flex" : "none";
+  $("#discVal").textContent = "−" + money(T.dis);
+  $("#shVal").textContent = T.ship ? money(T.ship) : u("free");
+  $("#totVal").textContent = money(T.total);
+}
+
+function renderWish(){
+  const body = $("#wishBody");
+  const ids = Array.from(wish);
+  if (!ids.length){ body.innerHTML = `<div class="empty">${IC.heart}<p>${esc(u("emptyWish"))}</p></div>`; return; }
+  body.innerHTML = ids.map(id=>{
+    const pr = PRODUCTS.find(x=>x.id===id);
+    return `<div class="li">
+      <div class="thumb"><img src="${IMG[pr.img]}" alt="${esc(p(id,"n"))}" loading="lazy" decoding="async"></div>
+      <div><div class="nm">${esc(p(id,"n"))}</div><div class="sz">${esc(p(id,"s"))}</div>
+        <button class="rm" data-wish="${id}">${esc(u("remove"))}</button></div>
+      <div class="lp">${money(pr.price)}</div></div>`;
+  }).join("");
+}
+
+/*═══════ TOAST ═══════*/
+function toast(msg){
+  const el = document.createElement("div");
+  el.className = "toast"; el.innerHTML = IC.check + "<span>" + esc(msg) + "</span>";
+  $("#toasts").appendChild(el);
+  setTimeout(()=>{ el.classList.add("out"); setTimeout(()=>el.remove(), 360); }, 2400);
+}
+
+/*═══════ OVERLAYS ═══════*/
+const scrim = $("#scrim"), drawer = $("#cart"), wishD = $("#wish"), modal = $("#modal"), search = $("#search"), finderModal = $("#finderModal"), compareModal = $("#compareModal");
+let activeOverlay=null, lastFocus=null;
+function closeAll(restoreFocus=true){
+  [drawer, wishD, modal, search, finderModal, compareModal].forEach(el=>el.classList.remove("on"));
+  $("#mnav").classList.remove("on"); $("#burger").classList.remove("on"); $("#burger").setAttribute("aria-expanded","false");
+  scrim.classList.remove("on"); document.body.classList.remove("locked","modal-open");
+  closeCheckout();
+  activeOverlay=null;
+  if(restoreFocus && lastFocus && document.contains(lastFocus)) setTimeout(()=>lastFocus.focus(),20);
+}
+function open(el){
+  closeAll(false); lastFocus=document.activeElement; activeOverlay=el; el.classList.add("on");
+  if (el !== search && el !== finderModal && el !== compareModal) scrim.classList.add("on");
+  document.body.classList.add("locked","modal-open");
+  setTimeout(()=>el.querySelector('button:not([disabled]),a[href],input,select,textarea')?.focus(),50);
+}
+
+function openProduct(id){
+  const pr = PRODUCTS.find(x=>x.id===id);
+  if(!pr) return;
+  recordViewed(id);
+  const off = pr.was ? Math.round((1-pr.price/pr.was)*100) : 0;
+  $("#modalImg").src = IMG[pr.img]; $("#modalImg").alt = p(id,"n"); $("#modalImg").alt = p(id,"n");
+  $("#modalBody").innerHTML =
+    `<h3>${esc(p(id,"n"))}</h3>
+     <div class="csize">${esc(p(id,"s"))}</div>
+     <p class="cdesc">${esc(p(id,"d"))}</p>
+     <ul class="blist">${p(id,"b").map(b=>`<li>${IC.check}<span>${esc(b)}</span></li>`).join("")}</ul>
+     <div class="mprice"><span class="price">${money(pr.price)}</span>
+       ${pr.was?`<span class="was">${money(pr.was)}</span><span class="save">${u("off").replace("{x}",off)}</span>`:""}</div>
+     <div class="mqty">
+       <div class="qty"><button data-mq="-1">−</button><span id="mqv">1</span><button data-mq="1">+</button></div>
+       <button class="btn btn-solid" style="flex:1" data-addq="${id}">${esc(u("add"))}</button>
+     </div>
+     <button class="heart${wish.has(id)?" on":""}" data-wish="${id}" style="position:static;margin-top:1rem;background:transparent;border:1px solid var(--line);width:auto;padding:.5rem 1rem;border-radius:999px;gap:.5rem;display:inline-flex;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase">
+       ${IC.heart}<span>${wish.has(id)?"♥":"+"} ${esc(lang==="fr"?"Favoris":"المفضلة")}</span></button>
+     <div class="card-tools"><button class="compare-toggle${compareSet.has(id)?" on":""}" data-compare="${id}">${esc(compareSet.has(id)?ft("compared"):ft("compare"))}</button><button class="compare-toggle" data-share="${id}">${esc(ft("share"))}</button></div>`;
+  open(modal);
+}
+
+/*═══════ REVIEWS CAROUSEL ═══════*/
+function goReview(i, user){
+  const n = 4; rIdx = (i + n) % n;
+  const tr = $("#rtrack"); if (tr) tr.style.transform = `translateX(-${rIdx*100}%)`;
+  $$("#rdots button").forEach((b,k)=>b.classList.toggle("on", k === rIdx));
+  if (user){ clearInterval(rTimer); rTimer = setInterval(()=>goReview(rIdx+1), 7000); }
+}
+
+/*═══════ EVENTS ═══════*/
+function setLang(next){
+  lang = next;
+  persist(); renderStatic(); renderGrid(); renderCart(); renderWish(); observe();
+  $("#nlMsg").textContent = ""; $("#promoMsg").textContent = "";
+  if (search.classList.contains("on")) runSearch();
+  if (finderModal.classList.contains("on")) renderFinder();
+  if (compareModal.classList.contains("on")) renderComparison();
+}
+$("#btn-fr").onclick = ()=>setLang("fr");
+$("#btn-ar").onclick = ()=>setLang("ar");
+
+$("#cartBtn").onclick = ()=>{ renderCart(); open(drawer); };
+$("#wishBtn").onclick = ()=>{ renderWish(); open(wishD); };
+$("#cartX").onclick = closeAll; $("#wishX").onclick = closeAll; $("#modalX").onclick = closeAll;
+$("#finderX").onclick = closeAll; $("#compareX").onclick = closeAll;
+scrim.onclick = closeAll;
+finderModal.addEventListener("click",e=>{ if(e.target===finderModal) closeAll(); });
+compareModal.addEventListener("click",e=>{ if(e.target===compareModal) closeAll(); });
+$("#finderStart").onclick = ()=>{ finderState={step:0,answers:[]}; renderFinder(); open(finderModal); };
+$("#compareOpen").onclick = ()=>{ if(renderComparison()) open(compareModal); };
+$("#recentClear").onclick = ()=>{ viewed=[]; persist(); renderRecent(); };
+$("#mobileCartOpen").onclick = ()=>{ renderCart(); open(drawer); };
+$("#reorderBtn").onclick = ()=>{
+  if(!lastOrder || !Array.isArray(lastOrder.items)) return;
+  cart=lastOrder.items.reduce((next,item)=>{ if(PRODUCT_BY_ID.has(item.id)) next[item.id]=Math.min(99,Math.max(1,Number(item.qty)||1)); return next; },{});
+  persist(); renderCart(); toast(ft("reorderDone")); open(drawer);
+};
+$("#searchBtn").onclick = ()=>{ open(search); setTimeout(()=>$("#searchIn").focus(), 80); };
+$("#searchX").onclick = closeAll;
+addEventListener("keydown", e=>{
+  if (e.key === "Escape") closeAll();
+  if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)){ e.preventDefault(); $("#searchBtn").click(); }
+  if(e.key === "Tab" && activeOverlay){
+    const focusable=$$('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled])').filter(el=>activeOverlay.contains(el) && el.offsetParent!==null);
+    if(focusable.length){ const first=focusable[0],last=focusable[focusable.length-1];
+      if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+    }
+  }
+});
+
+$("#burger").onclick = e=>{
+  const on = $("#mnav").classList.toggle("on");
+  e.currentTarget.classList.toggle("on", on);
+  e.currentTarget.setAttribute("aria-expanded", on);
+  document.body.classList.toggle("locked", on);
+};
+$("#toTop").onclick = ()=>scrollTo({ top:0, behavior:"smooth" });
+$("#sort").onchange = e=>{ sort = e.target.value; renderGrid(); };
+$("#lbPrev").onclick = ()=>$("#strip").scrollBy({ left:-320, behavior:"smooth" });
+$("#lbNext").onclick = ()=>$("#strip").scrollBy({ left: 320, behavior:"smooth" });
+$("#rPrev").onclick = ()=>goReview(rIdx-1, true);
+$("#rNext").onclick = ()=>goReview(rIdx+1, true);
+
+function addToCart(id, n){
+  if (!PRODUCT_BY_ID.has(id)) return false;
+  const amount = Math.max(1, Math.floor(Number(n) || 1));
+  cart[id] = Math.min(99, (cart[id] || 0) + amount);
+  persist();
+  renderCart(); toast(p(id,"n") + " " + u("toastAdd"));
+  return true;
+}
+
+document.addEventListener("click", e=>{
+  const mlang = e.target.closest("[data-ml]");
+  if (mlang){ setLang(mlang.dataset.ml); return; }
+
+  const f = e.target.closest("[data-f]");
+  if (f){ filter = f.dataset.f;
+    $$(".chip-f").forEach(c=>c.setAttribute("aria-pressed", c.dataset.f === filter));
+    renderGrid(); return; }
+
+  const cmp = e.target.closest("[data-compare]");
+  if(cmp){ const id=cmp.dataset.compare;
+    if(compareSet.has(id)) compareSet.delete(id);
+    else if(compareSet.size>=3){ toast(ft("compareMax")); return; }
+    else compareSet.add(id);
+    renderGrid(); renderCompareTray();
+    if(modal.classList.contains("on")) openProduct(id);
+    return;
+  }
+
+  const uncmp = e.target.closest("[data-uncompare]");
+  if(uncmp){ compareSet.delete(uncmp.dataset.uncompare); renderGrid(); renderCompareTray(); return; }
+
+  const fAnswer=e.target.closest("[data-finder-answer]");
+  if(fAnswer){ finderState.answers[finderState.step]=fAnswer.dataset.finderAnswer; finderState.step=Math.min(3,finderState.step+1); renderFinder(); return; }
+
+  const fAdd=e.target.closest("[data-finder-add]");
+  if(fAdd && addToCart(fAdd.dataset.finderAdd,1)){ toast(ft("finderAdded")); closeAll(); renderCart(); open(drawer); return; }
+
+  const suggest=e.target.closest("[data-suggest-add]");
+  if(suggest && addToCart(suggest.dataset.suggestAdd,1)){ renderCart(); return; }
+
+  const compareAdd=e.target.closest("[data-compare-add]");
+  if(compareAdd && addToCart(compareAdd.dataset.compareAdd,1)){ closeAll(); renderCart(); open(drawer); return; }
+
+  const share=e.target.closest("[data-share]");
+  if(share){
+    const id=share.dataset.share, url=new URL(location.href); url.searchParams.set("product",id);
+    const payload={title:p(id,"n"),text:p(id,"d"),url:url.href};
+    if(navigator.share) navigator.share(payload).catch(()=>{});
+    else if(navigator.clipboard) navigator.clipboard.writeText(url.href).then(()=>toast(ft("shareDone"))).catch(()=>{});
+    return;
+  }
+
+  const w = e.target.closest("[data-wish]");
+  if (w){ const id = w.dataset.wish;
+    if (wish.has(id)){ wish.delete(id); persist(); toast(p(id,"n") + " " + u("toastUnwish")); }
+    else { wish.add(id); persist(); toast(p(id,"n") + " " + u("toastWish")); }
+    renderGrid(); renderWish(); renderCart();
+    if (modal.classList.contains("on")) openProduct(id);
+    return; }
+
+  const a = e.target.closest("[data-add]");
+  if (a && addToCart(a.dataset.add, 1)){
+    const o = a.textContent; a.textContent = u("added") + " ✓"; a.classList.add("done");
+    setTimeout(()=>{ a.textContent = o; a.classList.remove("done"); }, 1400);
+    renderCart(); open(drawer); return; }
+
+  const mq = e.target.closest("[data-mq]");
+  if (mq){ const v = $("#mqv"); v.textContent = Math.max(1, +v.textContent + (+mq.dataset.mq)); return; }
+
+  const aq = e.target.closest("[data-addq]");
+  if (aq && addToCart(aq.dataset.addq, +$("#mqv").textContent)){ closeAll(); renderCart(); open(drawer); return; }
+
+  const inc = e.target.closest("[data-inc]");
+  if (inc){ const id = inc.dataset.inc; if (PRODUCT_BY_ID.has(id)) cart[id] = Math.min(99, (cart[id] || 0) + 1); persist(); renderCart(); return; }
+  const dec = e.target.closest("[data-dec]");
+  if (dec){ const id = dec.dataset.dec; cart[id] = Math.max(0, (cart[id] || 0) - 1); if (!cart[id]) delete cart[id]; persist(); renderCart(); return; }
+  const rm = e.target.closest("[data-rm]"); if (rm){ delete cart[rm.dataset.rm]; persist(); renderCart(); return; }
+
+  const q = e.target.closest("[data-open]"); if (q){ openProduct(q.dataset.open); return; }
+
+  const rd = e.target.closest("[data-r]"); if (rd){ goReview(+rd.dataset.r, true); return; }
+
+  const acc = e.target.closest(".acc button");
+  if (acc){
+    const d = acc.parentElement, wasOpen = d.classList.contains("open");
+    $$(".acc").forEach(x=>{ x.classList.remove("open");
+      x.querySelector(".panel").style.maxHeight = null;
+      x.querySelector("button").setAttribute("aria-expanded","false"); });
+    if (!wasOpen){ d.classList.add("open"); acc.setAttribute("aria-expanded","true");
+      const pn = d.querySelector(".panel"); pn.style.maxHeight = pn.scrollHeight + "px"; }
+    return;
+  }
+
+  const nl = e.target.closest("#mnav a");
+  if (nl){ $("#mnav").classList.remove("on"); $("#burger").classList.remove("on");
+    document.body.classList.remove("locked"); return; }
+});
+
+/*──── promo ────*/
+$("#promoBtn").onclick = ()=>{
+  const code = $("#promoIn").value.trim().toUpperCase(), msg = $("#promoMsg");
+  if (discount > 0){ msg.textContent = u("promoUsed"); msg.style.color = "var(--ink-soft)"; return; }
+  if (SET.promo[code]){ discount = SET.promo[code]; persist();
+    msg.textContent = `${u("promoOk")} · −${Math.round(discount*100)}%`; msg.style.color = "var(--sage-700)";
+    renderCart(); toast(u("promoOk"));
+  } else { msg.textContent = u("promoBad"); msg.style.color = "var(--rose-700)"; }
+};
+
+/*──── checkout ────*/
+function renderCheckoutSummary(){
+  const T = totals();
+  const items = T.ids.map(id=>{
+    const pr=PRODUCTS.find(x=>x.id===id);
+    return `<div class="sumrow"><span>${esc(p(id,"n"))} × ${cart[id]}</span><span>${money(pr.price*cart[id])}</span></div>`;
+  }).join("");
+  $("#checkoutSummary").innerHTML = items +
+    `<div class="sumrow"><span>${esc(u("ship"))}</span><span>${T.ship ? money(T.ship) : esc(u("free"))}</span></div>`+
+    `<div class="sumrow sumtotal"><span>${esc(u("total"))}</span><strong>${money(T.total)}</strong></div>`;
+}
+function openCheckout(){
+  const T=totals(); if(!T.ids.length) return;
+  renderCheckoutSummary();
+  const profile=safeLoad(STORAGE_KEYS.profile,{});
+  [["coName","name"],["coPhone","phone"],["coCity","city"],["coAddress","address"]].forEach(([id,key])=>{ if(!$("#"+id).value && profile[key]) $("#"+id).value=profile[key]; });
+  $("#cartBody").hidden=true; $("#cartFoot").hidden=true; $("#shipWrap").hidden=true; $("#checkoutPanel").hidden=false;
+  $("#checkoutMsg").textContent="";
+  setTimeout(()=>$("#coName").focus(), 50);
+}
+function closeCheckout(){
+  $("#checkoutPanel").hidden=true; $("#cartBody").hidden=false; $("#cartFoot").hidden=false; $("#shipWrap").hidden=false; $("#checkoutMsg").textContent="";
+}
+$("#checkout").onclick = openCheckout;
+$("#checkoutBack").onclick = closeCheckout;
+$("#checkoutForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const T=totals();
+  if(!T.ids.length){ closeCheckout(); return; }
+  const form=new FormData(e.currentTarget);
+  const order={
+    id:orderRef(),
+    createdAt:new Date().toISOString(),
+    customer:{name:String(form.get("name")||"").trim(),phone:String(form.get("phone")||"").trim(),city:String(form.get("city")||"").trim(),address:String(form.get("address")||"").trim(),note:String(form.get("note")||"").trim()},
+    items:T.ids.map(id=>({id,qty:cart[id],price:PRODUCTS.find(x=>x.id===id).price,name:p(id,"n")})),
+    subtotal:T.sub, discount:T.dis, shipping:T.ship, total:T.total, currency:STORE_CONFIG.currency
+  };
+  const msg=$("#checkoutMsg");
+  try{
+    if(STORE_CONFIG.orderEndpoint){
+      const res=await fetch(STORE_CONFIG.orderEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(order)});
+      if(!res.ok) throw new Error("Order endpoint failed");
+    }
+    safeSave(STORAGE_KEYS.profile,order.customer);
+    safeSave(STORAGE_KEYS.lastOrder,order);
+    lastOrder=order;
+    if(STORE_CONFIG.whatsappNumber){
+      const lines=lang === "ar"
+        ? [`مرحباً LYBELLE، أريد تأكيد الطلب ${order.id}.`,``,...order.items.map(i=>`• ${i.name} × ${i.qty} — ${money(i.price*i.qty)}`),``,`المجموع الفرعي: ${money(order.subtotal)}`,order.discount?`الخصم: −${money(order.discount)}`:"",`التوصيل: ${order.shipping?money(order.shipping):u("free")}`,`المجموع: ${money(order.total)}`,``,`الاسم: ${order.customer.name}`,`الهاتف: ${order.customer.phone}`,`المدينة: ${order.customer.city}`,`العنوان: ${order.customer.address}`,order.customer.note?`ملاحظة: ${order.customer.note}`:""].filter(Boolean)
+        : [`Bonjour LYBELLE, je souhaite confirmer la commande ${order.id}.`,``,...order.items.map(i=>`• ${i.name} × ${i.qty} — ${money(i.price*i.qty)}`),``,`Sous-total : ${money(order.subtotal)}`,order.discount?`Réduction : −${money(order.discount)}`:"",`Livraison : ${order.shipping?money(order.shipping):u("free")}`,`Total : ${money(order.total)}`,``,`Nom : ${order.customer.name}`,`Téléphone : ${order.customer.phone}`,`Ville : ${order.customer.city}`,`Adresse : ${order.customer.address}`,order.customer.note?`Note : ${order.customer.note}`:""].filter(Boolean);
+      const url=`https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
+      window.open(url,"_blank","noopener,noreferrer");
+    }
+    msg.classList.add("ok");
+    msg.textContent = STORE_CONFIG.orderEndpoint || STORE_CONFIG.whatsappNumber
+      ? `${u("doneH")} · ${order.id}`
+      : `Commande ${order.id} préparée. Ajoutez votre endpoint de commande ou votre numéro WhatsApp dans STORE_CONFIG pour l'envoyer automatiquement.`;
+    cart={}; discount=0; persist(); renderCart(); renderLastOrder();
+  } catch(err){
+    msg.classList.remove("ok");
+    msg.textContent="Impossible d'envoyer la commande pour le moment. Vérifiez la configuration du service de commande.";
+  }
+});
+
+/*──── newsletter ────*/
+$("#nlForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const email=$("#nlEmail").value.trim();
+  const ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+  const m=$("#nlMsg");
+  if(!ok){ m.textContent=u("err"); m.classList.remove("ok"); return; }
+  try{
+    if(STORE_CONFIG.newsletterEndpoint){
+      const res=await fetch(STORE_CONFIG.newsletterEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email,source:"lybelle-site"})});
+      if(!res.ok) throw new Error("Newsletter endpoint failed");
+      m.textContent=u("ok");
+    } else {
+      safeSave("lybelle-newsletter-pending",{email,createdAt:new Date().toISOString()});
+      m.textContent=lang==="fr"?"Adresse enregistrée — connectez votre service newsletter pour l'envoyer réellement.":"تم تسجيل البريد — اربط خدمة النشرة لإتمام الاشتراك.";
+    }
+    m.classList.add("ok"); e.target.reset(); toast(u("ok"));
+  }catch(err){ m.textContent=lang==="fr"?"Inscription momentanément indisponible.":"الاشتراك غير متاح مؤقتاً."; m.classList.remove("ok"); }
+});
+
+/*──── search ────*/
+function runSearch(){
+  const q = $("#searchIn").value.trim().toLowerCase();
+  const box = $("#sres");
+  if (!q){ box.innerHTML = ""; return; }
+  const hits = PRODUCTS.filter(pr=>{
+    const hay = ["fr","ar"].map(L=>P[L][pr.id].n+" "+P[L][pr.id].d+" "+COPY[L]["cat."+pr.cat]).join(" ");
+    return hay.toLowerCase().includes(q);
+  });
+  box.innerHTML = hits.length
+    ? hits.map(pr=>`<a href="#shop" data-open="${pr.id}">
+        <img src="${IMG[pr.img]}" alt="${esc(p(pr.id,"n"))}" loading="lazy" decoding="async"><div><div class="n">${esc(p(pr.id,"n"))}</div>
+        <div class="c">${esc(t("cat."+pr.cat))}</div></div><span class="price">${money(pr.price)}</span></a>`).join("")
+    : `<p class="snone">${esc(u("noRes"))}</p>`;
+}
+$("#searchIn").addEventListener("input", runSearch);
+
+/*──── lookbook drag ────*/
+(function(){
+  const s = $("#strip"); let down = false, sx = 0, sl = 0, moved = 0;
+  s.addEventListener("pointerdown", e=>{ down = true; moved = 0; sx = e.clientX; sl = s.scrollLeft; s.classList.add("drag"); });
+  addEventListener("pointerup", ()=>{ down = false; s.classList.remove("drag"); });
+  s.addEventListener("pointermove", e=>{ if (!down) return; const d = e.clientX - sx; moved += Math.abs(d);
+    s.scrollLeft = sl - d; });
+})();
+
+/*──── scroll fx ────*/
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let ticking = false;
+function onScroll(){
+  if (ticking) return; ticking = true;
+  requestAnimationFrame(()=>{
+    const y = scrollY;
+    $("#hdr").classList.toggle("stuck", y > 8);
+    $("#toTop").classList.toggle("on", y > 640);
+    const secs = [["#shop",0],["#rituel",1],["#apropos",2],["#journal",3],["#contact",4]];
+    let act = -1;
+    secs.forEach(([sel,i])=>{ const el = $(sel); if (el && el.getBoundingClientRect().top <= innerHeight*0.42) act = i; });
+    $$("#mainNav a").forEach((a,i)=>a.classList.toggle("act", i === act));
+    if (!reduce) $$(".par").forEach((el,i)=>{
+      const r = el.getBoundingClientRect();
+      if (r.top < innerHeight && r.bottom > 0){
+        const d = (r.top + r.height/2 - innerHeight/2) / innerHeight;
+        el.style.transform = `translateY(${d * (i % 2 ? -12 : 12)}px) scale(1.04)`;
+      }});
+    ticking = false;
+  });
+}
+addEventListener("scroll", onScroll, { passive:true });
+addEventListener("resize", onScroll, { passive:true });
+
+let io;
+function observe(){
+  if (!io) io = new IntersectionObserver(es=>es.forEach((en,i)=>{
+    if (en.isIntersecting){ setTimeout(()=>en.target.classList.add("in"), i*80); io.unobserve(en.target); }
+  }), { threshold:.08, rootMargin:"0px 0px -50px 0px" });
+  $$(".rev:not(.in)").forEach(el=>io.observe(el));
+}
+
+// Add lightweight Product JSON-LD for better search previews without exposing a backend.
+function syncProductSchema(){
+  let node=$("#product-schema");
+  if(!node){ node=document.createElement("script"); node.type="application/ld+json"; node.id="product-schema"; document.head.appendChild(node); }
+  node.textContent=JSON.stringify(PRODUCTS.map(pr=>({"@context":"https://schema.org","@type":"Product","name":p(pr.id,"n"),"description":p(pr.id,"d"),"image":new URL(IMG[pr.img],location.href).href,"offers":{"@type":"Offer","priceCurrency":"MAD","price":String(pr.price),"availability":"https://schema.org/InStock"}})));
+}
+/*──── init ────*/
+syncProductSchema();
+setLang(lang);
+onScroll();
+rTimer = setInterval(()=>goReview(rIdx+1), 7000);
+const boot = ()=>setTimeout(()=>{
+  $("#intro").classList.add("gone");
+  document.body.classList.add("ready");
+  observe();
+  const sharedProduct=new URLSearchParams(location.search).get("product");
+  if(PRODUCT_BY_ID.has(sharedProduct)) openProduct(sharedProduct);
+}, reduce ? 0 : 850);
+if (document.readyState === "complete") boot(); else addEventListener("load", boot);
+</script>
+</body>
+</html>
