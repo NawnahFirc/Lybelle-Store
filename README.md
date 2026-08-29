@@ -8,7 +8,7 @@ Premium bilingual French/Arabic storefront for LYBELLE.
 - Product catalogue, search, favourites and persistent cart
 - Guided routine finder and product comparison
 - Recently viewed products and reorder flow
-- WhatsApp checkout using +212 604-442881
+- WhatsApp checkout using +212 662-642955
 - Vercel-ready static deployment
 
 ## Local development
@@ -16,4 +16,3 @@ Premium bilingual French/Arabic storefront for LYBELLE.
 ```bash
 npm run dev
 ```
-

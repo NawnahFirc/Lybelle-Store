@@ -14,7 +14,7 @@
 <meta property="og:description" content="Compléments alimentaires et soins d'hygiène formulés au Maroc.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="/">
-<meta property="og:image" content="assets/hero-hair-ritual.webp">
+<meta property="og:image" content="assets/campaign-selenium-x.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -291,6 +291,7 @@ select.sort:hover{border-color:var(--sage-400)}
 .cmedia{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--rl);background:var(--sand);
   box-shadow:0 2px 12px -8px rgba(44,54,38,.4)}
 .cmedia img{width:100%;height:100%;object-fit:cover;transition:transform 1.15s var(--ease);filter:saturate(.96) contrast(1.02)}
+.cmedia .product-image-gel{object-position:63% center}.cmedia .product-image-selenium{object-position:center 42%}.cmedia .product-image-noctiglyc{object-position:center 38%}
 .card:hover .cmedia img{transform:scale(1.07)}
 .cmedia::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(34,38,31,.22),transparent 42%);
   opacity:0;transition:opacity .45s}
@@ -363,7 +364,7 @@ select.sort:hover{border-color:var(--sage-400)}
 /*══ NIGHT BANNER ══*/
 .night{position:relative;min-height:clamp(24rem,52vw,34rem);display:grid;align-items:center;
   color:var(--cream);overflow:hidden}
-.night img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.night img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% center;transform:scale(1.34);transform-origin:72% center}
 .night::after{content:"";position:absolute;inset:0;
   background:linear-gradient(100deg,rgba(28,23,62,.94) 0%,rgba(30,25,66,.78) 40%,rgba(36,31,78,.25) 82%)}
 .night .in{position:relative;z-index:3;padding:clamp(3rem,7vw,5rem) var(--pad);max-width:36rem}
@@ -373,13 +374,17 @@ select.sort:hover{border-color:var(--sage-400)}
 .night h2 em{color:var(--lav)}
 .night p{color:rgba(253,251,248,.78);margin-top:1.3rem;max-width:40ch}
 .night .hcta{margin-top:2.2rem}
+.night-prompt{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.1rem!important;padding:.65rem .9rem;
+  border:1px solid rgba(253,251,248,.18);border-radius:999px;background:rgba(253,251,248,.08);font-size:.76rem!important}
+.night-prompt::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:var(--lav);box-shadow:0 0 0 4px rgba(158,154,208,.14)}
 
 /*══ LOOKBOOK ══*/
 .look{padding-bottom:clamp(3.5rem,7vw,5.5rem);position:relative}
 .strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,25vw);
   gap:clamp(.7rem,1.6vw,1.2rem);overflow-x:auto;scroll-snap-type:x proximity;
   scroll-padding-left:var(--pad);
-  padding:clamp(1.8rem,3.5vw,2.8rem) var(--pad) 1rem;cursor:grab;scrollbar-width:none}
+  padding:clamp(1.8rem,3.5vw,2.8rem) var(--pad) 1rem;cursor:grab;scrollbar-width:none;
+  overscroll-behavior-inline:contain;touch-action:pan-x pan-y}
 .strip::-webkit-scrollbar{display:none}
 .strip.drag{cursor:grabbing;scroll-snap-type:none}
 .strip figure{scroll-snap-align:start;margin:0;aspect-ratio:4/5;border-radius:var(--rl);overflow:hidden;
@@ -448,6 +453,20 @@ select.sort:hover{border-color:var(--sage-400)}
 .field input:focus{outline:none;border-color:var(--rose-200);background:rgba(253,251,248,.12)}
 .fmsg{margin-top:.9rem;font-size:.82rem;min-height:1.4em;color:var(--rose-200)}
 .fmsg.ok{color:var(--sage-200)}
+
+/*══ JOURNAL — Skiper UI inspired animated link treatment ══*/
+.journal-story{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(18rem,.88fr);gap:clamp(2rem,6vw,6rem);
+  align-items:center;padding:clamp(4rem,9vw,7rem) var(--pad);background:var(--sand);position:relative;overflow:hidden}
+.journal-story::before{content:"";position:absolute;width:34rem;height:34rem;border-radius:50%;right:-12rem;top:-16rem;background:radial-gradient(circle,rgba(194,113,138,.16),transparent 65%);pointer-events:none}
+.journal-story>*{position:relative;z-index:1}.journal-story h2{max-width:17ch}.journal-story .lede{font-size:1.08rem;line-height:1.72}.journal-story .journal-body{max-width:58ch;margin-top:1.1rem;color:var(--ink-soft);font-size:.92rem}
+.journal-facts{list-style:none;display:grid;gap:.75rem;padding:clamp(1.35rem,3vw,2rem);border:1px solid var(--line-2);border-radius:24px;background:rgba(253,251,248,.82);box-shadow:var(--shadow-sm)}
+.journal-facts li{display:grid;grid-template-columns:1.45rem 1fr;gap:.7rem;align-items:start;color:var(--ink-soft);font-size:.83rem;line-height:1.55}
+.journal-facts li::before{content:"✦";display:grid;place-items:center;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--sage-50);color:var(--sage-700);font-size:.66rem}
+.journal-quote{margin-top:1.35rem;padding-left:1rem;border-left:2px solid var(--rose);color:var(--sage-700);font-family:var(--display);font-size:1.35rem;line-height:1.35;font-style:italic;max-width:35ch}
+.skiper-link{position:relative;display:inline-flex;align-items:center;gap:.45em;margin-top:1.8rem;padding:.18rem 0;color:var(--sage-700);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.skiper-link::before{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.skiper-link:hover::before,.skiper-link:focus-visible::before{transform:scaleX(1);transform-origin:left}.skiper-link svg{width:.8em;height:.8em;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;transform:translateY(.22em);opacity:0;transition:transform .3s cubic-bezier(.4,0,.2,1),opacity .3s}
+.skiper-link:hover svg,.skiper-link:focus-visible svg{transform:translateY(0);opacity:1}
 
 /*══ FOOTER ══*/
 footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
@@ -537,6 +556,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 .modal.on{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
 .mmedia{position:relative;aspect-ratio:4/5;overflow:hidden}
 .mmedia img{width:100%;height:100%;object-fit:cover}
+.mmedia .product-image-gel{object-fit:contain;object-position:center;background:#f8f8f4}.mmedia .product-image-selenium{object-position:center 40%}.mmedia .product-image-noctiglyc{object-position:center 38%}
 .modal .x{position:absolute;top:.85rem;right:.85rem;z-index:6;background:rgba(253,251,248,.92)}
 .mbody{padding:clamp(1.5rem,3vw,2.6rem);display:flex;flex-direction:column}
 .mbody h3{font-family:var(--display);font-size:2rem;font-weight:400;margin-top:.5rem;line-height:1.15}
@@ -548,6 +568,9 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 .mprice{display:flex;align-items:baseline;gap:.7rem;margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid var(--line-2)}
 .mprice .price{font-size:1.5rem}
 .mqty{display:flex;gap:.6rem;margin-top:1.2rem;align-items:center}
+.product-detail{display:grid;gap:1.1rem;margin-top:1.45rem;padding-top:1.35rem;border-top:1px solid var(--line-2)}
+.detail-section h4{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:var(--sage-700)}
+.detail-section p{margin-top:.45rem;color:var(--ink-soft);font-size:.82rem;line-height:1.65}.detail-section ul{display:grid;gap:.6rem;list-style:none;margin-top:.65rem}.detail-section li{color:var(--ink-soft);font-size:.81rem;line-height:1.58}.detail-section li b{display:block;color:var(--ink);font-weight:500}.detail-section li span{display:block;margin-top:.1rem}
 
 /*══ SEARCH ══*/
 .search{position:fixed;inset:0;z-index:330;background:rgba(253,251,248,.97);backdrop-filter:blur(10px);
@@ -684,7 +707,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .chips{overflow-x:auto;flex-wrap:nowrap;padding-bottom:.4rem;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
   .sortwrap{justify-content:flex-end}
-  .finder-options{grid-template-columns:1fr}.finder-option{min-height:auto}.finder-result{grid-template-columns:8rem 1fr}.compare-chips .compare-chip:nth-child(3){display:none}
+  .finder-options{grid-template-columns:1fr}.finder-option{min-height:auto}.finder-result{grid-template-columns:8rem 1fr}.compare-chips .compare-chip:nth-child(3){display:none}.journal-story{grid-template-columns:1fr}
 }
 @media(max-width:560px){
   .pgrid{grid-template-columns:1fr;gap:2.2rem}
@@ -694,9 +717,10 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .logo .wm b{font-size:1.05rem;letter-spacing:.28em}
   .hero .h1{font-size:clamp(2.5rem,10vw,3.4rem)}
   .product-ribbon{height:58px}.ribbon-item{min-width:164px;height:46px;grid-template-columns:38px 1fr;padding-right:.65rem}.ribbon-item img{width:38px;height:38px}.ribbon-item b{display:none}
-  .wa-float{right:.75rem;bottom:.75rem;padding:.48rem .7rem;font-size:.66rem;max-width:calc(100vw - 1.5rem)}.wa-float #waFloatLabel{display:inline;white-space:nowrap}.top{right:.75rem;bottom:4.65rem}
+  body{--mobile-cart-offset:0rem;--compare-offset:0rem}body.has-mobile-cart{--mobile-cart-offset:4.9rem}body.has-compare{--compare-offset:4.75rem}
+  .wa-float{right:.75rem;bottom:calc(.75rem + var(--mobile-cart-offset) + var(--compare-offset));width:3rem;height:3rem;justify-content:center;padding:0;font-size:.66rem}.wa-float #waFloatLabel{display:none}.top{right:.75rem;bottom:calc(4.55rem + var(--mobile-cart-offset) + var(--compare-offset))}
   .finder-banner{margin-inline:.75rem;border-radius:24px}.finder-copy{padding:2rem 1.25rem}.finder-visual{min-height:20rem}.finder-note{align-items:flex-start}.finder-result{grid-template-columns:1fr}.finder-result img{max-height:17rem;aspect-ratio:16/10}.recent-grid{grid-template-columns:1fr}.recent-section{padding-inline:.75rem}.compare-tray{bottom:.75rem}.mobile-cart-bar.on{display:flex}.checkout-actions{flex-direction:column}.cart-suggest .in{grid-template-columns:3.4rem 1fr}.cart-suggest button{grid-column:1/-1;width:100%}
-  .has-mobile-cart .wa-float{bottom:5.25rem}.has-mobile-cart .top{bottom:9.05rem}.has-compare .wa-float{bottom:5.35rem}.has-compare .top{bottom:9.1rem}.has-mobile-cart.has-compare .compare-tray{bottom:5.25rem}.has-mobile-cart.has-compare .wa-float{bottom:9.8rem}.has-mobile-cart.has-compare .top{bottom:13.6rem}
+  .compare-tray{bottom:calc(.75rem + var(--mobile-cart-offset))}.journal-story{padding-inline:1.25rem}.journal-facts{padding:1.25rem}.night-prompt{border-radius:16px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -817,7 +841,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
       </div>
     </div>
     <div class="finder-visual">
-      <img src="assets/product-gel-duo.webp" alt="Collection LYBELLE" width="528" height="640" loading="lazy">
+      <img src="assets/campaign-selenium-x.png" alt="Selenium X LYBELLE" width="1024" height="1262" loading="lazy">
       <div class="finder-note">
         <div><strong id="finderNoteTitle">Une réponse, pas un diagnostic</strong><small id="finderNoteText">Une orientation simple à partir des informations produit.</small></div>
         <span class="lbl" id="finderTime">≈ 45 sec</span>
@@ -874,11 +898,12 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 
   <!-- ══ NIGHT ══ -->
   <section class="night rev">
-    <img src="assets/original-night.webp" alt="Noctiglyc" width="1080" height="606" loading="lazy">
+    <img src="assets/campaign-noctiglyc.png" alt="Noctiglyc" width="1122" height="1402" loading="lazy">
     <div class="in">
       <span class="eyebrow" data-t="ngt.eyebrow"></span>
       <h2 data-th="ngt.h2"></h2>
       <p data-t="ngt.p"></p>
+      <p class="night-prompt" id="nightPrompt"></p>
       <div class="hcta">
         <button class="btn btn-inv" data-open="noctiglyc" data-t="ngt.cta"></button>
       </div>
@@ -935,6 +960,21 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
       <p class="fmsg" id="nlMsg" role="status" aria-live="polite"></p>
     </div>
   </section>
+
+  <!-- ══ JOURNAL ══ -->
+  <section class="journal-story rev" id="blog">
+    <div>
+      <span class="eyebrow" id="blogEyebrow"></span>
+      <h2 id="blogTitle"></h2>
+      <p class="lede" id="blogLead"></p>
+      <p class="journal-body" id="blogBody"></p>
+      <a class="skiper-link" id="blogLink" href="#apropos"><span id="blogLinkText"></span><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 9 9 .8m0 0v8.2m0-8.2H1"/></svg></a>
+    </div>
+    <div>
+      <ul class="journal-facts" id="blogFacts"></ul>
+      <p class="journal-quote" id="blogQuote"></p>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -943,7 +983,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
       <div class="logo" id="footLogo"></div>
       <p class="fblurb" data-t="foot.blurb"></p>
       <div class="social" aria-label="Réseaux sociaux">
-        <a href="https://wa.me/212604442881" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +212 604-442881"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.9 7L4 20l1.1-3.9A8 8 0 1 1 20 12z"/><path d="M9.2 9.4c.3-.6.6-.5.9-.5s.6.1.8.6l.5 1.1c.1.3 0 .5-.2.7l-.3.3c.5 1 1.3 1.7 2.2 2.1l.3-.4c.2-.2.4-.3.7-.2l1.1.5c.4.2.5.4.5.7s-.1.9-.6 1.1c-1.4.6-4.6-1.7-5.9-4.5-.2-.5-.3-1-.1-1.5z"/></svg></a>
+        <a href="https://wa.me/212662642955" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +212 662-642955"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.9 7L4 20l1.1-3.9A8 8 0 1 1 20 12z"/><path d="M9.2 9.4c.3-.6.6-.5.9-.5s.6.1.8.6l.5 1.1c.1.3 0 .5-.2.7l-.3.3c.5 1 1.3 1.7 2.2 2.1l.3-.4c.2-.2.4-.3.7-.2l1.1.5c.4.2.5.4.5.7s-.1.9-.6 1.1c-1.4.6-4.6-1.7-5.9-4.5-.2-.5-.3-1-.1-1.5z"/></svg></a>
       </div>
       <div class="pay"><i>Visa</i><i>Mastercard</i><i>CMI</i><i data-t="foot.cod"></i></div>
     </div>
@@ -1047,7 +1087,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   <div class="compare-chips" id="compareChips"></div>
   <button class="btn" id="compareOpen"></button>
 </div>
-<a class="wa-float" id="whatsappFloat" href="https://wa.me/212604442881" target="_blank" rel="noopener noreferrer" aria-label="Commander sur WhatsApp">
+<a class="wa-float" id="whatsappFloat" href="https://wa.me/212662642955" target="_blank" rel="noopener noreferrer" aria-label="Commander sur WhatsApp">
   <span class="wa-dot" aria-hidden="true">W</span><span id="waFloatLabel">Commander sur WhatsApp</span>
 </a>
 <button class="top" id="toTop" aria-label="Haut de page"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
@@ -1068,8 +1108,8 @@ const STORE_CONFIG = {
   freeShipping: 400,
   shippingFee: 35,
   promoWelcome: 0.15,
-  whatsappNumber: "212604442881",
-  whatsappDisplay: "+212 604-442881",
+  whatsappNumber: "212662642955",
+  whatsappDisplay: "+212 662-642955",
   newsletterEndpoint: "", // Optional POST endpoint for a real newsletter provider
   orderEndpoint: "" // Optional POST endpoint for a real order backend
 };
@@ -1097,9 +1137,9 @@ const IMG = {
   nightR: "assets/original-nightR.webp",
   daily: "assets/product-gel-duo.webp",
   huile: "assets/product-hair-oil.webp",
-  noctiglyc: "assets/product-noctiglyc.webp",
-  selenium: "assets/product-selenium-x.webp",
-  gel: "assets/product-gel-intime.webp",
+  noctiglyc: "assets/campaign-noctiglyc.png",
+  selenium: "assets/campaign-selenium-x.png",
+  gel: "assets/campaign-astringel.png",
   rituel: "assets/hero-hair-ritual.webp"
 };
 
@@ -1146,18 +1186,26 @@ const SET = { currency:"DH", freeShip:400, shipFee:35, promo:{ LYBELLE10:.10, BI
 /*──── premium feature copy ────*/
 const FEATURE_COPY = {
 fr:{
-  finderEyebrow:"Votre routine LYBELLE", finderTitle:"Trouvez votre rituel en <em>moins d'une minute</em>",
-  finderIntro:"Quelques choix simples, puis une suggestion claire et adaptée à votre quotidien.",
-  finderPoints:["3 choix simples","Résultat instantané","Conseil responsable"], finderStart:"Créer mon rituel",
-  finderNoteTitle:"Une réponse, pas un diagnostic", finderNoteText:"Une orientation simple à partir des informations produit.", finderTime:"≈ 45 sec",
+  finderEyebrow:"Votre recommandation LYBELLE", finderTitle:"Trouvez le produit qui vous correspond <em>en 30 secondes</em>",
+  finderIntro:"Nous commençons par votre profil, puis nous vous orientons vers le produit le plus pertinent pour votre besoin.",
+  finderPoints:["Parcours femmes & hommes","3 questions utiles","Conseil responsable"], finderStart:"Trouver mon produit",
+  finderNoteTitle:"Une orientation, pas un diagnostic", finderNoteText:"Les conseils respectent les usages indiqués sur chaque produit.", finderTime:"≈ 30 sec",
   lastOrder:"Votre dernière commande", reorder:"Recommander", lastOrderItems:"{x} article(s)",
-  finderModalTitle:"Composons votre routine", step:"Étape {x} sur 3",
-  q1:"Quel moment de votre quotidien voulez-vous accompagner ?",
-  q1o:[{v:"hair",b:"Cheveux & ongles",s:"Un rituel simple pour votre routine capillaire."},{v:"night",b:"Routine du soir",s:"Un produit à intégrer à votre rituel du soir."},{v:"intimate",b:"Soin quotidien",s:"Une option douce et pratique au quotidien."}],
-  q2:"Quel type de routine vous ressemble le plus ?",
-  q2o:[{v:"simple",b:"L'essentiel",s:"Un seul produit, facile à adopter."},{v:"complete",b:"La routine complète",s:"Une combinaison pensée pour aller ensemble."},{v:"flex",b:"La plus flexible",s:"Un format qui suit votre rythme."}],
-  q3:"Où utiliserez-vous votre routine le plus souvent ?",
-  q3o:[{v:"home",b:"À la maison",s:"Un essentiel toujours à portée de main."},{v:"move",b:"En déplacement",s:"Un format pratique pour votre quotidien."},{v:"both",b:"Les deux",s:"Une routine à garder et à emporter."}],
+  finderModalTitle:"Votre recommandation personnelle", step:"Étape {x} sur 3",
+  qGender:"Pour commencer, à qui est destinée cette recommandation ?",
+  qGendero:[{v:"woman",b:"Femme",s:"Accès à l'ensemble de la gamme LYBELLE."},{v:"man",b:"Homme",s:"Selenium X ou Noctiglyc selon votre besoin."}],
+  qGoalWoman:"Quel besoin voulez-vous accompagner aujourd'hui ?",
+  qGoalMan:"Quel besoin voulez-vous accompagner aujourd'hui ?",
+  qGoalWomano:[{v:"hair",b:"Cheveux & ongles",s:"Force, croissance ou soin des longueurs."},{v:"night",b:"Sommeil & détente",s:"Un rituel du soir plus apaisant."},{v:"intimate",b:"Confort intime",s:"Un soin externe au pH physiologique."}],
+  qGoalMano:[{v:"hair",b:"Cheveux & vitalité",s:"Pour une routine capillaire ciblée."},{v:"night",b:"Sommeil & détente",s:"Pour déconnecter au moment du coucher."}],
+  qHairWoman:"Quel type de routine cheveux préférez-vous ?",
+  qHairWomano:[{v:"selenium",b:"De l'intérieur",s:"Sélénium, zinc et biotine pour la cure capillaire."},{v:"huile",b:"En surface",s:"Un soin des longueurs et des pointes."},{v:"rituel",b:"La routine complète",s:"Le duo intérieur + extérieur."}],
+  qHairMan:"Votre priorité cheveux ?",
+  qHairMano:[{v:"selenium",b:"Réduire la chute",s:"Selenium X, formule non hormonale pour hommes et femmes."},{v:"selenium",b:"Fortifier la fibre",s:"Sélénium, zinc et biotine dans une cure d'un mois."}],
+  qNight:"Comment se présente votre besoin du soir ?",
+  qNighto:[{v:"noctiglyc",b:"Difficultés d'endormissement",s:"Noctiglyc associe magnésium bisglycinate et mélatonine."},{v:"noctiglyc",b:"Besoin de déconnexion",s:"Un rituel pratique à intégrer avant le coucher."}],
+  qIntimate:"Quel format vous conviendrait le mieux ?",
+  qIntimateo:[{v:"gel",b:"Le soin essentiel",s:"Astringel pour le confort intime quotidien."},{v:"duo",b:"Maison & déplacement",s:"Deux formats pratiques pour votre routine."}],
   resultEyebrow:"Votre suggestion LYBELLE", resultTitle:"Voici votre point de départ", resultAdd:"Ajouter cette routine", resultView:"Voir les détails", resultWhatsApp:"Demander conseil sur WhatsApp",
   resultNote:"Cette orientation générale ne remplace pas l'avis d'un professionnel de santé. Lisez toujours l'étiquette et les conseils d'utilisation.",
   compare:"Comparer", compared:"Sélectionné", compareOpen:"Comparer ({x})", compareNeed:"Choisissez au moins 2 produits", compareMax:"Vous pouvez comparer jusqu'à 3 produits.", compareEyebrow:"Comparateur LYBELLE", compareTitle:"Choisissez avec clarté", compareFormat:"Format", compareIdeal:"Idéal pour", compareRoutine:"Place dans la routine", comparePrice:"Prix", compareAdd:"Ajouter",
@@ -1167,18 +1215,26 @@ fr:{
   reorderDone:"Votre dernière commande a été remise dans le panier"
 },
 ar:{
-  finderEyebrow:"روتين LYBELLE الخاص بك", finderTitle:"اكتشفي روتينك في <em>أقل من دقيقة</em>",
-  finderIntro:"ثلاثة اختيارات بسيطة، ثم اقتراح واضح يناسب روتينك اليومي.",
-  finderPoints:["3 اختيارات بسيطة","نتيجة فورية","توجيه مسؤول"], finderStart:"ابدئي اختيار الروتين",
-  finderNoteTitle:"توجيه بسيط وليس تشخيصاً", finderNoteText:"اقتراح عام انطلاقاً من معلومات المنتجات.", finderTime:"حوالي 45 ثانية",
+  finderEyebrow:"توصية LYBELLE الخاصة بك", finderTitle:"اعثر على المنتج المناسب لك <em>في 30 ثانية</em>",
+  finderIntro:"نبدأ بملفك الشخصي ثم نرشدك نحو المنتج الأنسب لاحتياجك اليوم.",
+  finderPoints:["مسار للنساء والرجال","3 أسئلة مفيدة","توجيه مسؤول"], finderStart:"اعثر على منتجي",
+  finderNoteTitle:"توجيه وليس تشخيصاً", finderNoteText:"التوصيات تحترم طرق الاستعمال المدونة على المنتجات.", finderTime:"حوالي 30 ثانية",
   lastOrder:"طلبك الأخير", reorder:"إعادة الطلب", lastOrderItems:"{x} منتج",
-  finderModalTitle:"لنختَر روتينك", step:"الخطوة {x} من 3",
-  q1:"أي جزء من روتينك اليومي تريدين مرافقته؟",
-  q1o:[{v:"hair",b:"الشعر والأظافر",s:"روتين بسيط للعناية اليومية بالشعر."},{v:"night",b:"روتين المساء",s:"منتج يندمج بسهولة في طقوس المساء."},{v:"intimate",b:"العناية اليومية",s:"خيار لطيف وعملي للاستخدام اليومي."}],
-  q2:"أي نوع من الروتين يناسبك أكثر؟",
-  q2o:[{v:"simple",b:"الأساسيات",s:"منتج واحد سهل الاعتماد."},{v:"complete",b:"روتين متكامل",s:"منتجات مصممة لتنسجم معاً."},{v:"flex",b:"الأكثر مرونة",s:"خيار يرافق إيقاع يومك."}],
-  q3:"أين ستستخدمين روتينك غالباً؟",
-  q3o:[{v:"home",b:"في المنزل",s:"منتج أساسي قريب منك دائماً."},{v:"move",b:"أثناء التنقل",s:"خيار عملي لروتينك اليومي."},{v:"both",b:"في الاثنين",s:"روتين في البيت وأثناء التنقل."}],
+  finderModalTitle:"توصيتك الشخصية", step:"الخطوة {x} من 3",
+  qGender:"لمن تبحث عن هذه التوصية؟",
+  qGendero:[{v:"woman",b:"امرأة",s:"الوصول إلى كامل مجموعة LYBELLE."},{v:"man",b:"رجل",s:"Selenium X أو Noctiglyc حسب احتياجك."}],
+  qGoalWoman:"ما الاحتياج الذي تريدين مرافقته اليوم؟",
+  qGoalMan:"ما الاحتياج الذي تريد مرافقته اليوم؟",
+  qGoalWomano:[{v:"hair",b:"الشعر والأظافر",s:"القوة أو النمو أو العناية بالأطراف."},{v:"night",b:"النوم والاسترخاء",s:"طقوس مسائية أكثر هدوءاً."},{v:"intimate",b:"الراحة الحميمة",s:"عناية خارجية بدرجة حموضة فيزيولوجية."}],
+  qGoalMano:[{v:"hair",b:"الشعر والحيوية",s:"لعناية شعر مركزة."},{v:"night",b:"النوم والاسترخاء",s:"للحصول على لحظة هدوء قبل النوم."}],
+  qHairWoman:"أي نوع من روتين الشعر تفضلين؟",
+  qHairWomano:[{v:"selenium",b:"من الداخل",s:"سيلينيوم وزنك وبيوتين في برنامج للشعر."},{v:"huile",b:"عناية خارجية",s:"عناية بالأطراف وطول الشعر."},{v:"rituel",b:"روتين متكامل",s:"العناية من الداخل والخارج."}],
+  qHairMan:"ما أولويتك للشعر؟",
+  qHairMano:[{v:"selenium",b:"تقليل التساقط",s:"Selenium X بتركيبة غير هرمونية للرجال والنساء."},{v:"selenium",b:"تقوية بنية الشعر",s:"سيلينيوم وزنك وبيوتين في برنامج شهر."}],
+  qNight:"كيف يبدو احتياجك في المساء؟",
+  qNighto:[{v:"noctiglyc",b:"صعوبة في الاستغراق بالنوم",s:"Noctiglyc يجمع بين مغنيسيوم بيسغليسينات والميلاتونين."},{v:"noctiglyc",b:"الحاجة إلى الاسترخاء",s:"طقوس عملية قبل النوم."}],
+  qIntimate:"أي صيغة تناسبك أكثر؟",
+  qIntimateo:[{v:"gel",b:"العناية الأساسية",s:"Astringel للراحة الحميمة اليومية."},{v:"duo",b:"البيت والتنقل",s:"عبوتان عمليتان لروتينك."}],
   resultEyebrow:"اقتراح LYBELLE لك", resultTitle:"هذه نقطة بداية مناسبة", resultAdd:"أضف الروتين للسلة", resultView:"عرض التفاصيل", resultWhatsApp:"اطلبي نصيحة عبر واتساب",
   resultNote:"هذا توجيه عام ولا يعوض رأي مختص في الصحة. اقرئي دائماً الملصق وتعليمات الاستخدام.",
   compare:"قارن", compared:"تم الاختيار", compareOpen:"مقارنة ({x})", compareNeed:"اختاري منتجين على الأقل", compareMax:"يمكنك مقارنة 3 منتجات كحد أقصى.", compareEyebrow:"مقارنة منتجات LYBELLE", compareTitle:"اختاري بكل وضوح", compareFormat:"الحجم", compareIdeal:"مناسب لـ", compareRoutine:"مكانه في الروتين", comparePrice:"السعر", compareAdd:"أضف للسلة",
@@ -1187,6 +1243,23 @@ ar:{
   share:"مشاركة", shareDone:"تم نسخ رابط المنتج", finderAdded:"تمت إضافة اقتراحك إلى السلة",
   reorderDone:"تمت إعادة طلبك الأخير إلى السلة"
 }};
+
+const BLOG_COPY = {
+  fr:{
+    eyebrow:"L'histoire de LYBELLE", title:"Quand la nature rencontre <em>la science</em>",
+    lead:"Il y a des marques qui naissent d'un calcul marketing. LYBELLE est née d'une conviction : le bien-être ne devrait jamais être un compromis entre efficacité et naturalité.",
+    body:"Le Maroc porte en lui un héritage botanique et thérapeutique millénaire. Derrière LYBELLE se trouve Biopharmed Santé, un fabricant pharmaceutique marocain qui applique aux formules de la marque les mêmes exigences de rigueur, de traçabilité et de contrôle qualité.",
+    facts:["Partir d'actifs naturels reconnus et de plantes au bénéfice démontré","Les formuler selon des standards pharmaceutiques stricts","Éliminer le superflu : sans OGM, sans gluten, sans lactose et sans colorants artificiels lorsque la formule le permet"],
+    quote:"Trois produits, une même promesse : des résultats concrets, une formulation transparente, un ancrage naturel assumé.", link:"Découvrir notre approche"
+  },
+  ar:{
+    eyebrow:"قصة LYBELLE", title:"حين يلتقي العلم <em>بالطبيعة</em>",
+    lead:"هناك علامات تجارية تولد من حسابات تسويقية، وهناك علامات تولد من قناعة راسخة. LYBELLE ولدت من قناعة واحدة: العناية بالجسد لا يجب أن تكون خيارًا بين الفعالية والطبيعة.",
+    body:"يحمل المغرب إرثًا نباتيًا وعلاجيًا عريقًا. تقف خلف LYBELLE شركة Biopharmed Santé، وهي مصنع صيدلاني مغربي يطبق على تركيبات LYBELLE نفس معايير الدقة والتتبع ومراقبة الجودة المعتمدة في إنتاجه الصيدلاني.",
+    facts:["الانطلاق من مكونات طبيعية معروفة الفعالية","تركيبها وفق معايير صيدلانية صارمة","الاستغناء عن كل ما هو غير ضروري: بدون OGM وبدون غلوتين وبدون لاكتوز وبدون ألوان صناعية عندما تسمح التركيبة"],
+    quote:"ثلاثة منتجات، وعد واحد: نتائج ملموسة، تركيبة شفافة، وارتباط واضح بالطبيعة.", link:"اكتشف نهجنا"
+  }
+};
 
 const PRODUCT_META = {
 fr:{
@@ -1402,14 +1475,30 @@ COPY.ar = {
 /*──── product wording ────*/
 const P = {
 fr:{
-  selenium:{n:"Selenium X", d:"Complément alimentaire au sélénium, zinc et biotine, pensé pour votre routine cheveux et ongles.", s:"60 gélules · cure 1 mois",
-    b:["Routine quotidienne simple","Sélénium, zinc et biotine","Suivre les conseils de l'emballage"]},
-  noctiglyc:{n:"Noctiglyc", d:"Magnésium bisglycinate et mélatonine pour accompagner votre routine du soir.", s:"60 gélules · 45 g",
-    b:["Rituel du soir","Formule pratique","Suivre les conseils de l'emballage"]},
+  selenium:{n:"Selenium X", d:"Sélénium X est le complément alimentaire capillaire de LYBELLE, formulé avec sélénium, zinc et biotine pour agir sur les trois fronts d'une chevelure en bonne santé : freiner la chute, activer la croissance et fortifier la fibre capillaire.", s:"60 gélules · cure 1 mois",
+    b:["Freine la chute de cheveux","Active la croissance capillaire","Fortifie la fibre capillaire"],
+    detail:[
+      {h:"Pourquoi choisir Selenium X ?",items:[["Freine la chute de cheveux","Selenium X aide à réduire la chute de cheveux, avec une diminution observée de -33 % (1)."],["Active la croissance capillaire","Une formule qui favorise des cheveux plus longs et plus denses (2), pour retrouver du volume naturellement."],["Fortifie la fibre capillaire","Le sélénium, le zinc et la biotine contribuent à des cheveux plus forts, plus résistants et plus brillants (3)."],["Adapté aux hommes comme aux femmes","Selenium X convient aux hommes confrontés à une chute de cheveux ou un dégarnissement, grâce à une formule non hormonale ciblant le renforcement du cuir chevelu."],["Zinc, un actif clé pour l'homme","Le zinc contribue également au maintien d'une testostérone normale dans le sang, un atout supplémentaire pour les hommes soucieux de leur vitalité générale."],["La beauté de l'intérieur","Au-delà des cheveux, Selenium X soutient des ongles plus forts et une peau éclatante."]]},
+      {h:"3 actifs essentiels : Sélénium, Zinc, Biotine",p:"Une association ciblée de trois actifs reconnus pour leur rôle dans la santé capillaire, réunis dans une seule cure quotidienne."},
+      {h:"Une cure simple d'un mois",p:"60 gélules, complément alimentaire, sans OGM, sans gluten, sans lactose, sans colorant artificiel — pensé pour s'intégrer facilement à votre routine beauté."},
+      {h:"Conseils d'utilisation",p:"Prendre la dose recommandée indiquée sur l'emballage. Ne pas dépasser la dose journalière recommandée. Les compléments alimentaires ne doivent pas être utilisés comme substituts d'une alimentation variée et équilibrée et d'un mode de vie sain."}
+    ]},
+  noctiglyc:{n:"Noctiglyc", d:"Noctiglyc est le complément alimentaire sommeil de LYBELLE qui associe magnésium bisglycinate et mélatonine dans une formule pensée pour accompagner votre routine du soir.", s:"60 gélules · 45 g",
+    b:["Une formule pensée pour la routine du soir","Magnésium bisglycinate bien toléré","Mélatonine pour l'endormissement"],
+    detail:[
+      {h:"Pourquoi choisir Noctiglyc ?",items:[["Une formule pensée pour la routine du soir","Noctiglyc accompagne la transition vers le sommeil grâce à une association ciblée de magnésium bisglycinate et de mélatonine."],["Magnésium bisglycinate bien toléré","Le magnésium bisglycinate est une forme reconnue pour sa bonne tolérance digestive, adaptée à une prise quotidienne dans le cadre d'un rituel sommeil."],["Mélatonine pour l'endormissement","La mélatonine contribue à réduire le temps nécessaire à l'endormissement, dans les conditions d'utilisation autorisées."],["Un rituel du soir simple et pratique","Une solution facile à intégrer chaque soir avant le coucher, pour un vrai moment de déconnexion."]]},
+      {h:"NOCTIGLYC, votre moment de déconnexion",p:"Éloignez-vous du rythme de la journée, ralentissez et créez votre propre rituel du soir avec Noctiglyc. Moins de bruit. Plus de calme. Votre moment à vous."},
+      {h:"Conseils d'utilisation",p:"Prendre la dose recommandée indiquée sur l'emballage, de préférence le soir avant le coucher. Ne pas dépasser la dose journalière recommandée. Les compléments alimentaires ne doivent pas être utilisés comme substituts d'une alimentation variée et équilibrée et d'un mode de vie sain."}
+    ]},
   huile:{n:"Huile Capillaire", d:"Concentré d'argan et d'actifs botaniques pour nourrir la fibre en profondeur.", s:"30 ml · flacon compte-gouttes",
     b:["Nourrit les longueurs sèches","Discipline et fait briller","Texture non grasse"]},
-  gel:{n:"Gel Intime", d:"Un soin intime féminin pensé pour accompagner la routine quotidienne avec douceur.", s:"120 ml · usage quotidien",
-    b:["Soin intime féminin","Pensé pour le quotidien","Usage externe"]},
+  gel:{n:"Astringel", d:"Astringel est le gel de soin intime de LYBELLE, formulé à base d'alun de potassium, d'acide lactique et d'huiles essentielles de lavande, sauge sclarée et romarin. Sa formule astringente agit sur l'élasticité et la tonicité des parois vaginales, tout en respectant l'équilibre naturel de la flore et du pH physiologique.", s:"200 ml · usage externe",
+    b:["Effet astringent à l'alun de potassium","Régule le pH physiologique","Restaure le confort et la lubrification"],
+    detail:[
+      {h:"Une action astringente ciblée",items:[["Effet astringent à l'alun de potassium","Grâce à l'alun de potassium, Astringel exerce une action astringente qui contracte, tonifie et remodèle les tissus vaginaux, pour une sensation de fermeté retrouvée."],["Régule le pH physiologique","L'acide lactique contribue à maintenir le pH physiologique de la zone intime, un facteur clé pour préserver l'équilibre de la flore vaginale."],["Améliore l'élasticité et la souplesse","La formule agit sur les muscles vaginaux pour en améliorer la souplesse, la mobilité et la flexibilité."],["Protège et assainit","Astringel possède une action antiseptique qui aide à prévenir les infections bactériennes et fongiques, tout en éliminant les odeurs indésirables."],["Restaure le confort et la lubrification","La formule aide à restaurer la lubrification vaginale naturelle, pour un confort durable au quotidien."]]},
+      {h:"Des actifs naturels sélectionnés",items:[["Alun de potassium","Effet astringent et tonifiant."],["Acide lactique","Régulation du pH physiologique."],["Huile essentielle de lavande, sauge sclarée et romarin","Apaisantes et purifiantes."],["Extraits de tournesol et de calendula","Douceur et respect de la muqueuse."]]},
+      {h:"Mode d'utilisation",p:"Appliquer une noisette de gel sur les lèvres vulvaires, masser légèrement, puis rincer à l'eau claire."}
+    ]},
   duo:{n:"Duo Intime Quotidien", d:"Deux Gels Intimes : un pour la salle de bain, un pour le sac de sport.", s:"2 × 120 ml",
     b:["Deux flacons, un tarif duo","Formule pH physiologique","Idéal en voyage"]},
   rituel:{n:"Rituel Cheveux Intense", d:"Selenium X et Huile Capillaire réunis dans une routine cheveux complète.", s:"Coffret · 60 gélules + 30 ml",
@@ -1431,10 +1520,26 @@ en:{
 }};
 
 P.ar = {
-  selenium:{n:"Selenium X",d:"مكمل غذائي يحتوي على السيلينيوم والزنك والبيوتين، مصمم لروتين الشعر والأظافر.",s:"60 كبسولة · برنامج شهر",b:["روتين يومي بسيط","سيلينيوم وزنك وبيوتين","اتبع تعليمات العبوة"]},
-  noctiglyc:{n:"Noctiglyc",d:"مغنيسيوم بيسغليسينات وميلاتونين لمرافقة روتينك المسائي.",s:"60 كبسولة · 45 غ",b:["روتين مسائي","تركيبة عملية","اتبع تعليمات العبوة"]},
+  selenium:{n:"Selenium X",d:"سيلينيوم إكس هو مكمل الشعر من LYBELLE، بتركيبة تجمع بين السيلينيوم والزنك والبيوتين للعمل على ثلاثة محاور أساسية: تقليل تساقط الشعر، تنشيط نموه، وتقوية بنيته.",s:"60 كبسولة · برنامج شهر",b:["يقلل تساقط الشعر","ينشّط نمو الشعر","يقوّي بنية الشعر"],
+    detail:[
+      {h:"لماذا تختار سيلينيوم إكس؟",items:[["يقلل تساقط الشعر","يساعد سيلينيوم إكس على تقليل تساقط الشعر، بنسبة انخفاض ملحوظة تصل إلى 33%."],["ينشّط نمو الشعر","تركيبة تساهم في الحصول على شعر أطول وأكثف، لاستعادة الكثافة بشكل طبيعي."],["يقوّي بنية الشعر","يساهم السيلينيوم والزنك والبيوتين في الحصول على شعر أقوى وأكثر مقاومة ولمعاناً."],["مناسب للرجال أيضاً","سيلينيوم إكس مناسب للرجال الذين يعانون من تساقط الشعر أو ترقق الكثافة، بفضل تركيبة غير هرمونية تركز على تقوية فروة الرأس."],["الزنك، عنصر أساسي للرجل","يساهم الزنك أيضاً في الحفاظ على مستوى طبيعي للتستوستيرون في الدم، وهو دعم إضافي للرجال المهتمين بحيويتهم العامة."],["جمال من الداخل","بالإضافة إلى الشعر، يدعم سيلينيوم إكس أظافر أقوى وبشرة مشرقة."]]},
+      {h:"3 مكونات أساسية: سيلينيوم، زنك، بيوتين",p:"مزيج مدروس من ثلاثة مكونات معروفة بدورها في صحة الشعر، مجتمعة في علاج يومي واحد."},
+      {h:"علاج بسيط لمدة شهر",p:"60 كبسولة، مكمل غذائي، بدون OGM، بدون غلوتين، بدون لاكتوز، بدون ألوان صناعية."},
+      {h:"نصائح الاستخدام",p:"تناول الجرعة الموصى بها الموضحة على العبوة. لا تتجاوز الجرعة اليومية الموصى بها. لا يجب استخدام المكملات الغذائية كبديل عن نظام غذائي متنوع ومتوازن وعن نمط حياة صحي."}
+    ]},
+  noctiglyc:{n:"Noctiglyc",d:"نوكتيغليك هو المكمل الغذائي للنوم من LYBELLE، يجمع بين مغنيسيوم بيسغليسينات والميلاتونين في تركيبة مصممة لمرافقة روتينك المسائي.",s:"60 كبسولة · 45 غ",b:["تركيبة مخصصة لروتين المساء","مغنيسيوم بيسغليسينات جيد التحمل","ميلاتونين للمساعدة على الاستغراق في النوم"],
+    detail:[
+      {h:"لماذا تختار نوكتيغليك؟",items:[["تركيبة مخصصة لروتين المساء","يرافقك نوكتيغليك في الانتقال نحو النوم بفضل مزيج مدروس من مغنيسيوم بيسغليسينات والميلاتونين."],["مغنيسيوم بيسغليسينات جيد التحمل","مغنيسيوم بيسغليسينات هو شكل معروف بتحمّله الجيد على المستوى الهضمي، مناسب للاستخدام اليومي ضمن طقوس النوم."],["ميلاتونين للمساعدة على الاستغراق في النوم","يساهم الميلاتونين في تقليل الوقت اللازم للاستغراق في النوم، وفق شروط الاستخدام المسموح بها."],["طقس مسائي بسيط وعملي","حل سهل يمكن دمجه كل مساء قبل النوم، من أجل لحظة حقيقية للانفصال عن ضغوط اليوم."]]},
+      {h:"نوكتيغليك، لحظتك للانفصال عن ضغوط اليوم",p:"ابتعد عن إيقاع النهار، خفّف السرعة، واصنع طقوسك المسائية الخاصة مع نوكتيغليك. ضجيج أقل. هدوء أكثر. لحظتك أنت وحدك."},
+      {h:"نصائح الاستخدام",p:"تناول الجرعة الموصى بها الموضحة على العبوة، ويُفضّل تناولها مساءً قبل النوم. لا تتجاوز الجرعة اليومية الموصى بها. لا يجب استخدام المكملات الغذائية كبديل عن نظام غذائي متنوع ومتوازن وعن نمط حياة صحي."}
+    ]},
   huile:{n:"زيت الشعر",d:"زيت للعناية بالشعر مصمم لتغذية الأطراف وإضفاء مظهر لامع.",s:"30 مل · عبوة بقطارة",b:["يغذي الأطراف","يساعد على النعومة واللمعان","قوام خفيف"]},
-  gel:{n:"LYBELLE GEL INTIM",d:"عناية حميمة للنساء مصممة لمرافقة الروتين اليومي بلطف وبساطة.",s:"120 مل · استعمال يومي",b:["عناية لطيفة","مصمم للروتين اليومي","للاستعمال الخارجي"]},
+  gel:{n:"أسترينجيل",d:"أسترينجيل هو جل العناية الحميمية من LYBELLE، بتركيبة تعتمد على شبة البوتاسيوم وحمض اللاكتيك وزيوت اللافندر والمريمية والإكليل الأساسية. تعمل تركيبته القابضة على مرونة وتماسك جدران المهبل، مع احترام التوازن الطبيعي للفلورا والـ pH الفيزيولوجي.",s:"200 مل · للاستعمال الخارجي",b:["تأثير قابض بشبة البوتاسيوم","ينظم الـ pH الفيزيولوجي","يستعيد الراحة والترطيب"],
+    detail:[
+      {h:"تأثير قابض مركّز",items:[["تأثير قابض بشبة البوتاسيوم","بفضل شبة البوتاسيوم، يمارس أسترينجيل تأثيراً قابضاً يشد وينشّط ويعيد تشكيل أنسجة المهبل، لإحساس بالتماسك المستعاد."],["ينظم الـ pH الفيزيولوجي","يساهم حمض اللاكتيك في الحفاظ على الـ pH الفيزيولوجي للمنطقة الحميمية، وهو عامل أساسي للحفاظ على توازن الفلورا المهبلية."],["يحسّن المرونة والليونة","تعمل التركيبة على عضلات المهبل لتحسين ليونتها وحركتها ومرونتها."],["يحمي وينقّي","يتميز أسترينجيل بخاصية مطهرة تساعد على الوقاية من العدوى البكتيرية والفطرية، مع القضاء على الروائح غير المرغوبة."],["يستعيد الراحة والترطيب","تساعد التركيبة على استعادة الترطيب الطبيعي للمهبل، من أجل راحة تدوم يومياً."]]},
+      {h:"مكونات طبيعية مختارة",items:[["شبة البوتاسيوم","تأثير قابض ومنشط."],["حمض اللاكتيك","تنظيم الـ pH الفيزيولوجي."],["زيوت اللافندر والمريمية والإكليل","مهدئة ومنقية."],["مستخلصات دوار الشمس والقطيفة","لطف واحترام للغشاء المخاطي."]]},
+      {h:"طريقة الاستخدام",p:"تُوضع كمية صغيرة من الجل على الشفرين الخارجيين، تُدلّك بلطف، ثم تُشطف بماء نظيف."}
+    ]},
   duo:{n:"عرض الجل الحميم",d:"عبوتان من LYBELLE GEL INTIM لروتين يومي عملي.",s:"2 × 120 مل",b:["عبوتان بسعر العرض","روتين يومي","عملي للسفر"]},
   rituel:{n:"روتين الشعر المتكامل",d:"Selenium X وزيت الشعر معاً في مجموعة واحدة للعناية اليومية.",s:"مجموعة · 60 كبسولة + 30 مل",b:["عناية من الداخل والخارج","برنامج شهر","توفير 39 درهماً"]}
 };
@@ -1461,6 +1566,16 @@ const p  = (id,f) => P[lang][id][f];
 const money = n => `${Math.round(n)} ${SET.currency}`;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+function productDetailHTML(id){
+  const detail = p(id,"detail");
+  if (!detail) return "";
+  return `<div class="product-detail">${detail.map(section=>`<section class="detail-section">
+    <h4>${esc(section.h)}</h4>
+    ${section.p ? `<p>${esc(section.p)}</p>` : ""}
+    ${section.items ? `<ul>${section.items.map(([title,text])=>`<li><b>${esc(title)}</b><span>${esc(text)}</span></li>`).join("")}</ul>` : ""}
+  </section>`).join("")}</div>`;
+}
+
 /*──── icons ────*/
 const IC = {
   star:'<svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4 6.2 20.5l1.1-6.5L2.6 9.4l6.5-.9z"/></svg>',
@@ -1485,7 +1600,7 @@ function renderStatic(){
   const unit = `<div class="unit">${[1,2,3,4].map(i=>`<span>${esc(t("ann."+i))}</span>`).join("")}</div>`;
   $("#annTrack").innerHTML = unit + unit;
 
-  const links = [["#shop",1],["#rituel",2],["#apropos",3],["#journal",4],["#contact",5]];
+  const links = [["#shop",1],["#rituel",2],["#apropos",3],["#blog",4],["#contact",5]];
   $("#mainNav").innerHTML = links.map(([h,i])=>`<a href="${h}">${esc(t("nav."+i))}</a>`).join("");
   $("#mnav").innerHTML = links.map(([h,i],k)=>
     `<a href="${h}" style="animation-delay:${k*70+120}ms">${esc(t("nav."+i))}</a>`).join("")
@@ -1518,12 +1633,24 @@ function renderStatic(){
   $("#finderNoteTitle").textContent = ft("finderNoteTitle");
   $("#finderNoteText").textContent = ft("finderNoteText");
   $("#finderTime").textContent = ft("finderTime");
+  $("#nightPrompt").textContent = lang === "ar"
+    ? "هل تجد صعوبة في الاستغراق بالنوم؟ تعرّف على Noctiglyc كجزء من طقوس مسائية هادئة."
+    : "Difficultés d'endormissement ? Découvrez Noctiglyc comme partie d'un rituel du soir apaisant.";
   $("#recentEyebrow").textContent = ft("recentEyebrow");
   $("#recentTitle").textContent = ft("recentTitle");
   $("#recentClear").textContent = ft("recentClear");
   $("#compareEyebrow").textContent = ft("compareEyebrow");
   $("#compareTitle").textContent = ft("compareTitle");
   $("#mobileCartOpen").textContent = ft("mobileOpen");
+
+  const blog = BLOG_COPY[lang];
+  $("#blogEyebrow").textContent = blog.eyebrow;
+  $("#blogTitle").innerHTML = blog.title;
+  $("#blogLead").textContent = blog.lead;
+  $("#blogBody").textContent = blog.body;
+  $("#blogFacts").innerHTML = blog.facts.map(item=>`<li>${esc(item)}</li>`).join("");
+  $("#blogQuote").textContent = blog.quote;
+  $("#blogLinkText").textContent = blog.link;
 
   $("#h1").innerHTML = t("hero.h1").split("|").map(x=>`<span class="l"><span>${x}</span></span>`).join("");
 
@@ -1564,7 +1691,7 @@ function renderStatic(){
 
   [1,2,3].forEach(n=>{
     $("#fc"+n).innerHTML = [1,2,3,4].map(i=>
-      `<li><a href="#shop">${esc(t(`foot.c${n}.${i}`))}</a></li>`).join("");
+      `<li><a href="${n===2 && i===4 ? "#blog" : "#shop"}">${esc(t(`foot.c${n}.${i}`))}</a></li>`).join("");
   });
 
   $("#rights").textContent   = t("rights");
@@ -1603,7 +1730,7 @@ function cardHTML(pr,i){
     <div class="cmedia">
       ${pr.badge?`<span class="badge ${pr.badge==="save"?"rose":pr.badge==="new"?"gold":""}">${esc(t("badge."+pr.badge))}</span>`:""}
       <button class="heart${wish.has(pr.id)?" on":""}" data-wish="${pr.id}" aria-label="♥">${IC.heart}</button>
-      <img src="${IMG[pr.img]}" alt="${esc(p(pr.id,"n"))}" loading="lazy">
+      <img class="product-image product-image-${pr.id}" src="${IMG[pr.img]}" alt="${esc(p(pr.id,"n"))}" loading="lazy">
       <button class="quick" data-open="${pr.id}">${esc(u("quick"))}</button>
     </div>
     <div class="cbody">
@@ -1659,8 +1786,8 @@ function renderRecent(){
 }
 
 function renderCompareTray(){
-  const ids = Array.from(compareSet).filter(id=>PRODUCT_BY_ID.has(id));
-  compareSet = new Set(ids.slice(0,3));
+  const ids = Array.from(compareSet).filter(id=>PRODUCT_BY_ID.has(id)).slice(0,3);
+  compareSet = new Set(ids);
   const tray=$("#compareTray");
   tray.classList.toggle("on", ids.length>0);
   document.body.classList.toggle("has-compare",ids.length>0);
@@ -1688,13 +1815,24 @@ function renderComparison(){
   return true;
 }
 
+function finderQuestion(step){
+  const [profile, goal] = finderState.answers;
+  if(step === 0) return {q:ft("qGender"), options:ft("qGendero")};
+  if(step === 1) return profile === "man"
+    ? {q:ft("qGoalMan"), options:ft("qGoalMano")}
+    : {q:ft("qGoalWoman"), options:ft("qGoalWomano")};
+  if(profile === "man") return goal === "hair"
+    ? {q:ft("qHairMan"), options:ft("qHairMano")}
+    : {q:ft("qNight"), options:ft("qNighto")};
+  if(goal === "hair") return {q:ft("qHairWoman"), options:ft("qHairWomano")};
+  if(goal === "night") return {q:ft("qNight"), options:ft("qNighto")};
+  return {q:ft("qIntimate"), options:ft("qIntimateo")};
+}
+
 function finderResultId(){
-  const [goal,routine,place] = finderState.answers;
-  if(goal === "night") return "noctiglyc";
-  if(goal === "intimate") return routine === "complete" || place === "both" ? "duo" : "gel";
-  if(routine === "complete") return "rituel";
-  if(place === "move") return "huile";
-  return "selenium";
+  const [profile, goal, choice] = finderState.answers;
+  if(profile === "man") return goal === "hair" ? "selenium" : "noctiglyc";
+  return ["selenium","huile","rituel","noctiglyc","gel","duo"].includes(choice) ? choice : "selenium";
 }
 
 function renderFinder(){
@@ -1703,8 +1841,8 @@ function renderFinder(){
   $("#finderStepLabel").textContent = step<3 ? ft("step").replace("{x}",step+1) : ft("resultEyebrow");
   $$("#finderProgress i").forEach((bar,i)=>bar.classList.toggle("on",i<=Math.min(step,2)));
   if(step<3){
-    const n=step+1, options=ft(`q${n}o`);
-    $("#finderBody").innerHTML = `<h3 class="finder-question">${esc(ft(`q${n}`))}</h3><div class="finder-options">${options.map(o=>`<button class="finder-option" data-finder-answer="${o.v}"><b>${esc(o.b)}</b><small>${esc(o.s)}</small></button>`).join("")}</div>`;
+    const question=finderQuestion(step);
+    $("#finderBody").innerHTML = `<h3 class="finder-question">${esc(question.q)}</h3><div class="finder-options">${question.options.map(o=>`<button class="finder-option" data-finder-answer="${o.v}"><b>${esc(o.b)}</b><small>${esc(o.s)}</small></button>`).join("")}</div>`;
     return;
   }
   const id=finderResultId(), pr=PRODUCT_BY_ID.get(id);
@@ -1824,12 +1962,13 @@ function openProduct(id){
   if(!pr) return;
   recordViewed(id);
   const off = pr.was ? Math.round((1-pr.price/pr.was)*100) : 0;
-  $("#modalImg").src = IMG[pr.img]; $("#modalImg").alt = p(id,"n"); $("#modalImg").alt = p(id,"n");
+  $("#modalImg").src = IMG[pr.img]; $("#modalImg").alt = p(id,"n"); $("#modalImg").className = `product-image product-image-${id}`;
   $("#modalBody").innerHTML =
     `<h3>${esc(p(id,"n"))}</h3>
      <div class="csize">${esc(p(id,"s"))}</div>
      <p class="cdesc">${esc(p(id,"d"))}</p>
      <ul class="blist">${p(id,"b").map(b=>`<li>${IC.check}<span>${esc(b)}</span></li>`).join("")}</ul>
+     ${productDetailHTML(id)}
      <div class="mprice"><span class="price">${money(pr.price)}</span>
        ${pr.was?`<span class="was">${money(pr.was)}</span><span class="save">${u("off").replace("{x}",off)}</span>`:""}</div>
      <div class="mqty">
@@ -2116,11 +2255,14 @@ $("#searchIn").addEventListener("input", runSearch);
 
 /*──── lookbook drag ────*/
 (function(){
-  const s = $("#strip"); let down = false, sx = 0, sl = 0, moved = 0;
-  s.addEventListener("pointerdown", e=>{ down = true; moved = 0; sx = e.clientX; sl = s.scrollLeft; s.classList.add("drag"); });
-  addEventListener("pointerup", ()=>{ down = false; s.classList.remove("drag"); });
-  s.addEventListener("pointermove", e=>{ if (!down) return; const d = e.clientX - sx; moved += Math.abs(d);
-    s.scrollLeft = sl - d; });
+  const s = $("#strip"); let down = false, sx = 0, sl = 0;
+  const endDrag = e=>{ if (!down) return; down = false; s.classList.remove("drag"); if(e?.pointerId !== undefined && s.hasPointerCapture?.(e.pointerId)) s.releasePointerCapture(e.pointerId); };
+  s.addEventListener("pointerdown", e=>{
+    if(e.pointerType !== "mouse" || e.button !== 0) return;
+    down = true; sx = e.clientX; sl = s.scrollLeft; s.setPointerCapture?.(e.pointerId); s.classList.add("drag");
+  });
+  s.addEventListener("pointerup", endDrag); s.addEventListener("pointercancel", endDrag); s.addEventListener("lostpointercapture", endDrag);
+  s.addEventListener("pointermove", e=>{ if (!down) return; s.scrollLeft = sl - (e.clientX - sx); });
 })();
 
 /*──── scroll fx ────*/
