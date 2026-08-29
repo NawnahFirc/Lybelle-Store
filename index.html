@@ -14,11 +14,15 @@
 <meta property="og:description" content="Compléments alimentaires et soins d'hygiène formulés au Maroc.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="/">
-<meta property="og:image" content="assets/campaign-selenium-x.png">
+<meta property="og:image" content="assets/banner-selenium-x.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/product-selenium-x.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/product-noctiglyc.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/product-gel-intime.webp" type="image/webp">
+<link rel="preload" as="image" href="assets/product-duo-intime-editorial.png" type="image/png">
 <style>
 /*══════════════════════════════════════════════════════════════
   LYBELLE — palette drawn from the lotus mark on the packaging:
@@ -178,7 +182,9 @@ nav.main a.act{color:var(--sage-700)}
   border-bottom:1px solid var(--line-2);opacity:0;transform:translateY(14px)}
 .mnav.on a{animation:mIn .55s var(--ease) forwards}
 @keyframes mIn{to{opacity:1;transform:none}}
-.mnav .mfoot{margin-top:auto;padding-top:2rem;display:flex;gap:1rem;align-items:center}
+.mnav .mfoot{margin-top:auto;padding-top:2rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.mnav .mwhatsapp{font-family:var(--body);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:#fff;background:#176b47;border:0;border-radius:999px;padding:.68rem .9rem;opacity:1;transform:none;animation:none}
+.mnav.on .mwhatsapp{opacity:1;transform:none;animation:none}
 
 /*══ BUTTONS ══*/
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
@@ -289,10 +295,10 @@ select.sort:hover{border-color:var(--sage-400)}
 .card{display:flex;flex-direction:column;animation:fadeUp .65s var(--ease) both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .cmedia{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--rl);background:var(--sand);
-  box-shadow:0 2px 12px -8px rgba(44,54,38,.4)}
-.cmedia img{width:100%;height:100%;object-fit:cover;transition:transform 1.15s var(--ease);filter:saturate(.96) contrast(1.02)}
-.cmedia .product-image-gel{object-position:63% center}.cmedia .product-image-selenium{object-position:center 42%}.cmedia .product-image-noctiglyc{object-position:center 38%}
-.card:hover .cmedia img{transform:scale(1.07)}
+  border:1px solid rgba(44,54,38,.08);box-shadow:0 12px 30px -26px rgba(44,54,38,.48)}
+.cmedia img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .8s var(--ease);filter:saturate(1.01) contrast(1.01);background:var(--sand)}
+.cmedia .product-image-selenium{background:#ede7df}.cmedia .product-image-noctiglyc{background:#17183f}.cmedia .product-image-gel{background:#faf9f6}.cmedia .product-image-duo{background:#f2eee7}.cmedia .product-image-huile{background:#ece9e0}.cmedia .product-image-rituel{background:#efe8df}
+.card:hover .cmedia img{transform:scale(1.025)}
 .cmedia::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(34,38,31,.22),transparent 42%);
   opacity:0;transition:opacity .45s}
 .card:hover .cmedia::after{opacity:1}
@@ -627,19 +633,21 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 .checkout-actions{display:flex;gap:.5rem}
 .checkout-actions .btn{flex:1}
 .search-close{position:absolute;right:var(--pad);top:1rem}
-/*══ STICKY PRODUCT RIBBON + WHATSAPP ══*/
-.product-ribbon{height:64px;overflow:hidden;border-top:1px solid var(--line-2);background:rgba(253,251,248,.96)}
+/*══ PRODUCT RIBBON + WHATSAPP ══*/
+.product-ribbon{height:56px;overflow:hidden;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);background:rgba(253,251,248,.96)}
 .ribbon-track{display:flex;width:max-content;min-width:200%;height:100%;animation:ribbonFlow 34s linear infinite;will-change:transform}
 .product-ribbon:hover .ribbon-track,.product-ribbon:focus-within .ribbon-track{animation-play-state:paused}
 .ribbon-set{display:flex;align-items:center;gap:1rem;padding:6px .5rem;min-width:50%}
-.ribbon-item{height:50px;min-width:190px;display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:.65rem;padding:.25rem .8rem .25rem .3rem;border:1px solid var(--line-2);border-radius:999px;background:#fff;color:var(--ink);text-align:left;box-shadow:0 8px 22px -22px rgba(44,54,38,.7);transition:.25s var(--ease)}
+.ribbon-item{height:42px;min-width:190px;display:grid;grid-template-columns:36px 1fr auto;align-items:center;gap:.65rem;padding:.25rem .8rem .25rem .3rem;border:1px solid var(--line-2);border-radius:999px;background:#fff;color:var(--ink);text-align:left;box-shadow:0 8px 22px -22px rgba(44,54,38,.7);transition:.25s var(--ease)}
 .ribbon-item:hover,.ribbon-item:focus-visible{border-color:var(--sage-400);transform:translateY(-1px);outline:none}
-.ribbon-item img{width:42px;height:42px;border-radius:50%;object-fit:cover;background:var(--sage-50)}
+.ribbon-item img{width:36px;height:36px;border-radius:50%;object-fit:cover;background:var(--sage-50)}
 .ribbon-item span{font-size:.72rem;font-weight:500;white-space:nowrap}.ribbon-item b{font-size:.68rem;color:var(--sage-700);white-space:nowrap}
 @keyframes ribbonFlow{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.wa-float{position:fixed;right:1.2rem;bottom:1.2rem;z-index:210;display:flex;align-items:center;gap:.65rem;padding:.55rem .95rem .55rem .55rem;border-radius:999px;background:#176b47;color:#fff;box-shadow:0 16px 36px -14px rgba(23,107,71,.7);font-size:.72rem;font-weight:500;letter-spacing:.04em;transition:.28s var(--ease)}
+.wa-float{position:fixed;right:1.2rem;bottom:1.2rem;z-index:210;width:3.25rem;height:3.25rem;display:grid;place-items:center;padding:.45rem;border-radius:50%;background:#176b47;color:#fff;box-shadow:0 16px 36px -14px rgba(23,107,71,.7);font-size:.72rem;font-weight:500;letter-spacing:.04em;transition:.28s var(--ease)}
 .wa-float:hover,.wa-float:focus-visible{background:#105337;transform:translateY(-2px);outline:3px solid rgba(23,107,71,.18);outline-offset:3px}
-.wa-dot{width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:#fff;color:#176b47;font-weight:700;font-family:Arial,sans-serif}
+.wa-dot{width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;background:#fff;color:#176b47;font-weight:700;font-family:Arial,sans-serif}
+#waFloatLabel{position:absolute;right:calc(100% + .65rem);width:max-content;max-width:15rem;padding:.58rem .85rem;border-radius:999px;background:var(--sage-900);color:var(--cream);font-size:.66rem;opacity:0;visibility:hidden;transform:translateX(.35rem);transition:opacity .22s ease,transform .22s ease,visibility .22s;pointer-events:none}
+.wa-float:hover #waFloatLabel,.wa-float:focus-visible #waFloatLabel{opacity:1;visibility:visible;transform:none}
 .top{bottom:5.25rem}
 .is-ar{font-family:Tahoma,Arial,sans-serif}.is-ar .h1,.is-ar h2,.is-ar .h2,.is-ar .cname,.is-ar .night h2{font-family:Tahoma,Arial,sans-serif;letter-spacing:0;line-height:1.3}
 .is-ar .ribbon-item{text-align:right;padding:.25rem .3rem .25rem .8rem}.is-ar .drawer{right:auto;left:0;transform:translateX(-100%)}.is-ar .drawer.on{transform:none}.is-ar .search-close{right:auto;left:var(--pad)}
@@ -716,9 +724,9 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .logo svg{width:30px;height:30px}
   .logo .wm b{font-size:1.05rem;letter-spacing:.28em}
   .hero .h1{font-size:clamp(2.5rem,10vw,3.4rem)}
-  .product-ribbon{height:58px}.ribbon-item{min-width:164px;height:46px;grid-template-columns:38px 1fr;padding-right:.65rem}.ribbon-item img{width:38px;height:38px}.ribbon-item b{display:none}
+  .product-ribbon{height:52px}.ribbon-item{min-width:164px;height:40px;grid-template-columns:34px 1fr;padding-right:.65rem}.ribbon-item img{width:34px;height:34px}.ribbon-item b{display:none}
   body{--mobile-cart-offset:0rem;--compare-offset:0rem}body.has-mobile-cart{--mobile-cart-offset:4.9rem}body.has-compare{--compare-offset:4.75rem}
-  .wa-float{right:.75rem;bottom:calc(.75rem + var(--mobile-cart-offset) + var(--compare-offset));width:3rem;height:3rem;justify-content:center;padding:0;font-size:.66rem}.wa-float #waFloatLabel{display:none}.top{right:.75rem;bottom:calc(4.55rem + var(--mobile-cart-offset) + var(--compare-offset))}
+  .wa-float,.top{display:none!important}
   .finder-banner{margin-inline:.75rem;border-radius:24px}.finder-copy{padding:2rem 1.25rem}.finder-visual{min-height:20rem}.finder-note{align-items:flex-start}.finder-result{grid-template-columns:1fr}.finder-result img{max-height:17rem;aspect-ratio:16/10}.recent-grid{grid-template-columns:1fr}.recent-section{padding-inline:.75rem}.compare-tray{bottom:.75rem}.mobile-cart-bar.on{display:flex}.checkout-actions{flex-direction:column}.cart-suggest .in{grid-template-columns:3.4rem 1fr}.cart-suggest button{grid-column:1/-1;width:100%}
   .compare-tray{bottom:calc(.75rem + var(--mobile-cart-offset))}.journal-story{padding-inline:1.25rem}.journal-facts{padding:1.25rem}.night-prompt{border-radius:16px}
 }
@@ -776,8 +784,8 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
       </button>
     </div>
   </div>
-  <div class="product-ribbon" id="productRibbon" aria-label="Produits LYBELLE"></div>
 </header>
+<div class="product-ribbon" id="productRibbon" aria-label="Produits LYBELLE"></div>
 
 <div class="mnav" id="mnav"></div>
 
@@ -887,7 +895,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 
   <!-- ══ VALUES ══ -->
   <section class="split rev-order" id="apropos">
-    <div class="split-media round rev"><img class="par" src="assets/original-actives.webp" alt="Actifs Lybelle" width="760" height="760" loading="lazy"></div>
+    <div class="split-media round rev"><img class="par" src="assets/banner-selenium-x.png" alt="Selenium X LYBELLE" width="1024" height="1262" loading="lazy"></div>
     <div class="rev">
       <span class="eyebrow" data-t="val.eyebrow"></span>
       <h2 data-th="val.h2"></h2>
@@ -1132,14 +1140,14 @@ function persist(){
 /*──── imagery ────*/
 const IMG = {
   hero: "assets/hero-hair-ritual.webp",
-  actives: "assets/original-actives.webp",
+  actives: "assets/banner-selenium-x.png",
   night: "assets/original-night.webp",
   nightR: "assets/original-nightR.webp",
-  daily: "assets/product-gel-duo.webp",
+  daily: "assets/product-duo-intime-editorial.png",
   huile: "assets/product-hair-oil.webp",
-  noctiglyc: "assets/campaign-noctiglyc.png",
-  selenium: "assets/campaign-selenium-x.png",
-  gel: "assets/campaign-astringel.png",
+  noctiglyc: "assets/product-noctiglyc.webp",
+  selenium: "assets/product-selenium-x.webp",
+  gel: "assets/product-gel-intime.webp",
   rituel: "assets/hero-hair-ritual.webp"
 };
 
@@ -1602,9 +1610,10 @@ function renderStatic(){
 
   const links = [["#shop",1],["#rituel",2],["#apropos",3],["#blog",4],["#contact",5]];
   $("#mainNav").innerHTML = links.map(([h,i])=>`<a href="${h}">${esc(t("nav."+i))}</a>`).join("");
+  const mobileWhatsApp = lang === "ar" ? `اطلب عبر واتساب · ${STORE_CONFIG.whatsappDisplay}` : `WhatsApp · ${STORE_CONFIG.whatsappDisplay}`;
   $("#mnav").innerHTML = links.map(([h,i],k)=>
     `<a href="${h}" style="animation-delay:${k*70+120}ms">${esc(t("nav."+i))}</a>`).join("")
-    + `<div class="mfoot"><div class="lang" style="display:flex">
+    + `<div class="mfoot"><a class="mwhatsapp" href="https://wa.me/${STORE_CONFIG.whatsappNumber}" target="_blank" rel="noopener noreferrer">${esc(mobileWhatsApp)}</a><div class="lang" style="display:flex">
          <button data-ml="fr" aria-pressed="${lang==="fr"}">FR</button><button data-ml="ar" aria-pressed="${lang==="ar"}">AR</button>
        </div></div>`;
 
@@ -1730,7 +1739,7 @@ function cardHTML(pr,i){
     <div class="cmedia">
       ${pr.badge?`<span class="badge ${pr.badge==="save"?"rose":pr.badge==="new"?"gold":""}">${esc(t("badge."+pr.badge))}</span>`:""}
       <button class="heart${wish.has(pr.id)?" on":""}" data-wish="${pr.id}" aria-label="♥">${IC.heart}</button>
-      <img class="product-image product-image-${pr.id}" src="${IMG[pr.img]}" alt="${esc(p(pr.id,"n"))}" loading="lazy">
+      <img class="product-image product-image-${pr.id}" src="${IMG[pr.img]}" alt="${esc(p(pr.id,"n"))}" loading="${i < 2 ? "eager" : "lazy"}" fetchpriority="${i < 2 ? "high" : "auto"}" decoding="async">
       <button class="quick" data-open="${pr.id}">${esc(u("quick"))}</button>
     </div>
     <div class="cbody">
