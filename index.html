@@ -740,7 +740,14 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .mobile-cart-bar{bottom:max(.55rem,env(safe-area-inset-bottom))}.toasts{bottom:calc(5rem + env(safe-area-inset-bottom))}
   .hero .h1{font-size:clamp(2.5rem,10vw,3.4rem)}
   body{--mobile-cart-offset:0rem;--compare-offset:0rem}body.has-mobile-cart{--mobile-cart-offset:4.2rem}body.has-compare{--compare-offset:4.1rem}
-  .wa-float,.top{display:none!important}
+  /* Portrait-first contact control: the WhatsApp action stays one thumb-tap away
+     without turning into a second horizontal bar or covering the cart. */
+  .wa-float{display:grid!important;right:.7rem;bottom:max(.8rem,env(safe-area-inset-bottom));z-index:240;width:3.05rem;height:3.05rem;padding:.4rem;border:1px solid rgba(255,255,255,.8);box-shadow:0 14px 30px -14px rgba(23,107,71,.82)}
+  .wa-float .wa-dot{width:2rem;height:2rem;font-size:.72rem}.wa-float #waFloatLabel{display:none}
+  body.has-mobile-cart .wa-float{bottom:calc(4.45rem + env(safe-area-inset-bottom))}
+  body.locked .wa-float{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(.5rem)!important}
+  .mnav .mwhatsapp{display:none}
+  .top{display:none!important}
   .finder-banner{margin-inline:.75rem;border-radius:24px}.finder-copy{padding:2rem 1.25rem}.finder-visual{min-height:20rem}.finder-note{align-items:flex-start}.finder-result{grid-template-columns:1fr}.finder-result img{max-height:17rem;aspect-ratio:16/10}.recent-grid{grid-template-columns:1fr}.recent-section{padding-inline:.75rem}.compare-tray{bottom:.75rem}.mobile-cart-bar.on{display:flex}.checkout-actions{flex-direction:column}.cart-suggest .in{grid-template-columns:3.4rem 1fr}.cart-suggest button{grid-column:1/-1;width:100%}
   .compare-tray{bottom:calc(.75rem + var(--mobile-cart-offset))}.journal-story{padding-inline:1.25rem}.journal-facts{padding:1.25rem}
   .night{min-height:42rem;align-items:start}.night img{object-position:82% center;transform:scale(1.82);transform-origin:82% center}
