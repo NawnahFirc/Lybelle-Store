@@ -726,6 +726,13 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .pgrid{grid-template-columns:1fr;gap:1.65rem}
   .trust{grid-template-columns:1fr}
   .fcols{grid-template-columns:1fr}
+  /* The product filters are a dedicated swipe rail on portrait phones.  Keep
+     the overflow inside this control — never on the document itself. */
+  .tools{gap:.8rem}
+  .chips{width:calc(100% + (var(--pad) * 2));margin-inline:calc(var(--pad) * -1);padding:.15rem var(--pad) .8rem;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;scrollbar-width:none;touch-action:pan-x pan-y;justify-content:flex-start}
+  .chips::-webkit-scrollbar{display:none}
+  .chip-f{flex:0 0 auto;scroll-snap-align:start}
+  .sortwrap{padding-inline:0}
   html{scroll-padding-top:5.9rem}
   body.has-mobile-cart{padding-bottom:calc(4.9rem + env(safe-area-inset-bottom))}
   .bar{min-height:4.9rem;padding:.22rem var(--pad)}
