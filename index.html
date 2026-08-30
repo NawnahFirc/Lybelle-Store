@@ -730,7 +730,18 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   body.has-mobile-cart{padding-bottom:calc(4.9rem + env(safe-area-inset-bottom))}
   .bar{min-height:4.9rem;padding:.22rem var(--pad)}
   .brandlink.logo{width:8.9rem;height:4.25rem;border-radius:13px}
-  .product-ribbon{display:none}
+  /* A moving, product-led banner for portrait phones.  It is fully clipped to
+     its own band so the animation can never widen the document or steal page scroll. */
+  .product-ribbon{display:block;position:relative;height:4.35rem;max-width:100%;overflow:clip;isolation:isolate;background:linear-gradient(105deg,#f8f4ed 0%,#fdfbf8 46%,#edf2e8 100%);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);contain:paint}
+  .product-ribbon::before,.product-ribbon::after{content:"";position:absolute;top:0;bottom:0;width:2.5rem;z-index:2;pointer-events:none}
+  .product-ribbon::before{left:0;background:linear-gradient(90deg,#f8f4ed,rgba(248,244,237,0))}
+  .product-ribbon::after{right:0;background:linear-gradient(270deg,#edf2e8,rgba(237,242,232,0))}
+  .ribbon-track{width:max-content;min-width:0;animation-duration:27s}
+  .ribbon-set{gap:.65rem;padding:.55rem .45rem;min-width:max-content}
+  .ribbon-item{height:3.15rem;min-width:10.1rem;grid-template-columns:2.35rem 1fr auto;gap:.48rem;padding:.22rem .65rem .22rem .24rem;border-color:rgba(96,109,89,.16);background:rgba(255,255,255,.82);box-shadow:0 10px 20px -19px rgba(44,54,38,.75)}
+  .ribbon-item img{width:2.35rem;height:2.35rem;box-shadow:0 5px 11px -9px rgba(44,54,38,.7)}
+  .ribbon-item span{font-size:.64rem;letter-spacing:.01em}.ribbon-item b{font-size:.6rem}
+  .product-ribbon:active .ribbon-track,.product-ribbon:focus-within .ribbon-track{animation-play-state:paused}
   .mnav{inset:auto 0 0;top:4.9rem;height:calc(100dvh - 4.9rem);padding:1rem var(--pad) calc(1rem + env(safe-area-inset-bottom));z-index:119;
     overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateY(-104%)}
   .mnav.on{transform:none}.mnav a{font-size:1.8rem;padding:.48rem 0}.mnav .mfoot{padding-top:1.25rem}
@@ -756,6 +767,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .night h2{font-size:clamp(2.7rem,12.4vw,3.45rem);font-weight:600;line-height:1.02;text-wrap:balance}
   .night p{font-size:1rem;line-height:1.7}.night-prompt{width:100%;border-radius:16px;padding:.85rem 1rem;font-weight:600;background:rgba(253,251,248,.11)}
 }
+@media(max-width:560px) and (prefers-reduced-motion:reduce){.ribbon-track{animation:none!important;transform:none!important}}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
