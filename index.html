@@ -74,6 +74,8 @@ body{font-family:var(--body);background:var(--cream);color:var(--ink);
   font-size:16px;line-height:1.68;font-weight:300;overflow-x:clip;position:relative;
   -webkit-font-smoothing:antialiased}
 body.locked{overflow:hidden}
+body.locked header{position:fixed;top:0;left:0;right:0;width:100%}
+body.locked .mobile-cart-bar,body.locked .compare-tray{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit;color:inherit}
@@ -98,19 +100,13 @@ img{background:var(--sand)}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
 
 /*══ LOGO ══*/
-.logo{display:flex;align-items:center;gap:.6rem}
-.logo svg{flex:none}
-.logo .wm{display:flex;flex-direction:column;line-height:1}
-.logo .wm b{font-family:var(--body);font-weight:500;font-size:1.28rem;letter-spacing:.34em;
-  color:var(--sage-700);text-indent:.34em}
-.logo .wm b i{font-style:normal;color:var(--rose)}
-.logo .wm small{font-size:.45rem;letter-spacing:.29em;color:var(--ink-soft);margin-top:.32rem;
-  text-transform:uppercase;text-indent:.29em}
-.logo.lg .wm b{font-size:2.1rem}
-.logo.lg .wm small{font-size:.6rem;margin-top:.5rem}
-.logo.inv .wm b{color:var(--sage-200)}
-.logo.inv .wm b i{color:var(--rose-200)}
-.logo.inv .wm small{color:rgba(253,251,248,.55)}
+.logo{position:relative;display:grid;place-items:center;width:9.4rem;height:4.6rem;overflow:hidden;border-radius:14px;
+  background:#050505;box-shadow:0 10px 26px -20px rgba(28,23,62,.72)}
+.logo img{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none;object-fit:contain;object-position:center;
+  background:#050505;filter:brightness(1.34) contrast(1.2) saturate(1.2)}
+.brandlink.logo{width:9.8rem;height:4.7rem;border:1px solid rgba(96,109,89,.12)}
+.logo.lg{width:17.5rem;height:10.8rem;border-radius:28px;box-shadow:0 26px 60px -36px rgba(28,23,62,.76)}
+footer .logo{width:10rem;height:5rem}
 
 /*══ INTRO ══*/
 #intro{position:fixed;inset:0;z-index:700;background:var(--cream);display:grid;place-items:center;
@@ -376,9 +372,9 @@ select.sort:hover{border-color:var(--sage-400)}
 .night .in{position:relative;z-index:3;padding:clamp(3rem,7vw,5rem) var(--pad);max-width:36rem}
 .night .eyebrow{color:var(--lav)}
 .night .eyebrow::before{background:var(--lav)}
-.night h2{color:var(--cream)}
+.night h2{color:var(--cream);font-weight:600;letter-spacing:-.015em;text-shadow:0 3px 20px rgba(10,7,34,.46)}
 .night h2 em{color:var(--lav)}
-.night p{color:rgba(253,251,248,.78);margin-top:1.3rem;max-width:40ch}
+.night p{color:rgba(253,251,248,.92);margin-top:1.3rem;max-width:40ch;font-weight:500;text-shadow:0 2px 14px rgba(10,7,34,.54)}
 .night .hcta{margin-top:2.2rem}
 .night-prompt{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.1rem!important;padding:.65rem .9rem;
   border:1px solid rgba(253,251,248,.18);border-radius:999px;background:rgba(253,251,248,.08);font-size:.76rem!important}
@@ -721,14 +717,28 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .pgrid{grid-template-columns:1fr;gap:2.2rem}
   .trust{grid-template-columns:1fr}
   .fcols{grid-template-columns:1fr}
-  .logo svg{width:30px;height:30px}
-  .logo .wm b{font-size:1.05rem;letter-spacing:.28em}
+  html{scroll-padding-top:5.9rem}
+  body.has-mobile-cart{padding-bottom:calc(5.8rem + env(safe-area-inset-bottom))}
+  .bar{min-height:5.7rem;padding:.28rem var(--pad)}
+  .brandlink.logo{width:9.6rem;height:5rem;border-radius:14px}
+  .product-ribbon{display:none}
+  .mnav{inset:auto 0 0;top:5.7rem;height:calc(100dvh - 5.7rem);padding:1rem var(--pad) calc(1rem + env(safe-area-inset-bottom));z-index:119;
+    overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateY(-104%)}
+  .mnav.on{transform:none}.mnav a{font-size:1.8rem;padding:.48rem 0}.mnav .mfoot{padding-top:1.25rem}
+  .rev{opacity:1!important;transform:none!important;transition:none!important}
+  .drawer{height:100dvh;max-height:100dvh}.dbody{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:1.25rem}
+  body.modal-open .mobile-cart-bar{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(1rem)}
+  .mobile-cart-bar{bottom:max(.7rem,env(safe-area-inset-bottom))}.toasts{bottom:calc(5.9rem + env(safe-area-inset-bottom))}
   .hero .h1{font-size:clamp(2.5rem,10vw,3.4rem)}
-  .product-ribbon{height:52px}.ribbon-item{min-width:164px;height:40px;grid-template-columns:34px 1fr;padding-right:.65rem}.ribbon-item img{width:34px;height:34px}.ribbon-item b{display:none}
   body{--mobile-cart-offset:0rem;--compare-offset:0rem}body.has-mobile-cart{--mobile-cart-offset:4.9rem}body.has-compare{--compare-offset:4.75rem}
   .wa-float,.top{display:none!important}
   .finder-banner{margin-inline:.75rem;border-radius:24px}.finder-copy{padding:2rem 1.25rem}.finder-visual{min-height:20rem}.finder-note{align-items:flex-start}.finder-result{grid-template-columns:1fr}.finder-result img{max-height:17rem;aspect-ratio:16/10}.recent-grid{grid-template-columns:1fr}.recent-section{padding-inline:.75rem}.compare-tray{bottom:.75rem}.mobile-cart-bar.on{display:flex}.checkout-actions{flex-direction:column}.cart-suggest .in{grid-template-columns:3.4rem 1fr}.cart-suggest button{grid-column:1/-1;width:100%}
-  .compare-tray{bottom:calc(.75rem + var(--mobile-cart-offset))}.journal-story{padding-inline:1.25rem}.journal-facts{padding:1.25rem}.night-prompt{border-radius:16px}
+  .compare-tray{bottom:calc(.75rem + var(--mobile-cart-offset))}.journal-story{padding-inline:1.25rem}.journal-facts{padding:1.25rem}
+  .night{min-height:42rem;align-items:start}.night img{object-position:82% center;transform:scale(1.82);transform-origin:82% center}
+  .night::after{background:linear-gradient(180deg,rgba(25,21,64,.98) 0%,rgba(29,24,71,.96) 56%,rgba(38,30,82,.84) 100%)}
+  .night .in{max-width:none;padding:3.2rem 1.25rem 2.35rem}.night .eyebrow{font-weight:700;color:#d1cef2}
+  .night h2{font-size:clamp(2.7rem,12.4vw,3.45rem);font-weight:600;line-height:1.02;text-wrap:balance}
+  .night p{font-size:1rem;line-height:1.7}.night-prompt{width:100%;border-radius:16px;padding:.85rem 1rem;font-weight:600;background:rgba(253,251,248,.11)}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -1152,21 +1162,7 @@ const IMG = {
 };
 
 /*──── brand mark ────*/
-const PETAL = "M0,-46 C11,-27 15,-10 0,0 C-15,-10 -11,-27 0,-46Z";
-function mark(w){
-  const h = Math.round(w*70/124);
-  return `<svg viewBox="0 14 124 70" width="${w}" height="${h}" aria-hidden="true">
-  <path d="M62 68 C46 78 22 76 10 64 C24 54 48 54 62 68Z" fill="#5F7350"/>
-  <path d="M62 68 C78 78 102 76 114 64 C100 54 76 54 62 68Z" fill="#5F7350"/>
-  <g transform="translate(62,66)">
-    <path d="${PETAL}" fill="#C2718A" transform="rotate(-63) scale(.6)"/>
-    <path d="${PETAL}" fill="#C2718A" transform="rotate(63) scale(.6)"/>
-    <path d="${PETAL}" fill="#5F7350" transform="rotate(-33) scale(.86)"/>
-    <path d="${PETAL}" fill="#5F7350" transform="rotate(33) scale(.86)"/>
-    <path d="${PETAL}" fill="#C2718A"/>
-  </g></svg>`;
-}
-const logoHTML = (w,tag) => `${mark(w)}<span class="wm"><b>L<i>Y</i>BELLE</b><small>${tag}</small></span>`;
+const logoHTML = () => `<img src="assets/lybelle-logo-glow.png" alt="LYBELLE" decoding="async">`;
 
 /*──── catalogue ────*/
 const PRODUCTS = [
@@ -1368,7 +1364,7 @@ fr:{
     toastAdd:"ajouté au panier", toastWish:"ajouté aux favoris", toastUnwish:"retiré des favoris",
     promoOk:"Code appliqué", promoBad:"Code invalide", promoUsed:"Code déjà appliqué",
     shipLeft:"Plus que {x} DH pour la livraison offerte", shipFree:"Livraison offerte débloquée",
-    doneH:"Commande confirmée", doneP:"Merci pour votre confiance. Un e-mail de confirmation vous a été envoyé ; votre colis part sous 24h.",
+    doneH:"Commande prête dans WhatsApp", doneP:"Vérifiez le récapitulatif dans WhatsApp puis envoyez le message pour confirmer votre demande.",
     searchPh:"Rechercher un produit…", noRes:"Aucun produit ne correspond.", reviews:"avis", none:"Aucun produit dans cette catégorie.",
     qty:"Quantité", back:"Continuer mes achats", off:"−{x}%" }
 },
@@ -1477,7 +1473,7 @@ COPY.ar = {
   "ngt.eyebrow":"روتين المساء","ngt.h2":"طقوسك المسائية <em>تبدأ من هنا</em>","ngt.p":"تركيبة تجمع بين مغنيسيوم بيسغليسينات والميلاتونين، مصممة لترافق روتينك المسائي.","ngt.cta":"اكتشف نوكتيغليك","look.eyebrow":"في حياتك اليومية","look.h2":"العناية، <em>ببساطة</em>","look.p":"منتجات LYBELLE ترافقك في روتين الصباح والمساء.","look.1":"روتين الشعر","look.2":"ثنائي الجل الحميمي","look.3":"روتين المساء","look.4":"زيت الشعر","look.5":"Noctiglyc","look.6":"Selenium X",
   "rev.eyebrow":"LYBELLE","rev.h2":"رفاهيتك. روتينك. <em>LYBELLE الخاصة بك.</em>","faq.eyebrow":"الأسئلة الشائعة","faq.h2":"كل ما تحتاج <em>لمعرفته</em>","faq.1.q":"كيف أختار منتج LYBELLE المناسب لي؟","faq.1.a":"ابدأ من هدف روتينك واقرأ وصف المنتج ومكوناته وتعليمات استعماله. تواصل معنا على واتساب إذا احتجت مساعدة عامة في الاختيار.","faq.2.q":"كيف أستخدم منتجات LYBELLE؟","faq.2.a":"اتبع دائماً تعليمات الاستعمال والجرعة المدونة على عبوة كل منتج ولا تتجاوزها.","faq.3.q":"هل يمكن استعمال المكملات أثناء الحمل؟","faq.3.a":"استشيري الطبيب أو الصيدلي قبل تناول أي مكمل غذائي أثناء الحمل أو الرضاعة أو عند استعمال دواء.","faq.4.q":"هل تقومون بالتوصيل إلى جميع أنحاء المغرب؟","faq.4.a":"نعم، نوصل إلى مختلف مدن المغرب. التوصيل مجاني ابتداءً من 400 درهم، وإلا فتضاف 35 درهماً.","faq.5.q":"هل يمكن إرجاع المنتج؟","faq.5.a":"يمكن إرجاع المنتج غير المفتوح وفي عبوته الأصلية خلال 14 يوماً. تواصل معنا لترتيب العملية.",
   "nl.eyebrow":"مجلة LYBELLE","nl.h2":"نصائح مفيدة <em>بدون تعقيد</em>","nl.p":"نصائح بسيطة حول الرفاهية والتغذية والجمال والروتين اليومي، مع خصم ترحيبي على أول طلب.","foot.blurb":"تبتكر LYBELLE منتجات تنسجم بسهولة مع حياتك اليومية: مكملات غذائية ومنتجات عناية وأساسيات للرفاهية.","foot.cod":"الدفع عند الاستلام","foot.c1":"المتجر","foot.c2":"LYBELLE","foot.c3":"المساعدة","foot.c1.1":"المكملات","foot.c1.2":"العناية بالشعر","foot.c1.3":"العناية الحميمة","foot.c1.4":"العروض","foot.c2.1":"نهجنا","foot.c2.2":"منتجاتنا","foot.c2.3":"عن LYBELLE","foot.c2.4":"المجلة","foot.c3.1":"التوصيل","foot.c3.2":"الإرجاع","foot.c3.3":"تواصل معنا","foot.c3.4":"الأسئلة الشائعة","foot.legal":"المكملات الغذائية لا تغني عن نظام غذائي متنوع ومتوازن ونمط حياة صحي. تحفظ بعيداً عن متناول الأطفال. لا تتجاوز الجرعة اليومية الموصى بها.",rights:"© 2026 LYBELLE. جميع الحقوق محفوظة.",
-  ui:{cart:"السلة",cartTitle:"سلة التسوق",wishTitle:"المفضلة",empty:"سلة التسوق فارغة.",emptyWish:"لا توجد منتجات مفضلة بعد.",add:"أضف إلى السلة",added:"تمت الإضافة",quick:"عرض سريع",sub:"المجموع الفرعي",ship:"التوصيل",free:"مجاني",disc:"الخصم",total:"المجموع",checkout:"إتمام الطلب",remove:"حذف",subscribe:"اشترك",emailPh:"بريدك الإلكتروني",promoPh:"رمز التخفيض",apply:"تطبيق",ok:"شكراً لك — تم تسجيل بريدك.",err:"يرجى إدخال بريد إلكتروني صحيح.",toastAdd:"تمت إضافته إلى السلة",toastWish:"تمت إضافته إلى المفضلة",toastUnwish:"تم حذفه من المفضلة",promoOk:"تم تطبيق الرمز",promoBad:"الرمز غير صحيح",promoUsed:"تم تطبيق رمز مسبقاً",shipLeft:"بقي {x} درهم للتوصيل المجاني",shipFree:"حصلت على التوصيل المجاني",doneH:"تم تجهيز الطلب",doneP:"شكراً لثقتك.",searchPh:"ابحث عن منتج…",noRes:"لا يوجد منتج مطابق.",reviews:"تقييم",none:"لا توجد منتجات في هذه الفئة.",qty:"الكمية",back:"متابعة التسوق",off:"خصم {x}%"}
+  ui:{cart:"السلة",cartTitle:"سلة التسوق",wishTitle:"المفضلة",empty:"سلة التسوق فارغة.",emptyWish:"لا توجد منتجات مفضلة بعد.",add:"أضف إلى السلة",added:"تمت الإضافة",quick:"عرض سريع",sub:"المجموع الفرعي",ship:"التوصيل",free:"مجاني",disc:"الخصم",total:"المجموع",checkout:"إتمام الطلب",remove:"حذف",subscribe:"اشترك",emailPh:"بريدك الإلكتروني",promoPh:"رمز التخفيض",apply:"تطبيق",ok:"شكراً لك — تم تسجيل بريدك.",err:"يرجى إدخال بريد إلكتروني صحيح.",toastAdd:"تمت إضافته إلى السلة",toastWish:"تمت إضافته إلى المفضلة",toastUnwish:"تم حذفه من المفضلة",promoOk:"تم تطبيق الرمز",promoBad:"الرمز غير صحيح",promoUsed:"تم تطبيق رمز مسبقاً",shipLeft:"بقي {x} درهم للتوصيل المجاني",shipFree:"حصلت على التوصيل المجاني",doneH:"طلبك جاهز في واتساب",doneP:"راجعي الملخص في واتساب ثم أرسلي الرسالة لتأكيد طلبك.",searchPh:"ابحث عن منتج…",noRes:"لا يوجد منتج مطابق.",reviews:"تقييم",none:"لا توجد منتجات في هذه الفئة.",qty:"الكمية",back:"متابعة التسوق",off:"خصم {x}%"}
 };
 
 /*──── product wording ────*/
@@ -1601,19 +1597,19 @@ function renderStatic(){
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   document.body.classList.toggle("is-ar",lang === "ar");
   document.querySelector('meta[name="description"]').content = lang === "ar" ? "اكتشف LYBELLE: مكملات غذائية ومنتجات للعناية والجمال والرفاهية للجميع. التوصيل في المغرب." : "Découvrez LYBELLE : compléments alimentaires, soins beauté et produits bien-être pour tous. Livraison partout au Maroc.";
-  $("#introLogo").innerHTML = logoHTML(84, t("tagline"));
-  $("#hdrLogo").innerHTML   = logoHTML(40, t("tagline"));
-  $("#footLogo").innerHTML  = logoHTML(46, t("tagline"));
+  $("#introLogo").innerHTML = logoHTML();
+  $("#hdrLogo").innerHTML   = logoHTML();
+  $("#footLogo").innerHTML  = logoHTML();
 
   const unit = `<div class="unit">${[1,2,3,4].map(i=>`<span>${esc(t("ann."+i))}</span>`).join("")}</div>`;
   $("#annTrack").innerHTML = unit + unit;
 
   const links = [["#shop",1],["#rituel",2],["#apropos",3],["#blog",4],["#contact",5]];
   $("#mainNav").innerHTML = links.map(([h,i])=>`<a href="${h}">${esc(t("nav."+i))}</a>`).join("");
-  const mobileWhatsApp = lang === "ar" ? `اطلب عبر واتساب · ${STORE_CONFIG.whatsappDisplay}` : `WhatsApp · ${STORE_CONFIG.whatsappDisplay}`;
+  const mobileWhatsApp = lang === "ar" ? `اطلب عبر واتساب · <bdi dir="ltr">${STORE_CONFIG.whatsappDisplay}</bdi>` : `WhatsApp · ${STORE_CONFIG.whatsappDisplay}`;
   $("#mnav").innerHTML = links.map(([h,i],k)=>
     `<a href="${h}" style="animation-delay:${k*70+120}ms">${esc(t("nav."+i))}</a>`).join("")
-    + `<div class="mfoot"><a class="mwhatsapp" href="https://wa.me/${STORE_CONFIG.whatsappNumber}" target="_blank" rel="noopener noreferrer">${esc(mobileWhatsApp)}</a><div class="lang" style="display:flex">
+    + `<div class="mfoot"><a class="mwhatsapp" href="https://wa.me/${STORE_CONFIG.whatsappNumber}" target="_blank" rel="noopener noreferrer">${mobileWhatsApp}</a><div class="lang" style="display:flex">
          <button data-ml="fr" aria-pressed="${lang==="fr"}">FR</button><button data-ml="ar" aria-pressed="${lang==="ar"}">AR</button>
        </div></div>`;
 
@@ -2184,6 +2180,19 @@ function openCheckout(){
 function closeCheckout(){
   $("#checkoutPanel").hidden=true; $("#cartBody").hidden=false; $("#cartFoot").hidden=false; $("#shipWrap").hidden=false; $("#checkoutMsg").textContent="";
 }
+function whatsappSafe(value){ return String(value || "").replace(/[\r\n*_~`]/g," ").replace(/\s{2,}/g," ").trim(); }
+function orderWhatsAppMessage(order){
+  const itemLines = order.items.map((item,index)=>{
+    const name=whatsappSafe(item.name);
+    return lang === "ar"
+      ? `${index+1}. *${name}*\n   الكمية: *${item.qty}* · ${money(item.price*item.qty)}`
+      : `${index+1}. *${name}*\n   Quantité : *${item.qty}* · ${money(item.price*item.qty)}`;
+  });
+  const customer=order.customer;
+  return lang === "ar"
+    ? [`*طلب جديد من LYBELLE*`,`رقم الطلب: *${order.id}*`,``, `*المنتجات*`,...itemLines,``, `*ملخص الطلب*`,`المجموع الفرعي: ${money(order.subtotal)}`,order.discount?`الخصم: −${money(order.discount)}`:"",`التوصيل: ${order.shipping?money(order.shipping):u("free")}`,`*المجموع: ${money(order.total)}*`,``, `*بيانات العميل*`,`الاسم: ${whatsappSafe(customer.name)}`,`الهاتف: ${whatsappSafe(customer.phone)}`,`المدينة: ${whatsappSafe(customer.city)}`,`العنوان: ${whatsappSafe(customer.address)}`,customer.note?`ملاحظة: ${whatsappSafe(customer.note)}`:"",``, `يرجى تأكيد توفر الطلب وموعد التوصيل.`].filter(Boolean).join("\n")
+    : [`*Nouvelle commande LYBELLE*`,`Référence : *${order.id}*`,``, `*Articles*`,...itemLines,``, `*Récapitulatif*`,`Sous-total : ${money(order.subtotal)}`,order.discount?`Réduction : −${money(order.discount)}`:"",`Livraison : ${order.shipping?money(order.shipping):u("free")}`,`*Total : ${money(order.total)}*`,``, `*Coordonnées cliente*`,`Nom : ${whatsappSafe(customer.name)}`,`Téléphone : ${whatsappSafe(customer.phone)}`,`Ville : ${whatsappSafe(customer.city)}`,`Adresse : ${whatsappSafe(customer.address)}`,customer.note?`Note : ${whatsappSafe(customer.note)}`:"",``, `Merci de confirmer la disponibilité et le créneau de livraison.`].filter(Boolean).join("\n");
+}
 $("#checkout").onclick = openCheckout;
 $("#checkoutBack").onclick = closeCheckout;
 $("#checkoutForm").addEventListener("submit", async e=>{
@@ -2208,10 +2217,7 @@ $("#checkoutForm").addEventListener("submit", async e=>{
     safeSave(STORAGE_KEYS.lastOrder,order);
     lastOrder=order;
     if(STORE_CONFIG.whatsappNumber){
-      const lines=lang === "ar"
-        ? [`مرحباً LYBELLE، أريد تأكيد الطلب ${order.id}.`,``,...order.items.map(i=>`• ${i.name} × ${i.qty} — ${money(i.price*i.qty)}`),``,`المجموع الفرعي: ${money(order.subtotal)}`,order.discount?`الخصم: −${money(order.discount)}`:"",`التوصيل: ${order.shipping?money(order.shipping):u("free")}`,`المجموع: ${money(order.total)}`,``,`الاسم: ${order.customer.name}`,`الهاتف: ${order.customer.phone}`,`المدينة: ${order.customer.city}`,`العنوان: ${order.customer.address}`,order.customer.note?`ملاحظة: ${order.customer.note}`:""].filter(Boolean)
-        : [`Bonjour LYBELLE, je souhaite confirmer la commande ${order.id}.`,``,...order.items.map(i=>`• ${i.name} × ${i.qty} — ${money(i.price*i.qty)}`),``,`Sous-total : ${money(order.subtotal)}`,order.discount?`Réduction : −${money(order.discount)}`:"",`Livraison : ${order.shipping?money(order.shipping):u("free")}`,`Total : ${money(order.total)}`,``,`Nom : ${order.customer.name}`,`Téléphone : ${order.customer.phone}`,`Ville : ${order.customer.city}`,`Adresse : ${order.customer.address}`,order.customer.note?`Note : ${order.customer.note}`:""].filter(Boolean);
-      const url=`https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
+      const url=`https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(orderWhatsAppMessage(order))}`;
       window.open(url,"_blank","noopener,noreferrer");
     }
     msg.classList.add("ok");
