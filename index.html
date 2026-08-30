@@ -101,10 +101,10 @@ img{background:var(--sand)}
 
 /*══ LOGO ══*/
 .logo{position:relative;display:grid;place-items:center;width:9.4rem;height:4.6rem;overflow:hidden;border-radius:14px;
-  background:#050505;box-shadow:0 10px 26px -20px rgba(28,23,62,.72)}
+  background:#fff;border:1px solid rgba(96,109,89,.12);box-shadow:0 10px 26px -20px rgba(28,23,62,.32)}
 .logo img{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none;object-fit:contain;object-position:center;
-  background:#050505;filter:brightness(1.34) contrast(1.2) saturate(1.2)}
-.brandlink.logo{width:9.8rem;height:4.7rem;border:1px solid rgba(96,109,89,.12)}
+  background:#fff;transform:scale(1.23)}
+.brandlink.logo{width:9.8rem;height:4.7rem}
 .logo.lg{width:17.5rem;height:10.8rem;border-radius:28px;box-shadow:0 26px 60px -36px rgba(28,23,62,.76)}
 footer .logo{width:10rem;height:5rem}
 
@@ -616,9 +616,10 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 .par{will-change:transform}
 
 /*══ CHECKOUT FORM ══*/
-.checkout-panel{padding:1.4rem 1.5rem 1rem;border-bottom:1px solid var(--line-2)}
+.checkout-panel{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:1.4rem 1.5rem 1rem;border-bottom:1px solid var(--line-2)}
 .checkout-head h3{font-family:var(--display);font-size:1.6rem;font-weight:400;margin-top:.25rem}
 .checkout-form{display:flex;flex-direction:column;gap:.9rem;margin-top:1.2rem}
+.checkout-form[hidden]{display:none}
 .checkout-form label{display:flex;flex-direction:column;gap:.35rem;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
 .checkout-form input,.checkout-form textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line);border-radius:10px;background:transparent;font-size:.85rem;text-transform:none;letter-spacing:normal}
 .checkout-form input:focus,.checkout-form textarea:focus{outline:none;border-color:var(--sage-400);box-shadow:0 0 0 3px rgba(140,160,119,.12)}
@@ -628,6 +629,14 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 .checkout-note{font-size:.72rem;line-height:1.5;color:var(--ink-soft)}
 .checkout-actions{display:flex;gap:.5rem}
 .checkout-actions .btn{flex:1}
+.checkout-confirm{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.85rem;padding:1.35rem .15rem .3rem}
+.checkout-confirm[hidden]{display:none}
+.checkout-confirm .confirm-icon{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--sage-50);color:var(--sage-700);font-size:1.4rem;font-weight:600}
+.checkout-confirm h3{font-family:var(--display);font-size:1.7rem;font-weight:400;line-height:1.08;margin:0}
+.checkout-confirm p{max-width:25rem;margin:0;color:var(--ink-soft);font-size:.84rem;line-height:1.6}
+.checkout-confirm .checkout-summary{width:100%;text-align:left;margin:.15rem 0}
+.checkout-confirm-actions{display:grid;grid-template-columns:1fr;gap:.55rem;width:100%}
+.checkout-confirm-actions .btn{width:100%}
 .search-close{position:absolute;right:var(--pad);top:1rem}
 /*══ PRODUCT RIBBON + WHATSAPP ══*/
 .product-ribbon{height:56px;overflow:hidden;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);background:rgba(253,251,248,.96)}
@@ -683,7 +692,7 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
 .cart-suggest{margin:1rem 0 .6rem;padding:1rem;border-radius:16px;background:var(--rose-50);border:1px solid rgba(194,113,138,.14)}.cart-suggest>span{display:block;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-700);font-weight:600}.cart-suggest .in{display:grid;grid-template-columns:3.6rem 1fr auto;gap:.75rem;align-items:center;margin-top:.65rem}.cart-suggest img{width:3.6rem;height:4.2rem;object-fit:cover;border-radius:9px}.cart-suggest b{font-family:var(--display);font-size:1rem;font-weight:500;display:block}.cart-suggest small{font-size:.66rem;color:var(--ink-soft)}.cart-suggest button{padding:.5rem .7rem;border-radius:999px;background:var(--sage-700);color:#fff;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 
 /*══ MOBILE CART BAR ══*/
-.mobile-cart-bar{display:none;position:fixed;left:.75rem;right:.75rem;bottom:.7rem;z-index:250;padding:.5rem .55rem .5rem .85rem;border-radius:18px;background:var(--sage-900);color:var(--cream);box-shadow:0 16px 42px -15px rgba(44,54,38,.78);align-items:center;gap:.75rem}.mobile-cart-bar .mc-info{flex:1;min-width:0}.mobile-cart-bar b{display:block;font-size:.74rem;font-weight:500}.mobile-cart-bar small{display:block;color:var(--sage-200);font-size:.65rem}.mobile-cart-bar button{padding:.68rem .95rem;border-radius:999px;background:var(--cream);color:var(--sage-900);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.mobile-cart-bar{display:none;position:fixed;left:.6rem;right:.6rem;bottom:.55rem;z-index:250;padding:.4rem .45rem .4rem .72rem;border-radius:16px;background:var(--sage-900);color:var(--cream);box-shadow:0 15px 34px -17px rgba(44,54,38,.78);align-items:center;gap:.65rem}.mobile-cart-bar .mc-info{flex:1;min-width:0}.mobile-cart-bar b{display:block;font-size:.7rem;font-weight:500}.mobile-cart-bar small{display:block;color:var(--sage-200);font-size:.62rem}.mobile-cart-bar button{padding:.58rem .8rem;border-radius:999px;background:var(--cream);color:var(--sage-900);font-size:.55rem;letter-spacing:.11em;text-transform:uppercase;font-weight:600}
 .is-ar .finder-option,.is-ar .compare-table th,.is-ar .compare-table td{text-align:right}.is-ar .feature-close{right:auto;left:1rem}
 /*══ RESPONSIVE ══*/
 @media(max-width:1080px){
@@ -714,23 +723,23 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
   .finder-options{grid-template-columns:1fr}.finder-option{min-height:auto}.finder-result{grid-template-columns:8rem 1fr}.compare-chips .compare-chip:nth-child(3){display:none}.journal-story{grid-template-columns:1fr}
 }
 @media(max-width:560px){
-  .pgrid{grid-template-columns:1fr;gap:2.2rem}
+  .pgrid{grid-template-columns:1fr;gap:1.65rem}
   .trust{grid-template-columns:1fr}
   .fcols{grid-template-columns:1fr}
   html{scroll-padding-top:5.9rem}
-  body.has-mobile-cart{padding-bottom:calc(5.8rem + env(safe-area-inset-bottom))}
-  .bar{min-height:5.7rem;padding:.28rem var(--pad)}
-  .brandlink.logo{width:9.6rem;height:5rem;border-radius:14px}
+  body.has-mobile-cart{padding-bottom:calc(4.9rem + env(safe-area-inset-bottom))}
+  .bar{min-height:4.9rem;padding:.22rem var(--pad)}
+  .brandlink.logo{width:8.9rem;height:4.25rem;border-radius:13px}
   .product-ribbon{display:none}
-  .mnav{inset:auto 0 0;top:5.7rem;height:calc(100dvh - 5.7rem);padding:1rem var(--pad) calc(1rem + env(safe-area-inset-bottom));z-index:119;
+  .mnav{inset:auto 0 0;top:4.9rem;height:calc(100dvh - 4.9rem);padding:1rem var(--pad) calc(1rem + env(safe-area-inset-bottom));z-index:119;
     overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateY(-104%)}
   .mnav.on{transform:none}.mnav a{font-size:1.8rem;padding:.48rem 0}.mnav .mfoot{padding-top:1.25rem}
   .rev{opacity:1!important;transform:none!important;transition:none!important}
-  .drawer{height:100dvh;max-height:100dvh}.dbody{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:1.25rem}
+  .drawer{height:100dvh;max-height:100dvh}.dbody{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:1.25rem}.checkout-panel{padding:1.1rem 1rem calc(1.2rem + env(safe-area-inset-bottom))}
   body.modal-open .mobile-cart-bar{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(1rem)}
-  .mobile-cart-bar{bottom:max(.7rem,env(safe-area-inset-bottom))}.toasts{bottom:calc(5.9rem + env(safe-area-inset-bottom))}
+  .mobile-cart-bar{bottom:max(.55rem,env(safe-area-inset-bottom))}.toasts{bottom:calc(5rem + env(safe-area-inset-bottom))}
   .hero .h1{font-size:clamp(2.5rem,10vw,3.4rem)}
-  body{--mobile-cart-offset:0rem;--compare-offset:0rem}body.has-mobile-cart{--mobile-cart-offset:4.9rem}body.has-compare{--compare-offset:4.75rem}
+  body{--mobile-cart-offset:0rem;--compare-offset:0rem}body.has-mobile-cart{--mobile-cart-offset:4.2rem}body.has-compare{--compare-offset:4.1rem}
   .wa-float,.top{display:none!important}
   .finder-banner{margin-inline:.75rem;border-radius:24px}.finder-copy{padding:2rem 1.25rem}.finder-visual{min-height:20rem}.finder-note{align-items:flex-start}.finder-result{grid-template-columns:1fr}.finder-result img{max-height:17rem;aspect-ratio:16/10}.recent-grid{grid-template-columns:1fr}.recent-section{padding-inline:.75rem}.compare-tray{bottom:.75rem}.mobile-cart-bar.on{display:flex}.checkout-actions{flex-direction:column}.cart-suggest .in{grid-template-columns:3.4rem 1fr}.cart-suggest button{grid-column:1/-1;width:100%}
   .compare-tray{bottom:calc(.75rem + var(--mobile-cart-offset))}.journal-story{padding-inline:1.25rem}.journal-facts{padding:1.25rem}
@@ -1041,6 +1050,17 @@ footer{background:var(--cream);padding:clamp(3rem,6vw,4.5rem) var(--pad) 1.8rem}
       </div>
       <p class="fmsg" id="checkoutMsg" role="status" aria-live="polite"></p>
     </form>
+    <section class="checkout-confirm" id="checkoutConfirm" hidden aria-live="polite">
+      <div class="confirm-icon" aria-hidden="true">✓</div>
+      <span class="lbl" id="checkoutConfirmEyebrow"></span>
+      <h3 id="checkoutConfirmTitle"></h3>
+      <p id="checkoutConfirmText"></p>
+      <div class="checkout-summary" id="checkoutConfirmSummary"></div>
+      <div class="checkout-confirm-actions">
+        <a class="btn btn-solid" id="checkoutConfirmLink" target="_blank" rel="noopener noreferrer"></a>
+        <button class="btn btn-ghost" type="button" id="checkoutEdit"></button>
+      </div>
+    </section>
   </div>
   <div class="dfoot" id="cartFoot">
     <div class="promo">
@@ -1162,7 +1182,7 @@ const IMG = {
 };
 
 /*──── brand mark ────*/
-const logoHTML = () => `<img src="assets/lybelle-logo-glow.png" alt="LYBELLE" decoding="async">`;
+const logoHTML = () => `<img src="assets/lybelle-logo-white.png" alt="LYBELLE" decoding="async">`;
 
 /*──── catalogue ────*/
 const PRODUCTS = [
@@ -1626,9 +1646,13 @@ function renderStatic(){
   $("#whatsappFloat").href = `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(lang === "ar" ? "مرحباً LYBELLE، أريد الاستفسار عن أحد المنتجات." : "Bonjour LYBELLE, je souhaite me renseigner sur un produit.")}`;
   $("#waFloatLabel").innerHTML = lang === "ar" ? `اطلب عبر واتساب · <bdi dir="ltr">${STORE_CONFIG.whatsappDisplay}</bdi>` : `WhatsApp · ${STORE_CONFIG.whatsappDisplay}`;
   const checkoutCopy = lang === "ar"
-    ? ["الطلب","بياناتك","الاسم الكامل","الهاتف","المدينة","العنوان","ملاحظة (اختياري)","لن يتم خصم أي مبلغ هنا. سنفتح طلبك الجاهز في واتساب.","رجوع","اطلب عبر واتساب"]
-    : ["Commande","Vos coordonnées","Nom complet","Téléphone","Ville","Adresse","Note (optionnel)","Aucun paiement n'est déclenché ici : votre commande prête sera ouverte dans WhatsApp.","Retour","Commander sur WhatsApp"];
+    ? ["الطلب","بياناتك","الاسم الكامل","الهاتف","المدينة","العنوان","ملاحظة (اختياري)","لن يتم خصم أي مبلغ هنا. راجعي الطلب قبل فتح واتساب.","رجوع","مراجعة الطلب"]
+    : ["Commande","Vos coordonnées","Nom complet","Téléphone","Ville","Adresse","Note (optionnel)","Aucun paiement n'est déclenché ici : vérifiez votre commande avant d'ouvrir WhatsApp.","Retour","Vérifier ma commande"];
   ["checkoutEyebrow","checkoutTitle","coNameLbl","coPhoneLbl","coCityLbl","coAddressLbl","coNoteLbl","checkoutNote","checkoutBack","checkoutSubmit"].forEach((id,i)=>$("#"+id).textContent=checkoutCopy[i]);
+  const confirmCopy = lang === "ar"
+    ? ["الخطوة الأخيرة","طلبك جاهز","راجعي الملخص ثم افتحي واتساب لإرسال طلبك وتأكيده.","فتح واتساب وتأكيد الطلب","تعديل المعلومات"]
+    : ["Dernière étape","Votre commande est prête","Vérifiez le récapitulatif, puis ouvrez WhatsApp pour envoyer et confirmer votre demande.","Ouvrir WhatsApp et confirmer","Modifier mes informations"];
+  ["checkoutConfirmEyebrow","checkoutConfirmTitle","checkoutConfirmText","checkoutConfirmLink","checkoutEdit"].forEach((id,i)=>$("#"+id).textContent=confirmCopy[i]);
 
   $("#finderEyebrow").textContent = ft("finderEyebrow");
   $("#finderTitle").innerHTML = ft("finderTitle");
@@ -2158,27 +2182,31 @@ $("#promoBtn").onclick = ()=>{
 };
 
 /*──── checkout ────*/
-function renderCheckoutSummary(){
-  const T = totals();
-  const items = T.ids.map(id=>{
+function checkoutSummaryMarkup(T, items){
+  const lines = items.map(item=>{
+    const id=item.id, qty=item.qty;
     const pr=PRODUCTS.find(x=>x.id===id);
-    return `<div class="sumrow"><span>${esc(p(id,"n"))} × ${cart[id]}</span><span>${money(pr.price*cart[id])}</span></div>`;
+    return `<div class="sumrow"><span>${esc(item.name || p(id,"n"))} × ${qty}</span><span>${money((item.price || pr.price)*qty)}</span></div>`;
   }).join("");
-  $("#checkoutSummary").innerHTML = items +
+  return lines +
     `<div class="sumrow"><span>${esc(u("ship"))}</span><span>${T.ship ? money(T.ship) : esc(u("free"))}</span></div>`+
     `<div class="sumrow sumtotal"><span>${esc(u("total"))}</span><strong>${money(T.total)}</strong></div>`;
+}
+function renderCheckoutSummary(){
+  const T = totals();
+  $("#checkoutSummary").innerHTML = checkoutSummaryMarkup(T,T.ids.map(id=>({id,qty:cart[id],price:PRODUCTS.find(x=>x.id===id).price,name:p(id,"n")})));
 }
 function openCheckout(){
   const T=totals(); if(!T.ids.length) return;
   renderCheckoutSummary();
   const profile=safeLoad(STORAGE_KEYS.profile,{});
   [["coName","name"],["coPhone","phone"],["coCity","city"],["coAddress","address"]].forEach(([id,key])=>{ if(!$("#"+id).value && profile[key]) $("#"+id).value=profile[key]; });
-  $("#cartBody").hidden=true; $("#cartFoot").hidden=true; $("#shipWrap").hidden=true; $("#checkoutPanel").hidden=false;
+  $("#cartBody").hidden=true; $("#cartFoot").hidden=true; $("#shipWrap").hidden=true; $("#checkoutPanel").hidden=false; $("#checkoutForm").hidden=false; $("#checkoutConfirm").hidden=true;
   $("#checkoutMsg").textContent="";
   setTimeout(()=>$("#coName").focus(), 50);
 }
 function closeCheckout(){
-  $("#checkoutPanel").hidden=true; $("#cartBody").hidden=false; $("#cartFoot").hidden=false; $("#shipWrap").hidden=false; $("#checkoutMsg").textContent="";
+  $("#checkoutPanel").hidden=true; $("#checkoutForm").hidden=false; $("#checkoutConfirm").hidden=true; $("#cartBody").hidden=false; $("#cartFoot").hidden=false; $("#shipWrap").hidden=false; $("#checkoutMsg").textContent="";
 }
 function whatsappSafe(value){ return String(value || "").replace(/[\r\n*_~`]/g," ").replace(/\s{2,}/g," ").trim(); }
 function orderWhatsAppMessage(order){
@@ -2216,20 +2244,19 @@ $("#checkoutForm").addEventListener("submit", async e=>{
     safeSave(STORAGE_KEYS.profile,order.customer);
     safeSave(STORAGE_KEYS.lastOrder,order);
     lastOrder=order;
-    if(STORE_CONFIG.whatsappNumber){
-      const url=`https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(orderWhatsAppMessage(order))}`;
-      window.open(url,"_blank","noopener,noreferrer");
-    }
-    msg.classList.add("ok");
-    msg.textContent = STORE_CONFIG.orderEndpoint || STORE_CONFIG.whatsappNumber
-      ? `${u("doneH")} · ${order.id}`
-      : `Commande ${order.id} préparée. Ajoutez votre endpoint de commande ou votre numéro WhatsApp dans STORE_CONFIG pour l'envoyer automatiquement.`;
-    cart={}; discount=0; persist(); renderCart(); renderLastOrder();
+    $("#checkoutConfirmSummary").innerHTML=checkoutSummaryMarkup(order,order.items);
+    $("#checkoutConfirmLink").href=`https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(orderWhatsAppMessage(order))}`;
+    $("#checkoutForm").hidden=true; $("#checkoutConfirm").hidden=false;
+    msg.textContent="";
   } catch(err){
     msg.classList.remove("ok");
     msg.textContent="Impossible d'envoyer la commande pour le moment. Vérifiez la configuration du service de commande.";
   }
 });
+$("#checkoutEdit").onclick=()=>{ $("#checkoutConfirm").hidden=true; $("#checkoutForm").hidden=false; setTimeout(()=>$("#coName").focus(),50); };
+$("#checkoutConfirmLink").onclick=()=>{
+  cart={}; discount=0; persist(); renderCart(); renderLastOrder();
+};
 
 /*──── newsletter ────*/
 $("#nlForm").addEventListener("submit", async e=>{
