@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>LYBELLE · Prix et offres</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · checked: 2026-10-29 · genre: modern-minimal (inferred) · scope: app
+ * floor: built against the storefront tokens · shape: app screen · states: default, saving, saved, error, locked
+ * built: the project · v2.0.0 */
+:root{
+  --sage-900:#2C3626; --sage-700:#4C5F40; --sage-400:#8CA077; --sage-200:#C9D6BC; --sage-50:#EDF1E7;
+  --rose-700:#A2566F; --rose-50:#FAEEF1;
+  --cream:#FDFBF8; --sand:#F5F0E9; --paper:#FFFEFB;
+  --ink:#22261F; --ink-soft:#5E6358;
+  --line:rgba(34,38,31,.14); --line-2:rgba(34,38,31,.08);
+  --focus:#4C5F40;
+  --display:"Cormorant Garamond",Georgia,serif;
+  --body:"Jost",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+body{font-family:var(--body);background:var(--cream);color:var(--ink);font-size:16px;line-height:1.55;font-weight:400}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.wrap{max-width:68rem;margin:0 auto;padding:1.5rem 1rem 6rem}
+header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-bottom:1.25rem;border-bottom:1px solid var(--line)}
+h1{font-family:var(--display);font-weight:500;font-size:2rem;line-height:1.1}
+h2{font-family:var(--display);font-weight:500;font-size:1.5rem;line-height:1.2}
+.muted{color:var(--ink-soft);font-size:.9rem}
+section{padding:1.75rem 0;border-bottom:1px solid var(--line-2)}
+section>h2+p{margin-top:.35rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:1rem;margin-top:1.1rem}
+label{display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--ink-soft)}
+label.inline{flex-direction:row;align-items:center;gap:.55rem;color:var(--ink)}
+input[type=number],input[type=text],input[type=password],input[type=datetime-local],select{
+  width:100%;min-height:44px;padding:.55rem .75rem;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font-variant-numeric:tabular-nums}
+input:hover,select:hover{border-color:var(--sage-400)}
+input[type=checkbox]{width:1.15rem;height:1.15rem;accent-color:var(--sage-700)}
+.unit{position:relative}.unit input{padding-right:3rem}.unit::after{content:attr(data-unit);position:absolute;right:.8rem;bottom:.7rem;color:var(--ink-soft);font-size:.85rem;pointer-events:none}
+.plan{border:1px solid var(--line);border-radius:14px;padding:1.1rem;margin-top:1.1rem;background:var(--paper)}
+.plan h3{font-family:var(--display);font-size:1.3rem;font-weight:500}
+.preview{margin-top:.9rem;font-size:.88rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.preview b{color:var(--ink);font-weight:500}
+.row{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:.9rem}
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:1rem;margin-top:1rem}
+.stat{padding:1rem;border-radius:12px;background:var(--sage-50)}
+.stat b{display:block;font-family:var(--display);font-size:2rem;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.85rem;color:var(--ink-soft)}
+.btn{min-height:44px;padding:.65rem 1.4rem;border-radius:999px;border:1px solid var(--sage-700);background:var(--sage-700);color:var(--cream);cursor:pointer;font-weight:500;transition:background-color .2s,border-color .2s}
+.btn:hover{background:var(--sage-900);border-color:var(--sage-900)}
+.btn.ghost{background:transparent;color:var(--sage-700)}
+.btn.ghost:hover{background:var(--sage-50)}
+.btn[disabled]{background:var(--sand);border-color:var(--line);color:var(--ink-soft);cursor:not-allowed}
+.savebar{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:.75rem 1rem}
+.savebar .in{max-width:68rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.msg{font-size:.92rem}
+.msg.err{color:var(--rose-700)}
+.msg.ok{color:var(--sage-700)}
+.alert{margin-top:1rem;padding:.9rem 1rem;border-radius:12px;background:var(--rose-50);color:var(--rose-700);font-size:.92rem}
+.coupons{display:grid;gap:.6rem;margin-top:1rem;max-width:30rem}
+.coupon{display:grid;grid-template-columns:1fr 7rem auto;gap:.5rem;align-items:end}
+table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--line-2);vertical-align:top}
+th{font-weight:500;color:var(--ink-soft)}
+.tablewrap{overflow-x:auto}
+#login{max-width:24rem;margin:12vh auto 0;padding:0 1rem}
+#login form{display:grid;gap:1rem;margin-top:1.5rem}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<main id="login">
+  <h1>LYBELLE · Prix et offres</h1>
+  <p class="muted">Espace réservé à la gestion des prix, des formules et de l'offre de lancement.</p>
+  <form id="loginForm">
+    <label>Mot de passe<input type="password" id="pw" autocomplete="current-password" required></label>
+    <button class="btn" type="submit">Ouvrir</button>
+    <p class="msg err" id="loginMsg" role="alert"></p>
+  </form>
+</main>
+
+<div class="wrap" id="app" hidden>
+  <header>
+    <div><h1>Prix et offres</h1><p class="muted" id="storageNote"></p></div>
+    <button class="btn ghost" id="logout" type="button">Fermer la session</button>
+  </header>
+
+  <section aria-labelledby="hPromo">
+    <h2 id="hPromo">Offre de lancement</h2>
+    <p class="muted">Compteur tenu par le serveur. Une place est prise quand la cliente valide ses coordonnées avec un produit éligible, juste avant l'envoi WhatsApp. Corrigez « déjà utilisées » si une commande n'est jamais envoyée ou est annulée.</p>
+    <div class="status">
+      <div class="stat"><b id="stUsed">0</b><span>commandes promo utilisées</span></div>
+      <div class="stat"><b id="stLeft">0</b><span>restantes</span></div>
+      <div class="stat"><b id="stState">…</b><span>état sur le site</span></div>
+    </div>
+    <div class="grid">
+      <label class="inline"><input type="checkbox" id="promoEnabled"> Offre active</label>
+    </div>
+    <div class="grid">
+      <label>Réduction<span class="unit" data-unit="%"><input type="number" id="promoPercent" min="1" max="90" step="1"></span></label>
+      <label>Nombre de commandes concernées<input type="number" id="promoLimit" min="0" step="1"></label>
+      <label>Déjà utilisées<input type="number" id="promoUsed" min="0" step="1"></label>
+      <label>Début (optionnel)<input type="datetime-local" id="promoStart"></label>
+      <label>Fin (optionnelle)<input type="datetime-local" id="promoEnd"></label>
+    </div>
+    <p class="muted" style="margin-top:1.1rem">S'applique aux formules :</p>
+    <div class="row" id="promoPlans"></div>
+    <p class="muted" style="margin-top:.9rem">Et aux produits :</p>
+    <div class="row" id="promoProducts"></div>
+  </section>
+
+  <section aria-labelledby="hPlans">
+    <h2 id="hPlans">Formules 3 mois, 6 mois et Necessity Box</h2>
+    <p class="muted">Le prix 3 mois est le prix de base du produit, modifiable plus bas.</p>
+    <div id="plans"></div>
+  </section>
+
+  <section aria-labelledby="hBase">
+    <h2 id="hBase">Prix de base</h2>
+    <p class="muted">Prix normal de chaque produit, hors offre. Une promotion ne le modifie jamais.</p>
+    <div class="grid" id="bases"></div>
+  </section>
+
+  <section aria-labelledby="hShip">
+    <h2 id="hShip">Livraison</h2>
+    <div class="grid">
+      <label>Livraison offerte à partir de<span class="unit" data-unit="DH"><input type="number" id="freeThreshold" min="0" step="1"></span></label>
+      <label>Frais de livraison<span class="unit" data-unit="DH"><input type="number" id="shipFee" min="0" step="1"></span></label>
+    </div>
+    <p class="muted" style="margin-top:1.1rem">Livraison toujours offerte pour :</p>
+    <div class="row" id="planShip"></div>
+  </section>
+
+  <section aria-labelledby="hCoupons">
+    <h2 id="hCoupons">Codes promo</h2>
+    <p class="muted">Ne se cumulent pas avec l'offre de lancement : ils ne s'appliquent qu'aux articles qui n'en bénéficient pas.</p>
+    <div class="coupons" id="coupons"></div>
+    <button class="btn ghost" type="button" id="addCoupon" style="margin-top:.8rem">Ajouter un code</button>
+  </section>
+
+  <section aria-labelledby="hOrders">
+    <h2 id="hOrders">Dernières commandes préparées</h2>
+    <p class="muted">Sans données client : les coordonnées n'arrivent que dans WhatsApp.</p>
+    <div class="tablewrap"><table><thead><tr><th>Référence</th><th>Date</th><th>Articles</th><th>Total</th><th>Offre n°</th></tr></thead><tbody id="orders"></tbody></table></div>
+  </section>
+</div>
+
+<div class="savebar" id="savebar" hidden>
+  <div class="in">
+    <p class="msg" id="saveMsg" role="status" aria-live="polite"></p>
+    <div style="display:flex;gap:.5rem">
+      <button class="btn ghost" type="button" id="reload">Annuler les modifications</button>
+      <button class="btn" type="button" id="save">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<script src="pricing.js"></script>
+<script>
+"use strict";
+const P = window.LybellePricing;
+const NAMES = { selenium:"Selenium X", noctiglyc:"Noctiglyc", huile:"Huile Capillaire", gel:"Astringel", duo:"Duo Intime Quotidien", rituel:"Rituel Cheveux Intense" };
+const PLAN_NAMES = { start:"3 mois", bundle6:"6 mois", box:"Necessity Box" };
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+let token = "";
+try { token = sessionStorage.getItem("lybelle-admin") || ""; } catch {}
+let state = null;
+
+async function api(method, body) {
+  const res = await fetch("/api/admin", { method, headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw Object.assign(new Error(data.error || (data.errors || []).join(" · ") || "Erreur"), { status: res.status, errors: data.errors });
+  return data;
+}
+
+const toLocal = (iso) => {
+  if (!iso) return "";
+  const d = new Date(iso); const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+};
+const fromLocal = (v) => (v ? new Date(v).toISOString() : null);
+const money = (n) => `${Math.round(n)} DH`;
+const stateLabel = { active:"En cours", ended:"Terminée", scheduled:"Programmée", disabled:"Désactivée", unavailable:"Stockage absent" };
+
+function render() {
+  const c = state.config;
+  $("#storageNote").textContent = state.storage === "redis" ? "Données enregistrées sur le serveur." : state.storage === "file" ? "Mode local : données dans .data/." : "Aucun stockage configuré : lecture seule.";
+  $("#stUsed").textContent = state.used;
+  $("#stLeft").textContent = Math.max(0, c.promo.limit - state.used);
+  $("#stState").textContent = stateLabel[state.promo.reason] || state.promo.reason;
+  $("#promoEnabled").checked = c.promo.enabled;
+  $("#promoPercent").value = c.promo.percent;
+  $("#promoLimit").value = c.promo.limit;
+  $("#promoUsed").value = state.used;
+  $("#promoStart").value = toLocal(c.promo.startsAt);
+  $("#promoEnd").value = toLocal(c.promo.endsAt);
+  $("#promoPlans").innerHTML = P.PLAN_IDS.map((p) => `<label class="inline"><input type="checkbox" data-promo-plan="${p}" ${c.promo.plans.includes(p) ? "checked" : ""}> ${PLAN_NAMES[p]}</label>`).join("");
+  $("#promoProducts").innerHTML = Object.keys(c.products).map((id) => `<label class="inline"><input type="checkbox" data-promo-product="${id}" ${c.promo.products.includes(id) ? "checked" : ""}> ${NAMES[id]}</label>`).join("");
+
+  $("#plans").innerHTML = Object.keys(c.plans).map((id) => {
+    const pl = c.plans[id];
+    const options = Object.keys(c.products).filter((x) => x !== id).map((x) => `<option value="${x}" ${pl.box.complement === x ? "selected" : ""}>${NAMES[x]}</option>`).join("");
+    return `<div class="plan" data-plan="${id}">
+      <h3>${NAMES[id]}</h3>
+      <div class="grid">
+        <label class="inline"><input type="checkbox" data-f="enabled" ${pl.enabled ? "checked" : ""}> Vendre en formules</label>
+      </div>
+      <div class="grid">
+        <label>Prix 6 mois (2 flacons)<span class="unit" data-unit="DH"><input type="number" min="1" step="1" data-f="bundle6" value="${pl.bundle6.price}"></span></label>
+        <label>Prix Necessity Box<span class="unit" data-unit="DH"><input type="number" min="1" step="1" data-f="box" value="${pl.box.price}"></span></label>
+        <label>Produit complémentaire du coffret<select data-f="complement">${options}</select></label>
+      </div>
+      <p class="preview" data-preview="${id}"></p>
+    </div>`;
+  }).join("");
+
+  $("#bases").innerHTML = Object.keys(c.products).map((id) => `<label>${NAMES[id]}<span class="unit" data-unit="DH"><input type="number" min="1" step="1" data-base="${id}" value="${c.products[id].base}"></span></label>`).join("");
+  $("#freeThreshold").value = c.delivery.freeThreshold;
+  $("#shipFee").value = c.delivery.fee;
+  $("#planShip").innerHTML = P.PLAN_IDS.map((p) => `<label class="inline"><input type="checkbox" data-ship-plan="${p}" ${c.planFreeDelivery[p] ? "checked" : ""}> ${PLAN_NAMES[p]}</label>`).join("");
+  $("#coupons").innerHTML = "";
+  Object.entries(c.coupons).forEach(([code, pct]) => addCouponRow(code, pct));
+
+  $("#orders").innerHTML = state.orders.length
+    ? state.orders.map((o) => `<tr><td>${esc(o.id)}</td><td>${esc(new Date(o.at).toLocaleString("fr-MA"))}</td><td>${o.lines.map((l) => `${esc(l.key)} × ${l.qty}`).join("<br>")}</td><td>${money(o.total)}</td><td>${o.promoNumber || "–"}</td></tr>`).join("")
+    : `<tr><td colspan="5" class="muted">Aucune commande pour l'instant.</td></tr>`;
+  updatePreview();
+}
+
+function addCouponRow(code = "", pct = 10) {
+  const row = document.createElement("div");
+  row.className = "coupon";
+  row.innerHTML = `<label>Code<input type="text" data-coupon-code value="${esc(code)}" maxlength="20" autocapitalize="characters"></label>
+    <label>Remise<span class="unit" data-unit="%"><input type="number" min="1" max="90" data-coupon-pct value="${pct}"></span></label>
+    <button class="btn ghost" type="button" data-coupon-rm>Retirer</button>`;
+  $("#coupons").appendChild(row);
+}
+
+function readForm() {
+  const config = {
+    delivery: { freeThreshold: Number($("#freeThreshold").value), fee: Number($("#shipFee").value) },
+    products: {}, plans: {}, planFreeDelivery: {}, coupons: {},
+    promo: {
+      enabled: $("#promoEnabled").checked,
+      percent: Number($("#promoPercent").value),
+      limit: Number($("#promoLimit").value),
+      startsAt: fromLocal($("#promoStart").value),
+      endsAt: fromLocal($("#promoEnd").value),
+      plans: [...document.querySelectorAll("[data-promo-plan]:checked")].map((x) => x.dataset.promoPlan),
+      products: [...document.querySelectorAll("[data-promo-product]:checked")].map((x) => x.dataset.promoProduct)
+    }
+  };
+  document.querySelectorAll("[data-base]").forEach((x) => { config.products[x.dataset.base] = { base: Number(x.value) }; });
+  document.querySelectorAll("[data-plan]").forEach((el) => {
+    const f = (k) => el.querySelector(`[data-f="${k}"]`);
+    config.plans[el.dataset.plan] = { enabled: f("enabled").checked, bundle6: { price: Number(f("bundle6").value) }, box: { price: Number(f("box").value), complement: f("complement").value } };
+  });
+  document.querySelectorAll("[data-ship-plan]").forEach((x) => { config.planFreeDelivery[x.dataset.shipPlan] = x.checked; });
+  document.querySelectorAll(".coupon").forEach((row) => {
+    const code = row.querySelector("[data-coupon-code]").value.trim().toUpperCase();
+    if (code) config.coupons[code] = Number(row.querySelector("[data-coupon-pct]").value);
+  });
+  return { config, used: Number($("#promoUsed").value) };
+}
+
+function updatePreview() {
+  const { config } = readForm();
+  const c = P.normaliseConfig(config);
+  Object.keys(c.plans).forEach((id) => {
+    const el = document.querySelector(`[data-preview="${id}"]`);
+    if (!el) return;
+    const opts = P.planOptions(c, id, c.promo.enabled);
+    el.innerHTML = opts.map((o) => `${PLAN_NAMES[o.plan]} : <b>${money(o.price)}</b>${o.bundleSaving ? ` (valeur ${money(o.value)}, économie ${money(o.bundleSaving)})` : ""}${o.promo ? `, ${money(o.final)} avec l'offre` : ""}`).join("<br>");
+  });
+}
+
+async function load() {
+  try {
+    state = await api("GET");
+    $("#login").hidden = true; $("#app").hidden = false; $("#savebar").hidden = false;
+    $("#save").disabled = state.storage === "none";
+    $("#saveMsg").className = "msg"; $("#saveMsg").textContent = state.storage === "none" ? "Ajoutez Upstash Redis / Vercel KV pour pouvoir enregistrer." : "";
+    render();
+  } catch (err) {
+    $("#app").hidden = true; $("#savebar").hidden = true; $("#login").hidden = false;
+    $("#loginMsg").textContent = token ? err.message : "";
+    if (err.status === 401) { token = ""; try { sessionStorage.removeItem("lybelle-admin"); } catch {} }
+  }
+}
+
+$("#loginForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  token = $("#pw").value;
+  try { sessionStorage.setItem("lybelle-admin", token); } catch {}
+  load();
+});
+$("#logout").onclick = () => { token = ""; try { sessionStorage.removeItem("lybelle-admin"); } catch {} location.reload(); };
+$("#reload").onclick = load;
+$("#addCoupon").onclick = () => addCouponRow("", 10);
+document.addEventListener("click", (e) => { const rm = e.target.closest("[data-coupon-rm]"); if (rm) rm.closest(".coupon").remove(); });
+document.addEventListener("input", updatePreview);
+$("#save").onclick = async () => {
+  const btn = $("#save"), msg = $("#saveMsg");
+  btn.disabled = true; msg.className = "msg"; msg.textContent = "Enregistrement…";
+  try {
+    state = await api("PUT", readForm());
+    render();
+    msg.className = "msg ok"; msg.textContent = "Enregistré. Le site utilise ces prix immédiatement.";
+  } catch (err) {
+    msg.className = "msg err"; msg.textContent = err.errors ? err.errors.join(" · ") : err.message;
+  } finally { btn.disabled = state && state.storage === "none"; }
+};
+if (token) load();
+</script>
+</body>
+</html>

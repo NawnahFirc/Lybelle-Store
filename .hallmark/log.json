@@ -1,0 +1,15 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "polish",
+  "scope": "page",
+  "prompt": "LYBELLE bilingual FR/AR supplement storefront: make it less generated and less repetitive, keep the sage/rose/cream/indigo system",
+  "genre": "editorial",
+  "waived": [
+   "38iii"
+  ],
+  "before": "194 FAIL, 11 REFLEX",
+  "after": "0 FAIL, 0 REFLEX",
+  "date": "2026-10-29"
+ }
+]
