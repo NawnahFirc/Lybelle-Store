@@ -240,8 +240,8 @@ nav.main a.act{color:var(--sage-700)}
 .link:hover{border-color:var(--sage-700);color:var(--sage-700);gap:.85rem}
 
 /*══ SECTION HEADS ══*/
-.shead{padding:clamp(3.6rem,8vw,6.5rem) var(--pad) 0;max-width:64rem}
-.shead.ctr{margin:0 auto;text-align:center;max-width:46rem;display:flex;flex-direction:column;align-items:center}
+.shead{padding:clamp(3.6rem,8vw,6.5rem) var(--pad) 0;max-width:calc(64rem + 2 * var(--pad))}
+.shead.ctr{margin:0 auto;text-align:center;max-width:calc(46rem + 2 * var(--pad));display:flex;flex-direction:column;align-items:center}
 h2,.h2{font-family:var(--display);font-size:clamp(2.1rem,4.4vw,3.5rem);font-weight:300;
   line-height:1.13;letter-spacing:-.012em;max-width:20ch}
 .shead.ctr h2{max-width:22ch}
@@ -394,7 +394,7 @@ select.sort:hover{border-color:var(--sage-400)}
 .night img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% center;transform:scale(1.34);transform-origin:72% center}
 .night::after{content:"";position:absolute;inset:0;
   background:linear-gradient(100deg,color-mix(in srgb,var(--night-950) 94%,transparent) 0%,color-mix(in srgb,var(--night-950) 78%,transparent) 40%,color-mix(in srgb,var(--night) 25%,transparent) 82%)}
-.night .in{position:relative;z-index:3;padding:clamp(3rem,7vw,5rem) var(--pad);max-width:36rem}
+.night .in{position:relative;z-index:3;padding:clamp(3rem,7vw,5rem) var(--pad);max-width:calc(36rem + 2 * var(--pad))}
 .night .night .night h2{color:var(--cream);font-weight:600;letter-spacing:-.015em;text-shadow:0 3px 20px color-mix(in srgb,var(--night-ink) 46%,transparent)}
 .night p{color:color-mix(in srgb,var(--cream) 92%,transparent);margin-top:1.3rem;max-width:40ch;font-weight:500;text-shadow:0 2px 14px color-mix(in srgb,var(--night-ink) 54%,transparent)}
 .night .hcta{margin-top:2.2rem}
@@ -442,7 +442,7 @@ select.sort:hover{border-color:var(--sage-400)}
 .dots button.on{background:var(--sage-700);width:20px;border-radius:99px}
 
 /*══ FAQ ══*/
-.faqwrap{padding:0 var(--pad) clamp(3.5rem,7vw,5.5rem);max-width:52rem;margin:2.6rem auto 0}
+.faqwrap{padding:0 var(--pad) clamp(3.5rem,7vw,5.5rem);max-width:calc(52rem + 2 * var(--pad));margin:2.6rem auto 0}
 .acc{border-top:1px solid var(--line-2)}
 .acc:last-child{border-bottom:1px solid var(--line-2)}
 .acc button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem;
